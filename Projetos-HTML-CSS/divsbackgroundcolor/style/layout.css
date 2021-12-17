@@ -1,0 +1,17 @@
+.esquerda {
+  font-size: 14px;
+  color: red;
+  text-align: left;
+}
+
+.centro {
+  font-size: 16px;
+  color: #ccc;
+  text-align: center;
+}
+
+.direita {
+  font-size: 10px;
+  color: #000;
+  text-align: right;
+}

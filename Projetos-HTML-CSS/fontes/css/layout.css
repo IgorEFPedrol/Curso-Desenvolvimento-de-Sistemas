@@ -1,0 +1,15 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+}
+
+div {
+  background: #0f0;
+  width: 200px;
+  height: 200px;
+}
+
+.titulo {
+  font-size: 18px;
+  font-weight: 600;
+}

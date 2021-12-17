@@ -1,0 +1,21 @@
+.side-bar {
+  text-align: left;
+  background: #f0f2fd;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #000;
+  width: 20%;
+  height: 1000px;
+  float: left;
+}
+
+.side-content {
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: #000;
+  width: 80%;
+  height: 1000px;
+  text-align: center;
+  float: left;
+}

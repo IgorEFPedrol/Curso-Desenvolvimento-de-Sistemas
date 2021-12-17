@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulário</title>
+    <style>
+      input {
+        height: 20px;
+      }
+      input:hover {
+        border-radius: 60px;
+        transition-duration: 2s;
+        transition-delay: 0.15s;
+        background: linear-gradient(red, blue);
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="">
+      <p>Input - Texto style</p>
+      <input type="text" maxlength="2" placeholder="Max = 2" />
+      <p>Input-Number</p>
+      <input type="number" min="0" max="10" step="2" placeholder="Max= 10" />
+      <p>Input - E-mail</p>
+      <input type="email" placeholder="E-mail Válido" />
+      <p>Input-Date</p>
+      <input type="date" />
+      <p>Input - Time</p>
+      <input type="time" />
+      <p>Input - Checkbox</p>
+      <input type="checkbox" />
+      <label>Lanche</label>
+      <br />
+      <input type="checkbox" />
+      <label>Pizza</label>
+      <br />
+      <input type="checkbox" />
+      <label>Marmita</label>
+      <p>Input - Radiobutton</p>
+      <input type="radio" name="radio" />
+      <label>Lanche</label>
+      <br />
+      <input type="radio" name="radio" checked="true" />
+      <label>Pizza</label>
+      <br />
+      <input type="radio" name="radio" />
+      <label>Marmita</label>
+    </form>
+  </body>
+</html>

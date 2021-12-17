@@ -1,0 +1,187 @@
+* {
+    font-family: "roboto", sans-serif;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+#esquerda {
+    width: 68%;
+    height: 1000px;
+    float: left;
+}
+
+#direita {
+    width: 30%;
+    height: 900px;
+    padding-left: 5px; 
+    float: right;
+}
+
+#banner {
+    width: 100%;
+    height: 40%;
+    float: left;
+    padding-bottom: 15px;
+    padding-right: 8px;
+    border-bottom: 1px solid gray;
+}
+
+#gow {
+    width: 65%;
+    height: 100%;
+    background: url('../assets/GOWR.webp');
+    background-size: cover; 
+    float: left;
+}
+
+#pgow {
+    width: 33.3%;
+    font-size: 32px;
+    padding-left: 5px;
+    float: right; 
+}
+
+.pd {
+    font-size: 28px;
+    background: yellow;
+}
+
+.box {
+    width: 33.33%;
+    height: 60%;
+    float: left;
+    padding-top: 15px;
+}
+
+.box:hover {
+    background: #f00;
+}
+
+.boximg {
+    width: 95%;
+}
+
+#destaque {
+    width: 100%;
+    height: 60%;
+    float: left;
+}
+
+.fh {
+    width: 100%;
+    height: 70%;
+}
+
+#logos {
+    width: 100%;
+    height: 20%;
+    float: left;
+    border-top: 1px solid gray;
+}
+
+.logo {
+    width: 23%;
+    float: left;
+    padding: 2px;
+}
+
+@media (max-width: 960px) {
+    
+#header {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+#esquerda {
+    width: 100%;
+    height: 1200px;
+    float: left;
+}
+
+#direita {
+    width: 100%;
+    height: 1200px;
+    padding-left: 5px; 
+    float: right;
+}
+
+#banner {
+    width: 100%;
+    height: 40%;
+    float: left;
+    padding-bottom: 15px;
+    padding-right: 8px;
+    border-bottom: 1px solid gray;
+}
+
+#gow {
+    width: 100%;
+    height: 100%;
+    background: url('../assets/GOWR.webp');
+    background-size: cover; 
+    float: left;
+}
+
+#pgow {
+    width: 100%;
+    font-size: 32px;
+    padding-left: 5px;
+    float: right; 
+}
+
+.pd {
+    font-size: 28px;
+    background: yellow;
+}
+
+.box {
+    width: 100%;
+    height: 60%;
+    float: left;
+    padding-top: 15px;
+}
+
+.box:hover {
+    background: #f00;
+}
+
+.boximg {
+    width: 100%;
+}
+
+#destaque {
+    width: 100%;
+    height: 60%;
+    float: left;
+}
+
+.fh {
+    width: 100%;
+    height: 70%;
+}
+
+#logos {
+    width: 100%;
+    height: 20%;
+    float: left;
+    border-top: 1px solid gray;
+}
+
+.logo {
+    width: 100%;
+    float: left;
+    padding: 2px;
+}
+@media (max-width: 640px) {
+} 

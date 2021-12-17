@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cadastro</title>
+    <style>
+      input {
+        height: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Preencha seu cadastro</h1>
+    <form>
+      <p>Nome</p>
+      <input type="text" placeholder="Nome Completo"/>
+      <p>E-mail</p>
+      <input type="email" placeholder="E-mail Válido"/>
+      <p>Telefone</p>
+      <input type="text" placeholder="( )_____-____"/>
+      <br />
+      <input type="checkbox" />
+      <label>Aceita receber SMS?</label>
+    </form>
+    <h2><u>Dados de Endereço</u></h2>
+    <form>
+      <input type="radio" name="endereço" />
+      <label>Rua</label>
+      <input type="radio" name="endereço" />
+      <label>Avenida</label>
+      <input type="radio" name="endereço" />
+      <label>Sem Saida</label>
+    </form>
+    <form>
+      <input type="text" placeholder="Logradouro" />
+      <br />
+      <input type="number" placeholder="Número" />
+      <br />
+      <input type="text" placeholder="Bairro" />
+      <br />
+      <input type="text" placeholder="Cidade" />
+      <br />
+      <input type="text" placeholder="Estado" />
+    </form>
+    <h2><u>Dados do Plano</u></h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Plano</th>
+          <th>Velocidade</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Meio devagar</td>
+          <td>60 Mb</td>
+          <td>R$60,00</td>
+        </tr>
+        <tr>
+          <td>Ilusao</td>
+          <td>100 Mb</td>
+          <td>R$79,90</td>
+        </tr>
+        <tr>
+          <td>SPTele</td>
+          <td>300 Mb</td>
+          <td>R$89,90</td>
+        </tr>
+      </tbody>
+    </table>
+    <form>
+      <h3>Escolha o seu:</h3>
+      <input type="radio" />
+      <label>Meio devagar</label>
+      <br />
+      <input type="radio" />
+      <label>Ilusão</label>
+      <br />
+      <input type="radio" />
+      <label>SPTele</label>
+    </form>
+    <figure>
+      <img
+        src="../assets/joinha.jpg"
+        alt="Imagem de Agradecimento"
+        height="200"
+        width="200"
+      />
+      <figcaption>Obrigado</figcaption>
+    </figure>
+  </body>
+</html>
