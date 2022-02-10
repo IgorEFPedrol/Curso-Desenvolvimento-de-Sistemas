@@ -20,6 +20,7 @@ namespace projetoAula1
             a = Convert.ToDouble(Console.ReadLine());
             Console.Write("Digite o valor de b: ");
             b = Convert.ToDouble(Console.ReadLine());
+            double media = a + b / 2;
 
         }
     }
