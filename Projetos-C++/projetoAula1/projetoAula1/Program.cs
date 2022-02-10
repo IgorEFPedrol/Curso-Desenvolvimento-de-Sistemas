@@ -10,6 +10,7 @@ namespace projetoAula1
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
