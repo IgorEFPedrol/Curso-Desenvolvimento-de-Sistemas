@@ -1,1 +1,6 @@
 C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C++\projetoAula1\projetoAula1\bin\Debug\projetoAula1.exe.config
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C++\projetoAula1\projetoAula1\bin\Debug\projetoAula1.exe
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C++\projetoAula1\projetoAula1\bin\Debug\projetoAula1.pdb
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C++\projetoAula1\projetoAula1\obj\Debug\projetoAula1.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C++\projetoAula1\projetoAula1\obj\Debug\projetoAula1.exe
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C++\projetoAula1\projetoAula1\obj\Debug\projetoAula1.pdb
