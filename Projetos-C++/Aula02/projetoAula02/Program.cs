@@ -10,6 +10,10 @@ namespace projetoAula02
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.WriteLine("ÁREA DO CIRCULO");
 
         }
     }
