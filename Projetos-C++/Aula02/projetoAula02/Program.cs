@@ -18,7 +18,7 @@ namespace projetoAula02
             for (int i = 1; i <= 50; i++)
             {
                 CalculoArea(i);
-                Thread.Sleep(500);
+                Thread.Sleep(200);
             }
             Console.ReadKey();
         }
