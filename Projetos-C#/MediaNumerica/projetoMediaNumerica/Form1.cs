@@ -27,8 +27,19 @@ namespace projetoMediaNumerica
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnMedia_Click(object sender, EventArgs e)
         {
+            try
+            {
+                double a = Convert.ToDouble(txtA.Text);
+                double b = Convert.ToDouble(txtB.Text);
+                double m = (a + b) / 2;
+                MessageBox.Show("Media = " + m);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Valor inválido digitado");
+            }
 
         }
     }
