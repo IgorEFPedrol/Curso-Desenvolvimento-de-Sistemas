@@ -1,0 +1,9 @@
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\MediaNumerica\projetoMediaNumerica\bin\Debug\projetoMediaNumerica.exe.config
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\MediaNumerica\projetoMediaNumerica\bin\Debug\projetoMediaNumerica.exe
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\MediaNumerica\projetoMediaNumerica\bin\Debug\projetoMediaNumerica.pdb
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\MediaNumerica\projetoMediaNumerica\obj\Debug\projetoMediaNumerica.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\MediaNumerica\projetoMediaNumerica\obj\Debug\projetoMediaNumerica.Form1.resources
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\MediaNumerica\projetoMediaNumerica\obj\Debug\projetoMediaNumerica.Properties.Resources.resources
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\MediaNumerica\projetoMediaNumerica\obj\Debug\projetoMediaNumerica.csproj.GenerateResource.Cache
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\MediaNumerica\projetoMediaNumerica\obj\Debug\projetoMediaNumerica.exe
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\MediaNumerica\projetoMediaNumerica\obj\Debug\projetoMediaNumerica.pdb
