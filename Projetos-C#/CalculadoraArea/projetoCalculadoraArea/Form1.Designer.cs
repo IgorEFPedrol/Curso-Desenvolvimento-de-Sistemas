@@ -38,7 +38,7 @@
             // 
             this.lbRaio.AutoSize = true;
             this.lbRaio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lbRaio.Location = new System.Drawing.Point(117, 35);
+            this.lbRaio.Location = new System.Drawing.Point(28, 13);
             this.lbRaio.Name = "lbRaio";
             this.lbRaio.Size = new System.Drawing.Size(205, 24);
             this.lbRaio.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // txtRaio
             // 
-            this.txtRaio.Location = new System.Drawing.Point(121, 73);
+            this.txtRaio.Location = new System.Drawing.Point(32, 51);
             this.txtRaio.MaxLength = 10;
             this.txtRaio.Name = "txtRaio";
             this.txtRaio.Size = new System.Drawing.Size(236, 20);
@@ -56,7 +56,7 @@
             // btnCalcularArea
             // 
             this.btnCalcularArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalcularArea.Location = new System.Drawing.Point(121, 120);
+            this.btnCalcularArea.Location = new System.Drawing.Point(32, 98);
             this.btnCalcularArea.Name = "btnCalcularArea";
             this.btnCalcularArea.Size = new System.Drawing.Size(236, 38);
             this.btnCalcularArea.TabIndex = 2;
@@ -68,10 +68,11 @@
             // 
             this.lbResposta.BackColor = System.Drawing.Color.White;
             this.lbResposta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbResposta.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lbResposta.Location = new System.Drawing.Point(117, 185);
+            this.lbResposta.Location = new System.Drawing.Point(0, 178);
             this.lbResposta.Name = "lbResposta";
-            this.lbResposta.Size = new System.Drawing.Size(240, 67);
+            this.lbResposta.Size = new System.Drawing.Size(286, 67);
             this.lbResposta.TabIndex = 3;
             this.lbResposta.Text = "Resposta: ";
             this.lbResposta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,7 +82,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(471, 378);
+            this.ClientSize = new System.Drawing.Size(286, 245);
             this.Controls.Add(this.lbResposta);
             this.Controls.Add(this.btnCalcularArea);
             this.Controls.Add(this.txtRaio);
