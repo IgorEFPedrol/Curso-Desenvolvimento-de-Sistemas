@@ -38,7 +38,7 @@
             // 
             this.lbRaio.AutoSize = true;
             this.lbRaio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lbRaio.Location = new System.Drawing.Point(136, 30);
+            this.lbRaio.Location = new System.Drawing.Point(117, 35);
             this.lbRaio.Name = "lbRaio";
             this.lbRaio.Size = new System.Drawing.Size(205, 24);
             this.lbRaio.TabIndex = 0;
@@ -46,19 +46,19 @@
             // 
             // txtRaio
             // 
-            this.txtRaio.Location = new System.Drawing.Point(140, 67);
+            this.txtRaio.Location = new System.Drawing.Point(121, 73);
             this.txtRaio.MaxLength = 10;
             this.txtRaio.Name = "txtRaio";
-            this.txtRaio.Size = new System.Drawing.Size(201, 20);
+            this.txtRaio.Size = new System.Drawing.Size(236, 20);
             this.txtRaio.TabIndex = 1;
             this.txtRaio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnCalcularArea
             // 
             this.btnCalcularArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalcularArea.Location = new System.Drawing.Point(140, 114);
+            this.btnCalcularArea.Location = new System.Drawing.Point(121, 120);
             this.btnCalcularArea.Name = "btnCalcularArea";
-            this.btnCalcularArea.Size = new System.Drawing.Size(201, 38);
+            this.btnCalcularArea.Size = new System.Drawing.Size(236, 38);
             this.btnCalcularArea.TabIndex = 2;
             this.btnCalcularArea.Text = "CALCULAR ÁREA";
             this.btnCalcularArea.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             this.lbResposta.BackColor = System.Drawing.Color.White;
             this.lbResposta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lbResposta.Location = new System.Drawing.Point(136, 179);
+            this.lbResposta.Location = new System.Drawing.Point(117, 185);
             this.lbResposta.Name = "lbResposta";
-            this.lbResposta.Size = new System.Drawing.Size(205, 67);
+            this.lbResposta.Size = new System.Drawing.Size(240, 67);
             this.lbResposta.TabIndex = 3;
             this.lbResposta.Text = "Resposta: ";
             this.lbResposta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
