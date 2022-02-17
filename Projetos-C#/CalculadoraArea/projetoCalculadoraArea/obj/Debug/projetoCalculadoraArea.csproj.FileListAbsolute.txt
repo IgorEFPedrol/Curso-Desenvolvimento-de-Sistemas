@@ -1,0 +1,1 @@
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraArea\projetoCalculadoraArea\bin\Debug\projetoCalculadoraArea.exe.config
