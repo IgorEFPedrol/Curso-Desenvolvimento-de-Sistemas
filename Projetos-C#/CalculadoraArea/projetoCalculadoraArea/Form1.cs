@@ -26,5 +26,13 @@ namespace projetoCalculadoraArea
         {
 
         }
+
+        private void btnCalcularArea_Click(object sender, EventArgs e)
+        {
+            double resp = 0;
+            double raio = Convert.ToDouble(txtRaio.Text);
+            resp = Math.PI * Math.Pow(raio, 2);
+            lbResposta.Text = "Resposta: " + String.Format("{0:N2}", resp);
+        }
     }
 }
