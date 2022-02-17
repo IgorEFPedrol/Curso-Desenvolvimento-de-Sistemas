@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace projetoCalculadoraArea
 {
-    public partial class Form1 : Form
+    public partial class btnCalc : Form
     {
-        public Form1()
+        public btnCalc()
         {
             InitializeComponent();
         }
