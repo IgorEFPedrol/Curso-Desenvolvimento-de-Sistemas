@@ -42,5 +42,18 @@ namespace projetoCalculadoraArea
                 txtRaio.Focus();
             }
         }
+
+        private void txtRaio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char tecla = e.KeyChar;
+            if (Char.IsLetter(tecla))
+            {
+                e.Handled = true;
+            }
+            if (tecla == '.')
+            {
+                e.KeyChar = ',';
+            }
+        }
     }
 }

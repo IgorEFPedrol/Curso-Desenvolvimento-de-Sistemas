@@ -52,6 +52,7 @@
             this.txtRaio.Size = new System.Drawing.Size(236, 20);
             this.txtRaio.TabIndex = 1;
             this.txtRaio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRaio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRaio_KeyPress);
             // 
             // btnCalcularArea
             // 
