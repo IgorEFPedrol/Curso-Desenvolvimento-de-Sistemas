@@ -1,1 +1,9 @@
 C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraArea\projetoCalculadoraArea\bin\Debug\projetoCalculadoraArea.exe.config
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraArea\projetoCalculadoraArea\bin\Debug\projetoCalculadoraArea.exe
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraArea\projetoCalculadoraArea\bin\Debug\projetoCalculadoraArea.pdb
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraArea\projetoCalculadoraArea\obj\Debug\projetoCalculadoraArea.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraArea\projetoCalculadoraArea\obj\Debug\projetoCalculadoraArea.Form1.resources
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraArea\projetoCalculadoraArea\obj\Debug\projetoCalculadoraArea.Properties.Resources.resources
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraArea\projetoCalculadoraArea\obj\Debug\projetoCalculadoraArea.csproj.GenerateResource.Cache
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraArea\projetoCalculadoraArea\obj\Debug\projetoCalculadoraArea.exe
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraArea\projetoCalculadoraArea\obj\Debug\projetoCalculadoraArea.pdb
