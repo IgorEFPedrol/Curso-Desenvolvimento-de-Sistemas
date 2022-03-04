@@ -40,6 +40,41 @@ namespace prjConversorTemperatura
                 double k = c + 273;
                 lbTemperatura.Text = k.ToString("N2") + " KELVIN";
             }
+
+            if (rbFromC.Checked && rbToF.Checked)
+	        {
+                double c = Convert.ToDouble(txtTemperatura.Text);
+                double f = c * 1.8 + 32;
+                lbTemperatura.Text = f.ToString("N2") + " FAHRENHEIT";
+	        }
+
+            if (rbFromK.Checked && rbToC.Checked)
+            {
+                double k = Convert.ToDouble(txtTemperatura.Text);
+                double c = k - 273;
+                lbTemperatura.Text = c.ToString("N2") + " CELSIUS";
+            }
+
+            if (rbFromK.Checked && rbToF.Checked)
+	        {
+                double k = Convert.ToDouble(txtTemperatura.Text);
+                double f = k * 1.8 - 459.67;
+                lbTemperatura.Text = f.ToString("N2") + " FAHRENHEIT";
+	        }
+
+            if (rbFromF.Checked && rbToC.Checked)
+            {
+                double f = Convert.ToDouble(txtTemperatura.Text);
+                double c = (f - 32) / 1.8;
+                lbTemperatura.Text = c.ToString("N2") + " CELSIUS";
+            }
+
+            if ()
+            {
+                
+            }
         }
+
+
     }
 }
