@@ -1,0 +1,9 @@
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\prjTermometro\prjConversorTemperatura\bin\Debug\prjConversorTemperatura.exe.config
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\prjTermometro\prjConversorTemperatura\bin\Debug\prjConversorTemperatura.exe
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\prjTermometro\prjConversorTemperatura\bin\Debug\prjConversorTemperatura.pdb
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\prjTermometro\prjConversorTemperatura\obj\Debug\prjConversorTemperatura.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\prjTermometro\prjConversorTemperatura\obj\Debug\prjConversorTemperatura.Form1.resources
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\prjTermometro\prjConversorTemperatura\obj\Debug\prjConversorTemperatura.Properties.Resources.resources
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\prjTermometro\prjConversorTemperatura\obj\Debug\prjConversorTemperatura.csproj.GenerateResource.Cache
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\prjTermometro\prjConversorTemperatura\obj\Debug\prjConversorTemperatura.exe
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\prjTermometro\prjConversorTemperatura\obj\Debug\prjConversorTemperatura.pdb
