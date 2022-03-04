@@ -221,9 +221,9 @@
             // 
             this.lbTemperatura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbTemperatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lbTemperatura.Location = new System.Drawing.Point(249, 268);
+            this.lbTemperatura.Location = new System.Drawing.Point(243, 261);
             this.lbTemperatura.Name = "lbTemperatura";
-            this.lbTemperatura.Size = new System.Drawing.Size(217, 192);
+            this.lbTemperatura.Size = new System.Drawing.Size(217, 200);
             this.lbTemperatura.TabIndex = 7;
             this.lbTemperatura.Text = "Resposta: ";
             this.lbTemperatura.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
