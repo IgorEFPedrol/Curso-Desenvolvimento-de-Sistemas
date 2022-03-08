@@ -1,0 +1,8 @@
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\bin\Debug\prjCalculadoraGrafica.exe.config
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\bin\Debug\prjCalculadoraGrafica.exe
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\bin\Debug\prjCalculadoraGrafica.pdb
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\obj\Debug\prjCalculadoraGrafica.Form1.resources
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\obj\Debug\prjCalculadoraGrafica.Properties.Resources.resources
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\obj\Debug\prjCalculadoraGrafica.csproj.GenerateResource.Cache
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\obj\Debug\prjCalculadoraGrafica.exe
+C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\obj\Debug\prjCalculadoraGrafica.pdb
