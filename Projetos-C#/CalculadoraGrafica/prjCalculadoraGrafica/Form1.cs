@@ -16,5 +16,10 @@ namespace prjCalculadoraGrafica
         {
             InitializeComponent();
         }
+
+        private void lbResultado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
