@@ -48,7 +48,7 @@ namespace prjConversorTemperatura
                 lbTemperatura.Text = f.ToString("N2") + " FAHRENHEIT";
 	        }
 
-            if (rbFromC.Checked && rbToC.Checked)
+            if (rbFromC.Checked && rbToC.Checked || rbFromK.Checked && rbToK.Checked || rbFromF.Checked && rbToF.Checked)
             {
                 MessageBox.Show("Conversão Inválida!");
             }
@@ -67,11 +67,6 @@ namespace prjConversorTemperatura
                 lbTemperatura.Text = f.ToString("N2") + " FAHRENHEIT";
 	        }
 
-            if (rbFromK.Checked && rbToK.Checked)
-            {
-                MessageBox.Show("Conversão Inválida!");
-            }
-
             if (rbFromF.Checked && rbToC.Checked)
             {
                 double f = Convert.ToDouble(txtTemperatura.Text);
@@ -86,10 +81,6 @@ namespace prjConversorTemperatura
                 lbTemperatura.Text = k.ToString("N2") + " KELVIN";
             }
 
-            if (rbFromF.Checked && rbToF.Checked)
-            {
-                MessageBox.Show("Conversão Inválida!");
-            }
         }
 
 
