@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gbFrom = new System.Windows.Forms.GroupBox();
+            this.rbFromK = new System.Windows.Forms.RadioButton();
+            this.rbFromF = new System.Windows.Forms.RadioButton();
+            this.rbFromC = new System.Windows.Forms.RadioButton();
             this.gbTo = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTemperatura = new System.Windows.Forms.TextBox();
             this.btnConverter = new System.Windows.Forms.Button();
-            this.rbFromC = new System.Windows.Forms.RadioButton();
-            this.rbFromF = new System.Windows.Forms.RadioButton();
-            this.rbFromK = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbToK = new System.Windows.Forms.RadioButton();
             this.rbToF = new System.Windows.Forms.RadioButton();
@@ -61,6 +61,39 @@
             this.gbFrom.Size = new System.Drawing.Size(169, 176);
             this.gbFrom.TabIndex = 0;
             this.gbFrom.TabStop = false;
+            // 
+            // rbFromK
+            // 
+            this.rbFromK.AutoSize = true;
+            this.rbFromK.Location = new System.Drawing.Point(15, 129);
+            this.rbFromK.Name = "rbFromK";
+            this.rbFromK.Size = new System.Drawing.Size(94, 29);
+            this.rbFromK.TabIndex = 7;
+            this.rbFromK.TabStop = true;
+            this.rbFromK.Text = "Kelvin";
+            this.rbFromK.UseVisualStyleBackColor = true;
+            // 
+            // rbFromF
+            // 
+            this.rbFromF.AutoSize = true;
+            this.rbFromF.Location = new System.Drawing.Point(15, 81);
+            this.rbFromF.Name = "rbFromF";
+            this.rbFromF.Size = new System.Drawing.Size(142, 29);
+            this.rbFromF.TabIndex = 6;
+            this.rbFromF.TabStop = true;
+            this.rbFromF.Text = "Fahrenheit";
+            this.rbFromF.UseVisualStyleBackColor = true;
+            // 
+            // rbFromC
+            // 
+            this.rbFromC.AutoSize = true;
+            this.rbFromC.Location = new System.Drawing.Point(15, 32);
+            this.rbFromC.Name = "rbFromC";
+            this.rbFromC.Size = new System.Drawing.Size(105, 29);
+            this.rbFromC.TabIndex = 5;
+            this.rbFromC.TabStop = true;
+            this.rbFromC.Text = "Celsius";
+            this.rbFromC.UseVisualStyleBackColor = true;
             // 
             // gbTo
             // 
@@ -103,39 +136,6 @@
             this.btnConverter.Text = "Converter";
             this.btnConverter.UseVisualStyleBackColor = false;
             this.btnConverter.Click += new System.EventHandler(this.btnConverter_Click);
-            // 
-            // rbFromC
-            // 
-            this.rbFromC.AutoSize = true;
-            this.rbFromC.Location = new System.Drawing.Point(15, 32);
-            this.rbFromC.Name = "rbFromC";
-            this.rbFromC.Size = new System.Drawing.Size(105, 29);
-            this.rbFromC.TabIndex = 5;
-            this.rbFromC.TabStop = true;
-            this.rbFromC.Text = "Celsius";
-            this.rbFromC.UseVisualStyleBackColor = true;
-            // 
-            // rbFromF
-            // 
-            this.rbFromF.AutoSize = true;
-            this.rbFromF.Location = new System.Drawing.Point(15, 81);
-            this.rbFromF.Name = "rbFromF";
-            this.rbFromF.Size = new System.Drawing.Size(142, 29);
-            this.rbFromF.TabIndex = 6;
-            this.rbFromF.TabStop = true;
-            this.rbFromF.Text = "Fahrenheit";
-            this.rbFromF.UseVisualStyleBackColor = true;
-            // 
-            // rbFromK
-            // 
-            this.rbFromK.AutoSize = true;
-            this.rbFromK.Location = new System.Drawing.Point(15, 129);
-            this.rbFromK.Name = "rbFromK";
-            this.rbFromK.Size = new System.Drawing.Size(94, 29);
-            this.rbFromK.TabIndex = 7;
-            this.rbFromK.TabStop = true;
-            this.rbFromK.Text = "Kelvin";
-            this.rbFromK.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -198,7 +198,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(41, 35);
+            this.label2.Location = new System.Drawing.Point(41, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 32);
             this.label2.TabIndex = 5;
@@ -210,7 +210,7 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(41, 261);
+            this.label3.Location = new System.Drawing.Point(41, 271);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(169, 33);
             this.label3.TabIndex = 6;
@@ -248,7 +248,7 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Conversor de Temperatura";
+            this.Text = "CONVERSOR DE TEMPERATURA";
             this.gbFrom.ResumeLayout(false);
             this.gbFrom.PerformLayout();
             this.groupBox1.ResumeLayout(false);
