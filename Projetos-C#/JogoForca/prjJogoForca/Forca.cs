@@ -18,7 +18,11 @@ namespace prjJogoForca
         public void Sortear()
         {
             Random sorteio = new Random();
-            Pos = sorteio.Next()
+            Pos = sorteio.Next(Palavras.Count());
+        }
+        public string DevolvePalavra()
+        {
+            return Palavras[Pos];
         }
     }
 }
