@@ -6,5 +6,15 @@ var botao = document.getElementById("botao_OK").addEventListener("click",
     })
 
 function verificarCampos(campoNumero1, campoNumero2) {
-     
+     console.log(campoNumero1, campoNumero2);
+     if (campoNumero1 == "" || campoNumero2 == "") {
+         window.alert("Preencher os campos!!!")
+     } else {
+         converterValoresParaInteiro(campoNumero1, campoNumero2);
+     }
+}
+
+function converterValoresParaInteiro(valorConverter1, valorConverter2) {
+    var resultado = parseInt(valorConverter1) * parseFloat(valorConverter2);
+    var h1 =document.getElementById("h1_result").textContent = resultado; 
 }
