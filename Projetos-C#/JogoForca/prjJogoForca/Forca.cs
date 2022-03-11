@@ -8,6 +8,8 @@ namespace prjJogoForca
 {
     class Forca
     {
+        private List<string> Palavras;
+        private int Pos;
 
     }
 }
