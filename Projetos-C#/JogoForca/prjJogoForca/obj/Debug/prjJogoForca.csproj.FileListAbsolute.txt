@@ -1,1 +1,9 @@
 C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\JogoForca\prjJogoForca\bin\Debug\prjJogoForca.exe.config
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\JogoForca\prjJogoForca\bin\Debug\prjJogoForca.exe
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\JogoForca\prjJogoForca\bin\Debug\prjJogoForca.pdb
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\JogoForca\prjJogoForca\obj\Debug\prjJogoForca.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\JogoForca\prjJogoForca\obj\Debug\prjJogoForca.Form1.resources
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\JogoForca\prjJogoForca\obj\Debug\prjJogoForca.Properties.Resources.resources
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\JogoForca\prjJogoForca\obj\Debug\prjJogoForca.csproj.GenerateResource.Cache
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\JogoForca\prjJogoForca\obj\Debug\prjJogoForca.exe
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\JogoForca\prjJogoForca\obj\Debug\prjJogoForca.pdb
