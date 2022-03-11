@@ -13,6 +13,10 @@ namespace prjJogoForca
         public Forca(List<string> Palavras) 
         {
             this.Palavras = Palavras;
+            this.Pos = 0;
+        }
+        public void Sortear()
+        {
 
         }
     }
