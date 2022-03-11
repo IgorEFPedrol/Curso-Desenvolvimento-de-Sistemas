@@ -63,12 +63,13 @@
             // 
             this.txtLetra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLetra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtLetra.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.txtLetra.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.txtLetra.Location = new System.Drawing.Point(16, 48);
             this.txtLetra.MaxLength = 1;
             this.txtLetra.Name = "txtLetra";
-            this.txtLetra.Size = new System.Drawing.Size(169, 32);
+            this.txtLetra.Size = new System.Drawing.Size(169, 33);
             this.txtLetra.TabIndex = 1;
+            this.txtLetra.Text = "A";
             this.txtLetra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnJogar
