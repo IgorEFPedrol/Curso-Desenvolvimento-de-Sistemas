@@ -17,7 +17,8 @@ namespace prjJogoForca
         }
         public void Sortear()
         {
-
+            Random sorteio = new Random();
+            Pos = sorteio.Next()
         }
     }
 }
