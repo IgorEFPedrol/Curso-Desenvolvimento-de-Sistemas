@@ -24,5 +24,6 @@ namespace prjJogoForca
         {
             return Palavras[Pos];
         }
+
     }
 }

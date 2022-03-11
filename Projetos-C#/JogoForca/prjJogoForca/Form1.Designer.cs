@@ -110,6 +110,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JOGO DA FORCA";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.pnLetra.ResumeLayout(false);
             this.pnLetra.PerformLayout();
             this.ResumeLayout(false);
