@@ -10,6 +10,10 @@ namespace prjJogoForca
     {
         private List<string> Palavras;
         private int Pos;
+        public Forca(List<string> Palavras) 
+        {
+            this.Palavras = Palavras;
 
+        }
     }
 }
