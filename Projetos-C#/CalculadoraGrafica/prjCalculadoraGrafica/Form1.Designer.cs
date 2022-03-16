@@ -36,6 +36,8 @@
             this.lbRaio = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.lbResultado = new System.Windows.Forms.Label();
+            this.opDesenhar = new System.Windows.Forms.CheckBox();
+            this.pnDesenho = new System.Windows.Forms.Panel();
             this.gbCalculo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +88,7 @@
             // 
             // txtRaio
             // 
-            this.txtRaio.Location = new System.Drawing.Point(209, 37);
+            this.txtRaio.Location = new System.Drawing.Point(205, 25);
             this.txtRaio.Name = "txtRaio";
             this.txtRaio.Size = new System.Drawing.Size(140, 20);
             this.txtRaio.TabIndex = 1;
@@ -95,7 +97,7 @@
             // 
             this.lbRaio.AutoSize = true;
             this.lbRaio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbRaio.Location = new System.Drawing.Point(226, 14);
+            this.lbRaio.Location = new System.Drawing.Point(222, 2);
             this.lbRaio.Name = "lbRaio";
             this.lbRaio.Size = new System.Drawing.Size(104, 20);
             this.lbRaio.TabIndex = 2;
@@ -103,33 +105,51 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(209, 63);
+            this.btnCalcular.Location = new System.Drawing.Point(205, 51);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(140, 46);
             this.btnCalcular.TabIndex = 3;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // lbResultado
             // 
             this.lbResultado.BackColor = System.Drawing.Color.Gainsboro;
             this.lbResultado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbResultado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lbResultado.Location = new System.Drawing.Point(0, 114);
+            this.lbResultado.Location = new System.Drawing.Point(8, 134);
             this.lbResultado.Name = "lbResultado";
-            this.lbResultado.Size = new System.Drawing.Size(354, 78);
+            this.lbResultado.Size = new System.Drawing.Size(337, 45);
             this.lbResultado.TabIndex = 4;
             this.lbResultado.Text = "Resultado:";
             this.lbResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbResultado.Click += new System.EventHandler(this.lbResultado_Click);
+            // 
+            // opDesenhar
+            // 
+            this.opDesenhar.AutoSize = true;
+            this.opDesenhar.Location = new System.Drawing.Point(205, 103);
+            this.opDesenhar.Name = "opDesenhar";
+            this.opDesenhar.Size = new System.Drawing.Size(72, 17);
+            this.opDesenhar.TabIndex = 5;
+            this.opDesenhar.Text = "Desenhar";
+            this.opDesenhar.UseVisualStyleBackColor = true;
+            // 
+            // pnDesenho
+            // 
+            this.pnDesenho.Location = new System.Drawing.Point(359, 14);
+            this.pnDesenho.Name = "pnDesenho";
+            this.pnDesenho.Size = new System.Drawing.Size(215, 164);
+            this.pnDesenho.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(354, 192);
+            this.ClientSize = new System.Drawing.Size(586, 199);
+            this.Controls.Add(this.pnDesenho);
+            this.Controls.Add(this.opDesenhar);
             this.Controls.Add(this.lbResultado);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.lbRaio);
@@ -158,6 +178,8 @@
         private System.Windows.Forms.Label lbRaio;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lbResultado;
+        private System.Windows.Forms.CheckBox opDesenhar;
+        private System.Windows.Forms.Panel pnDesenho;
     }
 }
 
