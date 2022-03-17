@@ -40,7 +40,12 @@ namespace prjJogoForca
             Letras = new Label[qtd];
             for (int i = 0; i < qtd; i++)
             {
-                
+                Letras[i] = new Label();
+                Letras[i].Text = "?";
+                Letras[i].AutoSize = false;
+                Letras[i].BorderStyle = BorderStyle.FixedSingle;
+                Letras[i].ForeColor = Color.Blue;
+                Letras[i].BackColor = Color.White;
             }
         }
     }
