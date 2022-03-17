@@ -41,10 +41,21 @@ namespace prjCalculadoraGrafica
             }
 
             if (opDesenhar.Checked == true)
-
                 DesenharCirculo();
-            else
             
+            else pnDesenho.CreateGraphics().Clear(pnDesenho.BackColor);
+            
+        }
+
+        private void DesenharCirculo()
+        {
+            Graphics tela = pnDesenho.CreateGraphics();
+            double diametro = Convert.ToDouble(txtRaio.Text) * 2;
+            Pen caneta = new Pen(Color.Blue, 3);
+            tela.Clear(pnDesenho.BackColor);
+            int x = pnDesenho.Width / 2;
+            int y = pnDesenho.Height / 2;
+            tela.DrawEllipse(caneta, (int)(x-diametro / 2))
         }
     }
 }
