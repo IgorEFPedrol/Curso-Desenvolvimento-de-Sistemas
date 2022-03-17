@@ -37,6 +37,7 @@ namespace prjJogoForca
         private void DesenharPalavra(string p)
         {
             int qtd = p.Length;
+            Letras = new Label[qtd];
 
         }
     }
