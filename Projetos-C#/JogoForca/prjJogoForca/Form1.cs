@@ -38,7 +38,10 @@ namespace prjJogoForca
         {
             int qtd = p.Length;
             Letras = new Label[qtd];
-
+            for (int i = 0; i < qtd; i++)
+            {
+                
+            }
         }
     }
 }
