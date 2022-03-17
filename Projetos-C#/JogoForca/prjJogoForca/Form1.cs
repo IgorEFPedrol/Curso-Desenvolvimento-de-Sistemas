@@ -23,7 +23,9 @@ namespace prjJogoForca
             "GREMIO", "PALMEIRAS", "DIASPORA", "FILOSOFIA", "GUARATINGUETA", "FILANTROPIA", "HERCULES", "JUPITER", "VASCO", "ANHANGUERA", "MARTE", "INGLATERRA",
             "LEAO", "ANACONDA", "VENUS", "ESCORBUTO", "ANEMIA", "SATURNO", "RUSSIA", "BELGICA"
         };
+
         Forca jogo;
+        Label[] Letras;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -34,6 +36,7 @@ namespace prjJogoForca
 
         private void DesenharPalavra(string p)
         {
+            int qtd = p.Length;
 
         }
     }
