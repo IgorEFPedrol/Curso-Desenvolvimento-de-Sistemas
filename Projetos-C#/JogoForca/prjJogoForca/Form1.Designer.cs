@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.pnLetra = new System.Windows.Forms.Panel();
-            this.lbLetra = new System.Windows.Forms.Label();
-            this.txtLetra = new System.Windows.Forms.TextBox();
             this.btnJogar = new System.Windows.Forms.Button();
+            this.txtLetra = new System.Windows.Forms.TextBox();
+            this.lbLetra = new System.Windows.Forms.Label();
             this.pnPalavra = new System.Windows.Forms.Panel();
             this.pnLetra.SuspendLayout();
             this.SuspendLayout();
@@ -47,17 +47,18 @@
             this.pnLetra.Size = new System.Drawing.Size(201, 157);
             this.pnLetra.TabIndex = 0;
             // 
-            // lbLetra
+            // btnJogar
             // 
-            this.lbLetra.BackColor = System.Drawing.Color.Black;
-            this.lbLetra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbLetra.ForeColor = System.Drawing.Color.White;
-            this.lbLetra.Location = new System.Drawing.Point(0, 0);
-            this.lbLetra.Name = "lbLetra";
-            this.lbLetra.Size = new System.Drawing.Size(199, 36);
-            this.lbLetra.TabIndex = 0;
-            this.lbLetra.Text = "DIGITE LETRA";
-            this.lbLetra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnJogar.BackColor = System.Drawing.Color.Silver;
+            this.btnJogar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnJogar.ForeColor = System.Drawing.Color.Black;
+            this.btnJogar.Location = new System.Drawing.Point(0, 90);
+            this.btnJogar.Name = "btnJogar";
+            this.btnJogar.Size = new System.Drawing.Size(199, 65);
+            this.btnJogar.TabIndex = 2;
+            this.btnJogar.Text = "JOGAR";
+            this.btnJogar.UseVisualStyleBackColor = false;
+            this.btnJogar.Click += new System.EventHandler(this.btnJogar_Click);
             // 
             // txtLetra
             // 
@@ -72,24 +73,24 @@
             this.txtLetra.Text = "A";
             this.txtLetra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnJogar
+            // lbLetra
             // 
-            this.btnJogar.BackColor = System.Drawing.Color.Silver;
-            this.btnJogar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnJogar.ForeColor = System.Drawing.Color.Black;
-            this.btnJogar.Location = new System.Drawing.Point(0, 90);
-            this.btnJogar.Name = "btnJogar";
-            this.btnJogar.Size = new System.Drawing.Size(199, 65);
-            this.btnJogar.TabIndex = 2;
-            this.btnJogar.Text = "JOGAR";
-            this.btnJogar.UseVisualStyleBackColor = false;
+            this.lbLetra.BackColor = System.Drawing.Color.Black;
+            this.lbLetra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbLetra.ForeColor = System.Drawing.Color.White;
+            this.lbLetra.Location = new System.Drawing.Point(0, 0);
+            this.lbLetra.Name = "lbLetra";
+            this.lbLetra.Size = new System.Drawing.Size(199, 36);
+            this.lbLetra.TabIndex = 0;
+            this.lbLetra.Text = "DIGITE LETRA";
+            this.lbLetra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnPalavra
             // 
             this.pnPalavra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnPalavra.Location = new System.Drawing.Point(245, 13);
             this.pnPalavra.Name = "pnPalavra";
-            this.pnPalavra.Size = new System.Drawing.Size(556, 155);
+            this.pnPalavra.Size = new System.Drawing.Size(394, 155);
             this.pnPalavra.TabIndex = 1;
             // 
             // Form1
@@ -97,13 +98,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(813, 484);
+            this.ClientSize = new System.Drawing.Size(647, 484);
             this.Controls.Add(this.pnPalavra);
             this.Controls.Add(this.pnLetra);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";

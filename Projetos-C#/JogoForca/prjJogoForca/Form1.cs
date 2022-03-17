@@ -38,15 +38,35 @@ namespace prjJogoForca
         {
             int qtd = p.Length;
             Letras = new Label[qtd];
+            int cx = 10;
+            int cy = 10;
             for (int i = 0; i < qtd; i++)
             {
                 Letras[i] = new Label();
                 Letras[i].Text = "?";
                 Letras[i].AutoSize = false;
+                Letras[i].Width = 30;
+                Letras[i].Height = 30;
                 Letras[i].BorderStyle = BorderStyle.FixedSingle;
                 Letras[i].ForeColor = Color.Blue;
                 Letras[i].BackColor = Color.White;
+                Letras[i].TextAlign = ContentAlignment.MiddleCenter;
+                if (i % 5 == 0 && i != 0)
+                {
+                    cy += 35;
+                    cx = 10;
+                }
+                Letras[i].Top = cy;
+                Letras[i].Left = cx;
+                cx += 35;
+                pnPalavra.Controls.Add(Letras[i]);
+                Letras[i].Show();
             }
+        }
+
+        private void btnJogar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
