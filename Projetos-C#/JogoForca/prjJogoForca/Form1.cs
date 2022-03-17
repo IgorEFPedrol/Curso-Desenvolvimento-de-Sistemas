@@ -29,7 +29,12 @@ namespace prjJogoForca
         {
             jogo = new Forca(lista);
             jogo.Sortear();
-            MessageBox.Show(jogo.DevolvePalavra());
+            DesenharPalavra(jogo.DevolvePalavra());
+        }
+
+        private void DesenharPalavra(string p)
+        {
+
         }
     }
 }
