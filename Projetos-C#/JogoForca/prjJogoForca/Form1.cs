@@ -66,7 +66,17 @@ namespace prjJogoForca
 
         private void btnJogar_Click(object sender, EventArgs e)
         {
+           DesenharLetra(txtLetra.Text);
+        }
 
+        private void DesenharLetra(string letra)
+        {
+            string p = jogo.DevolvePalavra();
+            
+            for (int i = 0; i < p.Length; i++)
+            {
+
+            }
         }
     }
 }
