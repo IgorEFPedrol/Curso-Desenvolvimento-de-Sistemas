@@ -75,7 +75,10 @@ namespace prjJogoForca
             
             for (int i = 0; i < p.Length; i++)
             {
-
+                if (p.Substring(i, 1).Equals(letra))
+                {
+                    Letras[i].Text = letra;
+                }
             }
         }
     }
