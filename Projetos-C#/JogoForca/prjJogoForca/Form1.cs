@@ -21,7 +21,8 @@ namespace prjJogoForca
         {
             "JARARACA", "ROMA", "ESPELHO", "RONDONIA", "JABUTI", "DINAMARCA", "ITALIA", "ENDOSCOPIA", "GOIANIA", "JIBOIA", "GASTRITE", "VARIOLA", "FLUMINENSE",
             "GREMIO", "PALMEIRAS", "DIASPORA", "FILOSOFIA", "GUARATINGUETA", "FILANTROPIA", "HERCULES", "JUPITER", "VASCO", "ANHANGUERA", "MARTE", "INGLATERRA",
-            "LEAO", "ANACONDA", "VENUS", "ESCORBUTO", "ANEMIA", "SATURNO", "RUSSIA", "BELGICA"
+            "LEAO", "ANACONDA", "VENUS", "ANEMIA", "SATURNO", "RUSSIA", "BELGICA", "FRAMBOESA", "AMORA", "TELEFERICO", "MOTOCICLETA", "AMARELO", "CAMELO",
+            "GUAXINIM", "AZULEJO", "CATARRO", "QUARTZO", "VORTICE", "QUIZ", "MARFIM", "INTRIGANTE"
         };
 
         Forca jogo;
@@ -67,6 +68,8 @@ namespace prjJogoForca
         private void btnJogar_Click(object sender, EventArgs e)
         {
            DesenharLetra(txtLetra.Text);
+           txtLetra.Focus();
+           txtLetra.SelectAll();
         }
 
         private void DesenharLetra(string letra)
