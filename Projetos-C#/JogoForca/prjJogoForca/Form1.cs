@@ -27,6 +27,7 @@ namespace prjJogoForca
 
         Forca jogo;
         Label[] Letras;
+        int Erro = 0;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -75,14 +76,29 @@ namespace prjJogoForca
         private void DesenharLetra(string letra)
         {
             string p = jogo.DevolvePalavra();
+            bool achei = false;
             
             for (int i = 0; i < p.Length; i++)
             {
                 if (p.Substring(i, 1).Equals(letra))
                 {
                     Letras[i].Text = letra;
+                    achei = true;
                 }
             }
+
+            if (achei == false)
+            {
+                Erro++;
+                DesenharBoneco();
+            }
+        }
+
+        private void DesenharBoneco()
+        {
+            string arquivo = Environment.CurrentDirectory + "\\imagens\\forca" + Erro + ".png";
+            pbBoneco.Image = Image.FromFile(arquivo);
+           
         }
     }
 }

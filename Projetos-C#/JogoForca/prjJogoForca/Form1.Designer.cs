@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnLetra = new System.Windows.Forms.Panel();
             this.btnJogar = new System.Windows.Forms.Button();
             this.txtLetra = new System.Windows.Forms.TextBox();
             this.lbLetra = new System.Windows.Forms.Label();
             this.pnPalavra = new System.Windows.Forms.Panel();
+            this.pbForca = new System.Windows.Forms.PictureBox();
+            this.pbBoneco = new System.Windows.Forms.PictureBox();
             this.pnLetra.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBoneco)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLetra
@@ -51,6 +56,7 @@
             // 
             this.btnJogar.BackColor = System.Drawing.Color.Silver;
             this.btnJogar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnJogar.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
             this.btnJogar.ForeColor = System.Drawing.Color.Black;
             this.btnJogar.Location = new System.Drawing.Point(0, 90);
             this.btnJogar.Name = "btnJogar";
@@ -77,6 +83,7 @@
             // 
             this.lbLetra.BackColor = System.Drawing.Color.Black;
             this.lbLetra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbLetra.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLetra.ForeColor = System.Drawing.Color.White;
             this.lbLetra.Location = new System.Drawing.Point(0, 0);
             this.lbLetra.Name = "lbLetra";
@@ -93,12 +100,31 @@
             this.pnPalavra.Size = new System.Drawing.Size(394, 155);
             this.pnPalavra.TabIndex = 1;
             // 
+            // pbForca
+            // 
+            this.pbForca.Image = ((System.Drawing.Image)(resources.GetObject("pbForca.Image")));
+            this.pbForca.Location = new System.Drawing.Point(12, 175);
+            this.pbForca.Name = "pbForca";
+            this.pbForca.Size = new System.Drawing.Size(322, 417);
+            this.pbForca.TabIndex = 2;
+            this.pbForca.TabStop = false;
+            // 
+            // pbBoneco
+            // 
+            this.pbBoneco.Location = new System.Drawing.Point(125, 221);
+            this.pbBoneco.Name = "pbBoneco";
+            this.pbBoneco.Size = new System.Drawing.Size(196, 434);
+            this.pbBoneco.TabIndex = 3;
+            this.pbBoneco.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(647, 484);
+            this.ClientSize = new System.Drawing.Size(666, 684);
+            this.Controls.Add(this.pbBoneco);
+            this.Controls.Add(this.pbForca);
             this.Controls.Add(this.pnPalavra);
             this.Controls.Add(this.pnLetra);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,6 +140,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnLetra.ResumeLayout(false);
             this.pnLetra.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBoneco)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,6 +153,8 @@
         private System.Windows.Forms.TextBox txtLetra;
         private System.Windows.Forms.Button btnJogar;
         private System.Windows.Forms.Panel pnPalavra;
+        private System.Windows.Forms.PictureBox pbForca;
+        private System.Windows.Forms.PictureBox pbBoneco;
     }
 }
 
