@@ -43,6 +43,7 @@
             // 
             // pnLetra
             // 
+            this.pnLetra.BackColor = System.Drawing.Color.Transparent;
             this.pnLetra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnLetra.Controls.Add(this.btnJogar);
             this.pnLetra.Controls.Add(this.txtLetra);
@@ -54,10 +55,10 @@
             // 
             // btnJogar
             // 
-            this.btnJogar.BackColor = System.Drawing.Color.Silver;
+            this.btnJogar.BackColor = System.Drawing.Color.Transparent;
             this.btnJogar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnJogar.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
-            this.btnJogar.ForeColor = System.Drawing.Color.Black;
+            this.btnJogar.ForeColor = System.Drawing.Color.Red;
             this.btnJogar.Location = new System.Drawing.Point(0, 90);
             this.btnJogar.Name = "btnJogar";
             this.btnJogar.Size = new System.Drawing.Size(199, 65);
@@ -94,6 +95,7 @@
             // 
             // pnPalavra
             // 
+            this.pnPalavra.BackColor = System.Drawing.Color.Transparent;
             this.pnPalavra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnPalavra.Location = new System.Drawing.Point(245, 13);
             this.pnPalavra.Name = "pnPalavra";
@@ -102,6 +104,7 @@
             // 
             // pbForca
             // 
+            this.pbForca.BackColor = System.Drawing.Color.Transparent;
             this.pbForca.Image = ((System.Drawing.Image)(resources.GetObject("pbForca.Image")));
             this.pbForca.Location = new System.Drawing.Point(12, 175);
             this.pbForca.Name = "pbForca";
@@ -111,9 +114,10 @@
             // 
             // pbBoneco
             // 
-            this.pbBoneco.Location = new System.Drawing.Point(125, 221);
+            this.pbBoneco.BackColor = System.Drawing.Color.Transparent;
+            this.pbBoneco.Location = new System.Drawing.Point(126, 216);
             this.pbBoneco.Name = "pbBoneco";
-            this.pbBoneco.Size = new System.Drawing.Size(196, 434);
+            this.pbBoneco.Size = new System.Drawing.Size(196, 429);
             this.pbBoneco.TabIndex = 3;
             this.pbBoneco.TabStop = false;
             // 
@@ -122,7 +126,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(666, 684);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(666, 657);
             this.Controls.Add(this.pbBoneco);
             this.Controls.Add(this.pbForca);
             this.Controls.Add(this.pnPalavra);
