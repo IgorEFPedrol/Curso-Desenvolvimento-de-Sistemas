@@ -15,13 +15,14 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
     <title>Bootstrap</title>
   </head>
   <body>
       <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                     <div class="container-fluid">
-                      <a class="navbar-brand" href="#">Navbar</a>
+                      <a class="navbar-brand" href="#">Conversor Universal</a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -29,45 +30,88 @@
                       <div class="collapse navbar-collapse" id="navbarColor01">
                         <ul class="navbar-nav me-auto">
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Home
+                            <a class="nav-link active" href="#">Início
                               <span class="visually-hidden">(current)</span>
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="#">Mais usados</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="#">Recentes</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="#">Sobre</a>
                           </li>
                           <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Conversões</a>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Separated link</a>
+                              <a class="dropdown-item" href="#">Temperatura</a>
+                              <a class="dropdown-item" href="#">Dinheiro</a>
+                              <a class="dropdown-item" href="#">Distância</a>
+                              <a class="dropdown-item" href="#">Peso</a>
                             </div>
                           </li>
                         </ul>
                         <form class="d-flex">
-                          <input class="form-control me-sm-2" type="text" placeholder="Search">
-                          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                          <input class="form-control me-sm-2" type="text" placeholder="Pesquisar">
+                          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
                         </form>
                       </div>
                     </div>
                   </nav>
 
+            <div class="row mt-3">
+                <h2>Escolha o que deseja converter</h2>
+            </div>
+            <div class="row mt-1">
+                <div class="col-3 mt-2">
+                    <form>
+                            <div class="form-group">
+                              <label for="exampleFormControlSelect1">Converter</label>
+                              <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Celsius</option>
+                                <option>Kelvin</option>
+                                <option>Fahrenheit</option>
+                              </select>
+                            </div>
+                    </form>        
+                </div> 
+                <div class="col-3 mt-2">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Para</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Kelvin</option>
+                            <option>Celsius</option>
+                            <option>Fahrenheit</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-3">
+                <h3>Insira o valor a ser convertido</h3>
+            </div>
+            <div class="col mt-3">
+                <div class="form-group">
+                    <input type="number" id="valorConvert">        
+                </div>
+                    
+            </div>
 
+            <div class="col mt-3">
+                    <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnCalcular">
+                    Calcular
+                    </button>
+            </div>     
 
-
-
-
-
-
+            <div class="row">
+                <div class="col mt-3">
+                    <input type="number" id="resultado" placeholder="Resultado">
+                </div>
+            </div> 
       </div>
   </body>
 </html>
