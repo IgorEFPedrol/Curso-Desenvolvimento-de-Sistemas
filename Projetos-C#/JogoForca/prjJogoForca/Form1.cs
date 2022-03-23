@@ -77,7 +77,12 @@ namespace prjJogoForca
         {
             string p = jogo.DevolvePalavra();
             bool achei = false;
-            
+            if (lbLetras.Text.Contains(letra))
+            {
+                MessageBox.Show("Letra já digitada");
+                return;
+            }
+            lbLetras.Text += letra + " ";
             for (int i = 0; i < p.Length; i++)
             {
                 if (p.Substring(i, 1).Equals(letra))
@@ -98,6 +103,23 @@ namespace prjJogoForca
                 Derrota();
 
             }
+
+            Vitoria();
+        }
+
+        private void Vitoria()
+        {
+            string p = jogo.DevolvePalavra();
+            string tmp = "";
+            foreach (Label letra in Letras)
+            {
+                tmp += letra.Text;
+            }
+            if (p.Equals(tmp))
+            {
+                MessageBox.Show("Voce Venceu");
+                NovoJogo();
+            }
         }
 
         private void Derrota()
@@ -111,7 +133,9 @@ namespace prjJogoForca
             Erro = 0;
             pnPalavra.Controls.Clear();
             pbBoneco.Image = null;
-
+            jogo.Sortear();
+            DesenharPalavra(jogo.DevolvePalavra());
+            lbLetras.Text = "";
         }
 
         private void DesenharBoneco()
