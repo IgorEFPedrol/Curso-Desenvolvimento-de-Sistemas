@@ -92,13 +92,32 @@ namespace prjJogoForca
                 Erro++;
                 DesenharBoneco();
             }
+
+            if (Erro == 6)
+            {
+                Derrota();
+
+            }
+        }
+
+        private void Derrota()
+        {
+            MessageBox.Show("Voce perdeu. A palavra era " + jogo.DevolvePalavra());
+            NovoJogo();
+        }
+
+        private void NovoJogo()
+        {
+            Erro = 0;
+            pnPalavra.Controls.Clear();
+            pbBoneco.Image = null;
+
         }
 
         private void DesenharBoneco()
         {
             string arquivo = Environment.CurrentDirectory + "\\imagens\\forca" + Erro + ".png";
             pbBoneco.Image = Image.FromFile(arquivo);
-           
         }
     }
 }
