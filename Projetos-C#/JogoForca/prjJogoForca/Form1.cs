@@ -154,11 +154,27 @@ namespace prjJogoForca
             int seg = Int16.Parse(lbCronometro.Text);
             seg--;
             lbCronometro.Text = seg.ToString();
+            if (seg <= 60)
+            {
+                Console.Beep();
+                lbCronometro.ForeColor = Color.Yellow;
+            }
+            if (seg <= 40)
+            {
+                Console.Beep();
+                lbCronometro.ForeColor = Color.Orange;
+            }
+            if (seg <= 15)
+            {
+                Console.Beep();
+                lbCronometro.ForeColor = Color.Red;
+            }
             if (seg <= 0)
             {
                 timer1.Stop();
                 Derrota();
                 lbCronometro.Text = "120";
+                lbCronometro.ForeColor = Color.White;
                 timer1.Start();
             }
         }
