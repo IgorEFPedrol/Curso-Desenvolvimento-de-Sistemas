@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnLetra = new System.Windows.Forms.Panel();
             this.btnJogar = new System.Windows.Forms.Button();
@@ -46,6 +47,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.lbCronometro = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnLetra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbForca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBoneco)).BeginInit();
@@ -101,10 +104,10 @@
             // 
             // lbLetra
             // 
-            this.lbLetra.BackColor = System.Drawing.Color.Black;
+            this.lbLetra.BackColor = System.Drawing.Color.Transparent;
             this.lbLetra.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbLetra.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLetra.ForeColor = System.Drawing.Color.White;
+            this.lbLetra.ForeColor = System.Drawing.Color.Red;
             this.lbLetra.Location = new System.Drawing.Point(0, 0);
             this.lbLetra.Name = "lbLetra";
             this.lbLetra.Size = new System.Drawing.Size(199, 36);
@@ -144,9 +147,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(554, 332);
+            this.pictureBox2.Location = new System.Drawing.Point(539, 301);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 37);
+            this.pictureBox2.Size = new System.Drawing.Size(88, 68);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -252,6 +255,24 @@
             this.pictureBox9.TabIndex = 14;
             this.pictureBox9.TabStop = false;
             // 
+            // lbCronometro
+            // 
+            this.lbCronometro.BackColor = System.Drawing.Color.Transparent;
+            this.lbCronometro.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCronometro.ForeColor = System.Drawing.Color.White;
+            this.lbCronometro.Location = new System.Drawing.Point(636, 33);
+            this.lbCronometro.Name = "lbCronometro";
+            this.lbCronometro.Size = new System.Drawing.Size(144, 114);
+            this.lbCronometro.TabIndex = 15;
+            this.lbCronometro.Text = "120";
+            this.lbCronometro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -259,6 +280,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(792, 657);
+            this.Controls.Add(this.lbCronometro);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -320,6 +342,8 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label lbCronometro;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

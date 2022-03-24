@@ -143,5 +143,10 @@ namespace prjJogoForca
             string arquivo = Environment.CurrentDirectory + "\\imagens\\forca" + Erro + ".png";
             pbBoneco.Image = Image.FromFile(arquivo);
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
