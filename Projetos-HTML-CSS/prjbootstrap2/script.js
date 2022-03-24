@@ -1,4 +1,3 @@
-
 var botao = document.getElementById("btnCalcular").addEventListener("click",
     function mostrarResult() {
         var celsius = 0.0;
