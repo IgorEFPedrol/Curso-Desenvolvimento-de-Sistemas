@@ -136,6 +136,7 @@ namespace prjJogoForca
         {
             MessageBox.Show("Voce perdeu. A palavra era " + jogo.DevolvePalavra());
             NovoJogo();
+            lbCronometro.ForeColor = Color.White;
         }
 
         private void NovoJogo()
