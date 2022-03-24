@@ -119,8 +119,11 @@ namespace prjJogoForca
             }
             if (p.Equals(tmp))
             {
+                timer1.Stop();
                 MessageBox.Show("Voce Venceu");
                 NovoJogo();
+                lbCronometro.Text = "120";
+                timer1.Start();
             }
         }
 
