@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,12 +29,16 @@ namespace prjJogoForca
         Forca jogo;
         Label[] Letras;
         int Erro = 0;
+        SoundPlayer som;
 
         private void Form1_Load(object sender, EventArgs e)
         {
             jogo = new Forca(lista);
             jogo.Sortear();
             DesenharPalavra(jogo.DevolvePalavra());
+            som = new SoundPlayer();
+            som.SoundLocation = Environment.CurrentDirectory + "\\fundo.wav";
+            som.PlayLooping();
         }
 
         private void DesenharPalavra(string p)
