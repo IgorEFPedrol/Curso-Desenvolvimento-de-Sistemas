@@ -100,8 +100,10 @@ namespace prjJogoForca
 
             if (Erro == 6)
             {
+                timer1.Stop();
                 Derrota();
-
+                lbCronometro.Text = "120";
+                timer1.Start();
             }
 
             Vitoria();
