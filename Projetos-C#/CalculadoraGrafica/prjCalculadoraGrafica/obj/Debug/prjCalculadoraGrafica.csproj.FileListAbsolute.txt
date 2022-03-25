@@ -6,3 +6,4 @@ C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\Ca
 C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\obj\Debug\prjCalculadoraGrafica.csproj.GenerateResource.Cache
 C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\obj\Debug\prjCalculadoraGrafica.exe
 C:\Users\aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\obj\Debug\prjCalculadoraGrafica.pdb
+C:\Users\Aluno\Documents\GitHub\Curso-Desenvolvimento-de-Sistemas\Projetos-C#\CalculadoraGrafica\prjCalculadoraGrafica\obj\Debug\prjCalculadoraGrafica.csprojResolveAssemblyReference.cache

@@ -60,7 +60,6 @@
             this.rbVolume.Name = "rbVolume";
             this.rbVolume.Size = new System.Drawing.Size(60, 17);
             this.rbVolume.TabIndex = 2;
-            this.rbVolume.TabStop = true;
             this.rbVolume.Text = "Volume";
             this.rbVolume.UseVisualStyleBackColor = true;
             // 
@@ -71,13 +70,13 @@
             this.rbPerimetro.Name = "rbPerimetro";
             this.rbPerimetro.Size = new System.Drawing.Size(71, 17);
             this.rbPerimetro.TabIndex = 1;
-            this.rbPerimetro.TabStop = true;
             this.rbPerimetro.Text = "Perímetro";
             this.rbPerimetro.UseVisualStyleBackColor = true;
             // 
             // rbArea
             // 
             this.rbArea.AutoSize = true;
+            this.rbArea.Checked = true;
             this.rbArea.Location = new System.Drawing.Point(6, 19);
             this.rbArea.Name = "rbArea";
             this.rbArea.Size = new System.Drawing.Size(47, 17);
@@ -92,6 +91,8 @@
             this.txtRaio.Name = "txtRaio";
             this.txtRaio.Size = new System.Drawing.Size(140, 20);
             this.txtRaio.TabIndex = 1;
+            this.txtRaio.Text = "0";
+            this.txtRaio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lbRaio
             // 

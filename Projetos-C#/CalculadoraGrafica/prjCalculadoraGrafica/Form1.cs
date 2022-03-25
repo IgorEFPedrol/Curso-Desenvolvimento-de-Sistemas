@@ -55,7 +55,12 @@ namespace prjCalculadoraGrafica
             tela.Clear(pnDesenho.BackColor);
             int x = pnDesenho.Width / 2;
             int y = pnDesenho.Height / 2;
-            tela.DrawEllipse(caneta, (int)(x-diametro / 2))
+            tela.DrawEllipse(caneta, (int)(x - diametro / 2), (int) (y - diametro / 2), (int) diametro, (int) diametro);
+            caneta.Width = 1;
+            caneta.Color = Color.OliveDrab;
+            tela.DrawLine(caneta, 0, y, pnDesenho.Width, y);
+            tela.DrawLine(caneta, x, 0, x, pnDesenho.Height);
+            tela.DrawRectangle(caneta, (int)(x - diametro / 2), (int)(y - diametro / 2), (int)diametro, (int)diametro);
         }
     }
 }
