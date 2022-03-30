@@ -162,7 +162,6 @@ namespace prjJogoForca
             lbCronometro.Text = seg.ToString();
             if (seg <= 60)
             {
-                Console.Beep();
                 lbCronometro.ForeColor = Color.Yellow;
             }
             if (seg <= 40)
