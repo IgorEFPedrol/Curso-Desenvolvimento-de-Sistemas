@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -18,13 +19,8 @@ namespace prjJogoForca
             InitializeComponent();
         }
 
-        List<string> lista = new List<string>()
-        {
-            "JARARACA", "ROMA", "ESPELHO", "RONDONIA", "JABUTI", "DINAMARCA", "ITALIA", "ENDOSCOPIA", "GOIANIA", "JIBOIA", "GASTRITE", "VARIOLA", "FLUMINENSE",
-            "GREMIO", "PALMEIRAS", "DIASPORA", "FILOSOFIA", "GUARATINGUETA", "FILANTROPIA", "HERCULES", "JUPITER", "VASCO", "ANHANGUERA", "MARTE", "INGLATERRA",
-            "LEAO", "ANACONDA", "VENUS", "ANEMIA", "SATURNO", "RUSSIA", "BELGICA", "FRAMBOESA", "AMORA", "TELEFERICO", "MOTOCICLETA", "AMARELO", "CAMELO",
-            "GUAXINIM", "AZULEJO", "CATARRO", "QUARTZO", "VORTICE", "QUIZ", "MARFIM", "INTRIGANTE"
-        };
+        List<string> lista = new List<string>();
+        List<string> dicas = new List<string>();
 
         Forca jogo;
         Label[] Letras;
@@ -33,12 +29,28 @@ namespace prjJogoForca
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            CarregarLista();
             jogo = new Forca(lista);
             jogo.Sortear();
             DesenharPalavra(jogo.DevolvePalavra());
             som = new SoundPlayer();
             som.SoundLocation = Environment.CurrentDirectory + "\\fundo.wav";
             som.PlayLooping();
+        }
+
+        private void CarregarLista()
+        {
+            string file = Environment.CurrentDirectory + "\\lista.txt";
+            StreamReader st = new StreamReader(file,Encoding.UTF8);
+            int qtd = File.ReadAllLines(file).Count();
+            for (int i = 0; i < qtd; i++)
+            {
+                string linha = st.ReadLine();
+                string[] campo = linha.Split(',');
+                lista.Add(campo[0]);
+                dicas.Add(campo[1]);
+            }
+            st.Close();
         }
 
         private void DesenharPalavra(string p)

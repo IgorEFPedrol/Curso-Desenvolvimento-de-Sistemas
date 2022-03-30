@@ -49,6 +49,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lbCronometro = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbDica = new System.Windows.Forms.Label();
             this.pnLetra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbForca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBoneco)).BeginInit();
@@ -119,9 +120,9 @@
             // 
             this.pnPalavra.BackColor = System.Drawing.Color.Transparent;
             this.pnPalavra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnPalavra.Location = new System.Drawing.Point(245, 13);
+            this.pnPalavra.Location = new System.Drawing.Point(245, 61);
             this.pnPalavra.Name = "pnPalavra";
-            this.pnPalavra.Size = new System.Drawing.Size(369, 155);
+            this.pnPalavra.Size = new System.Drawing.Size(369, 107);
             this.pnPalavra.TabIndex = 1;
             // 
             // pbForca
@@ -273,6 +274,18 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lbDica
+            // 
+            this.lbDica.BackColor = System.Drawing.Color.Transparent;
+            this.lbDica.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDica.ForeColor = System.Drawing.Color.Red;
+            this.lbDica.Location = new System.Drawing.Point(245, 25);
+            this.lbDica.Name = "lbDica";
+            this.lbDica.Size = new System.Drawing.Size(369, 30);
+            this.lbDica.TabIndex = 16;
+            this.lbDica.Text = "DICA:";
+            this.lbDica.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -280,6 +293,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(792, 657);
+            this.Controls.Add(this.lbDica);
             this.Controls.Add(this.lbCronometro);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -344,6 +358,7 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label lbCronometro;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbDica;
     }
 }
 
