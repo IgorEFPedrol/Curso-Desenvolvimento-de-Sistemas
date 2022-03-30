@@ -36,6 +36,7 @@ namespace prjJogoForca
             som = new SoundPlayer();
             som.SoundLocation = Environment.CurrentDirectory + "\\fundo.wav";
             som.PlayLooping();
+            lbDica.Text = "DICA: " + dicas[jogo.Pos];
         }
 
         private void CarregarLista()
@@ -141,6 +142,7 @@ namespace prjJogoForca
                 NovoJogo();
                 lbCronometro.Text = "120";
                 timer1.Start();
+                lbCronometro.ForeColor = Color.White;
             }
         }
 
@@ -159,6 +161,7 @@ namespace prjJogoForca
             jogo.Sortear();
             DesenharPalavra(jogo.DevolvePalavra());
             lbLetras.Text = "";
+            lbDica.Text = "DICA: " + dicas[jogo.Pos];
         }
 
         private void DesenharBoneco()
