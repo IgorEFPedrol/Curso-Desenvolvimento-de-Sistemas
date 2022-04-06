@@ -54,6 +54,11 @@ namespace prjRelogio
             double angulo = -90 + (seg * 6);
             Pen caneta = new Pen(Color.White, 4);
             g.DrawLine(caneta, cx, cy, cx + xseg, cy + yseg);
+            double rad = Math.PI * angulo / 180;
+            xseg = (int)(raio * Math.Cos(rad));
+            yseg = (int)(raio * Math.Sin(rad));
+            caneta.Color = Color.Red;
+            g.DrawLine(caneta, cx, cy, cx + xseg, cy + yseg);
 
         }
     }
