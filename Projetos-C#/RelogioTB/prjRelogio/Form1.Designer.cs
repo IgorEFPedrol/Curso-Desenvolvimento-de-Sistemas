@@ -28,24 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pbRelogio = new System.Windows.Forms.PictureBox();
+            this.relogio = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbRelogio)).BeginInit();
             this.SuspendLayout();
             // 
             // pbRelogio
             // 
-            this.pbRelogio.Location = new System.Drawing.Point(12, 12);
+            this.pbRelogio.Location = new System.Drawing.Point(10, 12);
             this.pbRelogio.Name = "pbRelogio";
-            this.pbRelogio.Size = new System.Drawing.Size(690, 462);
+            this.pbRelogio.Size = new System.Drawing.Size(329, 315);
+            this.pbRelogio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRelogio.TabIndex = 0;
             this.pbRelogio.TabStop = false;
+            // 
+            // relogio
+            // 
+            this.relogio.Enabled = true;
+            this.relogio.Interval = 1000;
+            this.relogio.Tick += new System.EventHandler(this.relogio_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(714, 486);
+            this.ClientSize = new System.Drawing.Size(351, 333);
             this.Controls.Add(this.pbRelogio);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -64,6 +73,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbRelogio;
+        private System.Windows.Forms.Timer relogio;
     }
 }
 
