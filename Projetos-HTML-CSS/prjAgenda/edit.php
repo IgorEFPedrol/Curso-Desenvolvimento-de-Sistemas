@@ -1,20 +1,23 @@
 <?php
-    include_once('db_conn.php');
 
+    include_once('db_conn.php');
+    
     if(!empty($_GET['id_compromisso']))
     {
+        echo "ENTROU AQUI";
         $id = $_GET['id_compromisso'];
         $sqlSelect = "SELECT * FROM compromissos WHERE id=$id";
-        $result = $conexao->query($sqlSelect);
-        if($result->num_rows > 0)
-        {
-            while($user_data = mysqli_fetch_assoc($result))
-            {
-                $nome = $user_data['nome'];
-                $descricao = $user_data['descricao'];
-                $data_compromisso = $user_data['data_compromisso'];
-            }
-        }
+        $result = $conn->query($sqlSelect);
+       //if($result->num_rows != 1)
+       // {
+       //     while($user_data = mysqli_fetch_assoc($result))
+        //    {
+       //         $nome = $user_data['nome'];
+        //        $descricao = $user_data['descricao'];
+        //        $data_compromisso = $user_data['data_compromisso'];
+         //   }
+       // }
+        
     }
 ?>
 
@@ -31,16 +34,18 @@
     <div class="container">
         <div class="row d-flex col-6 d-grid mx-auto mt-5">
             <form action="saveEdit.php" method="POST">
+                
                 <label for="input_name" class="mt-3">Nome do Compromisso</label>
-                <input type="text" class="form-control mt-2" id="input_name">
+                <input type="text" class="form-control mt-2" id="input_name" name="nome">
         
                 <label for="input_desc" class="mt-3">Descrição do Compromisso</label>
-                <input type="text" class="form-control mt-2" id="input_desc">
+                <input type="text" class="form-control mt-2" id="input_desc" name="descricao">
         
                 <label for="input_date" class="mt-3">Data do Compromisso</label>
-                <input type="date" class="form-control mt-2" id="input_date">
+                <input type="datetime-local" class="form-control mt-2" id="input_date" name="data">
 
-                <input type="submit" name="update" id="submit" class="mt-3 text-center">
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                <input type="submit" name="update" id="submit" class="mt-3">
             </form>
         </div>
     </div>
