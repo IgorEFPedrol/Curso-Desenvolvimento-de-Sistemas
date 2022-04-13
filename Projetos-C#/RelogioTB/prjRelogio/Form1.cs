@@ -46,12 +46,19 @@ namespace prjRelogio
             DesenharPonteiroMinuto();
             DesenharPonteiroHora();
             DesenharCentro();
+            DesenharDigital();
             pbRelogio.CreateGraphics().DrawImage(fundo, 0, 0);
+        }
+
+        private void DesenharDigital()
+        {
+            SolidBrush corSolida = new SolidBrush(Color.Black);
+            g.DrawString(DateTime.Now.ToLongTimeString(), new Font("Arial", 12), corSolida, 125, 50);
         }
 
         private void DesenharFundo()
         {
-            g.DrawImage(Image.FromFile(path), 0, 0);
+            g.DrawImage(Image.FromFile(path), 0, 0, pbRelogio.Width, pbRelogio.Height);
         }
 
         private void DesenharCentro()
