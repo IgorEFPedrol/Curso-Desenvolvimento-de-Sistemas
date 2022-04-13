@@ -18,7 +18,7 @@ namespace prjRelogio
         }
 
         string path = Environment.CurrentDirectory + "\\fundo.png";
-        Image fundo;
+        Bitmap fundo;
         Graphics g;
 
         int hora;
@@ -30,11 +30,9 @@ namespace prjRelogio
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            fundo = Image.FromFile(path);
+            fundo = new Bitmap(pbRelogio.Width, pbRelogio.Height);
             pbRelogio.Image = fundo;
-            g = pbRelogio.CreateGraphics();
-            pbRelogio.Width = fundo.Width;
-            pbRelogio.Height = fundo.Height;
+            g = Graphics.FromImage(fundo);
         }
 
         private void relogio_Tick(object sender, EventArgs e)
@@ -43,19 +41,38 @@ namespace prjRelogio
             hora = bios.Hour;
             min = bios.Minute;
             seg = bios.Second;
+            DesenharFundo();
             DesenharPonteiroSegundo();
             DesenharPonteiroMinuto();
             DesenharPonteiroHora();
+            DesenharCentro();
+            pbRelogio.CreateGraphics().DrawImage(fundo, 0, 0);
+        }
+
+        private void DesenharFundo()
+        {
+            g.DrawImage(Image.FromFile(path), 0, 0);
+        }
+
+        private void DesenharCentro()
+        {
+            SolidBrush corSolida = new SolidBrush(Color.Red);
+            int cx = pbRelogio.Width / 2;
+            int cy = pbRelogio.Height / 2;
+            g.FillEllipse(corSolida, cx - 10, cy - 10, 20, 20);
+            corSolida.Color = Color.White;
+            g.FillEllipse(corSolida, cx - 8, cy - 8, 16, 16);
         }
 
         private void DesenharPonteiroHora()
         {
             int cx = pbRelogio.Width / 2;
             int cy = pbRelogio.Height / 2;
-            int raio = 80;
+            int raio = 75;
             if (hora > 12) hora = hora - 12;
-            double angulo = -90 + (hora * 6);
+            double angulo = -90 + (hora * 30);
             Pen caneta = new Pen(Color.White, 7);
+            caneta.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
             g.DrawLine(caneta, cx, cy, cx + xhora, cy + yhora);
             double rad = Math.PI * angulo / 180;
             xhora = (int)(raio * Math.Cos(rad));
@@ -71,11 +88,12 @@ namespace prjRelogio
             int raio = 90;
             double angulo = -90 + (min * 6);
             Pen caneta = new Pen(Color.White, 4);
+            caneta.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
             g.DrawLine(caneta, cx, cy, cx + xmin, cy + ymin);
             double rad = Math.PI * angulo / 180;
             xmin = (int)(raio * Math.Cos(rad));
             ymin = (int)(raio * Math.Sin(rad));
-            caneta.Color = Color.Black;
+            caneta.Color = Color.Blue;
             g.DrawLine(caneta, cx, cy, cx + xmin, cy + ymin);
         }
 
@@ -85,7 +103,8 @@ namespace prjRelogio
             int cy = pbRelogio.Height / 2;
             int raio = 110;
             double angulo = -90 + (seg * 6);
-            Pen caneta = new Pen(Color.White, 4);
+            Pen caneta = new Pen(Color.Transparent, 4);
+            caneta.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
             g.DrawLine(caneta, cx, cy, cx + xseg, cy + yseg);
             double rad = Math.PI * angulo / 180;
             xseg = (int)(raio * Math.Cos(rad));
