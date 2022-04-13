@@ -44,6 +44,39 @@ namespace prjRelogio
             min = bios.Minute;
             seg = bios.Second;
             DesenharPonteiroSegundo();
+            DesenharPonteiroMinuto();
+            DesenharPonteiroHora();
+        }
+
+        private void DesenharPonteiroHora()
+        {
+            int cx = pbRelogio.Width / 2;
+            int cy = pbRelogio.Height / 2;
+            int raio = 80;
+            if (hora > 12) hora = hora - 12;
+            double angulo = -90 + (hora * 6);
+            Pen caneta = new Pen(Color.White, 7);
+            g.DrawLine(caneta, cx, cy, cx + xhora, cy + yhora);
+            double rad = Math.PI * angulo / 180;
+            xhora = (int)(raio * Math.Cos(rad));
+            yhora = (int)(raio * Math.Sin(rad));
+            caneta.Color = Color.Black;
+            g.DrawLine(caneta, cx, cy, cx + xhora, cy + yhora);
+        }
+
+        private void DesenharPonteiroMinuto()
+        {
+            int cx = pbRelogio.Width / 2;
+            int cy = pbRelogio.Height / 2;
+            int raio = 90;
+            double angulo = -90 + (min * 6);
+            Pen caneta = new Pen(Color.White, 4);
+            g.DrawLine(caneta, cx, cy, cx + xmin, cy + ymin);
+            double rad = Math.PI * angulo / 180;
+            xmin = (int)(raio * Math.Cos(rad));
+            ymin = (int)(raio * Math.Sin(rad));
+            caneta.Color = Color.Black;
+            g.DrawLine(caneta, cx, cy, cx + xmin, cy + ymin);
         }
 
         private void DesenharPonteiroSegundo()
