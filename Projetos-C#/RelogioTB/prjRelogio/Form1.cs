@@ -78,6 +78,7 @@ namespace prjRelogio
             int raio = 75;
             if (hora > 12) hora = hora - 12;
             double angulo = -90 + (hora * 30);
+            angulo += -90 + (hora * 30);
             Pen caneta = new Pen(Color.White, 7);
             caneta.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
             g.DrawLine(caneta, cx, cy, cx + xhora, cy + yhora);
