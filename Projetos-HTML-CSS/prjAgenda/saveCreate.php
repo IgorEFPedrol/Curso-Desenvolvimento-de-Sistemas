@@ -1,15 +1,13 @@
 <?php
     include_once('db_conn.php');
-    if (isset($_POST['update']))
+    if (isset($_POST['create']))
     {
-        $id = $_POST['id'];
         $nome = $_POST['nome'];
         $descricao = $_POST['descricao'];
         $data = $_POST['data'];
 
-        $sqlInsert = "UPDATE compromissos
-        SET nome='$nome', descricao='$descricao', data_compromisso='$data'
-        WHERE id_compromisso=$id";
+        $sqlInsert = "INSERT INTO compromissos (id_compromisso, nome, descricao, data_compromisso) VALUES (NULL, '$nome', '$descricao', '$data')";
+
         $result = $conn->query($sqlInsert);
     }
 ?>
@@ -26,12 +24,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <title>Editado com Sucesso</title>
+    <title>Criado com Sucesso</title>
 </head>
 <body>
     <div class="text-center d-flex mx-auto">
         <?php
-             echo  "<h1>Compromisso Alterado com Sucesso!</h1>";
+             echo  "<h1>Compromisso Criado com Sucesso!</h1>";
         ?>
     </div>
     <form class="d-flex" method="POST" action="telaPrincipal.php"> 

@@ -4,20 +4,18 @@
     
     if(!empty($_GET['id_compromisso']))
     {
-        echo "ENTROU AQUI";
         $id = $_GET['id_compromisso'];
-        $sqlSelect = "SELECT * FROM compromissos WHERE id=$id";
+        $sqlSelect = "SELECT * FROM compromissos WHERE id_compromisso=$id";
         $result = $conn->query($sqlSelect);
-       //if($result->num_rows != 1)
-       // {
-       //     while($user_data = mysqli_fetch_assoc($result))
-        //    {
-       //         $nome = $user_data['nome'];
-        //        $descricao = $user_data['descricao'];
-        //        $data_compromisso = $user_data['data_compromisso'];
-         //   }
-       // }
-        
+       if($result->num_rows != 0)
+        {
+            while($user_data = mysqli_fetch_assoc($result))
+            {
+                $nome = $user_data['nome'];
+               $descricao = $user_data['descricao'];
+                $data_compromisso = $user_data['data_compromisso'];
+            }
+        }       
     }
 ?>
 
