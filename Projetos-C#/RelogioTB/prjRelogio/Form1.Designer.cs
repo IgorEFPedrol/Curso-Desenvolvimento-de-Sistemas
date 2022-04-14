@@ -35,6 +35,7 @@
             this.mnPonteiro = new System.Windows.Forms.ToolStripMenuItem();
             this.mnFundo = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pbRelogio)).BeginInit();
             this.menu.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +71,7 @@
             this.mnPonteiro.Name = "mnPonteiro";
             this.mnPonteiro.Size = new System.Drawing.Size(75, 20);
             this.mnPonteiro.Text = "PONTEIRO";
+            this.mnPonteiro.Click += new System.EventHandler(this.mnPonteiro_Click);
             // 
             // mnFundo
             // 
@@ -116,6 +118,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnPonteiro;
         private System.Windows.Forms.ToolStripMenuItem mnFundo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 

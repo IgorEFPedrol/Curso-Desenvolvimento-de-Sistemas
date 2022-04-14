@@ -21,6 +21,7 @@ namespace prjRelogio
         string path = Environment.CurrentDirectory + "\\fundo.png";
         Bitmap fundo;
         Graphics g;
+        Color ponteiro = Color.Red;
 
         int hora;
         int min;
@@ -64,7 +65,7 @@ namespace prjRelogio
 
         private void DesenharCentro()
         {
-            SolidBrush corSolida = new SolidBrush(Color.Red);
+            SolidBrush corSolida = new SolidBrush(ponteiro);
             int cx = pbRelogio.Width / 2;
             int cy = pbRelogio.Height / 2;
             g.FillEllipse(corSolida, cx - 10, cy - 10, 20, 20);
@@ -86,7 +87,7 @@ namespace prjRelogio
             double rad = Math.PI * angulo / 180;
             xhora = (int)(raio * Math.Cos(rad));
             yhora = (int)(raio * Math.Sin(rad));
-            caneta.Color = Color.Black;
+            caneta.Color = ponteiro;
             g.DrawLine(caneta, cx, cy, cx + xhora, cy + yhora);
         }
 
@@ -102,7 +103,7 @@ namespace prjRelogio
             double rad = Math.PI * angulo / 180;
             xmin = (int)(raio * Math.Cos(rad));
             ymin = (int)(raio * Math.Sin(rad));
-            caneta.Color = Color.Blue;
+            caneta.Color = ponteiro;
             g.DrawLine(caneta, cx, cy, cx + xmin, cy + ymin);
         }
 
@@ -118,7 +119,7 @@ namespace prjRelogio
             double rad = Math.PI * angulo / 180;
             xseg = (int)(raio * Math.Cos(rad));
             yseg = (int)(raio * Math.Sin(rad));
-            caneta.Color = Color.Red;
+            caneta.Color = ponteiro;
             g.DrawLine(caneta, cx, cy, cx + xseg, cy + yseg);
 
         }
@@ -134,6 +135,12 @@ namespace prjRelogio
                 File.Copy(openFileDialog1.FileName, path);
             }
             relogio.Start();
+        }
+
+        private void mnPonteiro_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            ponteiro = colorDialog1.Color;
         }
     }
 }
