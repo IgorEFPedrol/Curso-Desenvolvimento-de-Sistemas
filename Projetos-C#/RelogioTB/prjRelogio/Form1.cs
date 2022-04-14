@@ -33,6 +33,12 @@ namespace prjRelogio
         private void Form1_Load(object sender, EventArgs e)
         {
             fundo = new Bitmap(pbRelogio.Width, pbRelogio.Height);
+            if (!File.Exists(path))
+            {
+                relogio.Enabled = false;
+                mnFundo_Click(sender, e);
+                relogio.Enabled = true;
+            }
             g = Graphics.FromImage(fundo);
         }
 
