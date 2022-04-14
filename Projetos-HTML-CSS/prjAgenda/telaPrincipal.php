@@ -32,7 +32,7 @@
 
     <!--Header da página-->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #944ACE;">
       <div class="container-fluid">
         <a class="navbar-brand ms-5 fs-3 fw-bold" href="#"
           >Agenda de compromissos</a
@@ -46,11 +46,12 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
+        
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <form class="d-flex" method="POST" action="index.php"> 
-            <button class="btn btn-light me-5 my-2 my-sm-0" type="submit">
+            <button class="btn btn-light me-5 my-2 my-sm-0" type="submit" style="color: #944ACE;">
               Voltar
             </button>
         </form>
@@ -58,9 +59,9 @@
     </nav>
 
     <div class="m-5">
-    <h1 class="float-start">Compromissos Pendentes</h1>
-    <a class='btn btn-md btn-light float-end mx-4' href="create.php" title='create'>
-      <image src="assets/adicionar.png">
+    <h1 class="float-start fw-bold fs-3 mb-5">Compromissos Pendentes</h1>
+    <a class="btn btn-md btn-light float-end mt-3 me-5 bg-transparent border-0" href="create.php" title='create'>
+      <image src="assets/btn.svg" class="bg-transparent">
     </a>
       <table class="table table-striped table-bg">
             <thead>

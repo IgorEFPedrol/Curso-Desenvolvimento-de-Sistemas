@@ -11,9 +11,9 @@
 
 </head>
 
-<body style="background-image: url(assets/iMac\ -\ 3.png);">
+<body style="background-image: url(assets/iMac\ -\ 3.png); background-repeat:no-repeat; background-size:cover">
   <div class="container-fluid">
-    <div class="row justify-content-end d-flex" style="margin-right: 200px; margin-top: 192px">
+    <div class="row justify-content-end d-flex" style="margin-right: 48px; margin-top: 192px">
       <div class="col-6">
         <div class="card col-10 pb-4 rounded">
           <div class="card-body">
