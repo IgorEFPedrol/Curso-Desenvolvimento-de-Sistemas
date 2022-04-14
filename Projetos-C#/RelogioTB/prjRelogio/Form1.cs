@@ -32,7 +32,6 @@ namespace prjRelogio
         private void Form1_Load(object sender, EventArgs e)
         {
             fundo = new Bitmap(pbRelogio.Width, pbRelogio.Height);
-            pbRelogio.Image = fundo;
             g = Graphics.FromImage(fundo);
         }
 
@@ -49,6 +48,7 @@ namespace prjRelogio
             DesenharCentro();
             DesenharDigital();
             pbRelogio.CreateGraphics().DrawImage(fundo, 0, 0);
+            GC.Collect();
         }
 
         private void DesenharDigital()
