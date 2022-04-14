@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -120,6 +121,19 @@ namespace prjRelogio
             caneta.Color = Color.Red;
             g.DrawLine(caneta, cx, cy, cx + xseg, cy + yseg);
 
+        }
+
+        private void mnFundo_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "imagens | *.jpg;*.png";
+            relogio.Stop();
+            openFileDialog1.ShowDialog();
+            if (File.Exists(openFileDialog1.FileName))
+            {
+                File.Delete(path);
+                File.Copy(openFileDialog1.FileName, path);
+            }
+            relogio.Start();
         }
     }
 }
