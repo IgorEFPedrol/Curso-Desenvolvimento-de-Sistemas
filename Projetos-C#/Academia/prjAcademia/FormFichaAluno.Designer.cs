@@ -41,7 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.btnGravar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnFormulario.SuspendLayout();
@@ -179,17 +179,18 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "ALTURA:";
             // 
-            // btnAdicionar
+            // btnGravar
             // 
-            this.btnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.ForeColor = System.Drawing.Color.White;
-            this.btnAdicionar.Location = new System.Drawing.Point(302, 417);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(234, 84);
-            this.btnAdicionar.TabIndex = 6;
-            this.btnAdicionar.Text = "GRAVAR MATRÍCULA";
-            this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnGravar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGravar.ForeColor = System.Drawing.Color.White;
+            this.btnGravar.Location = new System.Drawing.Point(302, 417);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(234, 84);
+            this.btnGravar.TabIndex = 6;
+            this.btnGravar.Text = "GRAVAR MATRÍCULA";
+            this.btnGravar.UseVisualStyleBackColor = false;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnFechar
             // 
@@ -210,7 +211,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(560, 539);
             this.Controls.Add(this.btnFechar);
-            this.Controls.Add(this.btnAdicionar);
+            this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.pnFormulario);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -243,7 +244,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnFechar;
     }
 }

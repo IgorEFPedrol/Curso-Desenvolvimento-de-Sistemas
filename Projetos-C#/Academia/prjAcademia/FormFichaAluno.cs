@@ -18,5 +18,13 @@ namespace prjAcademia
         {
             InitializeComponent();
         }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            Registro = new Aluno(8, "ALUNO TESTE", 45, 70, 1.65);
+            this.Dispose();
+        }
     }
+
+
 }

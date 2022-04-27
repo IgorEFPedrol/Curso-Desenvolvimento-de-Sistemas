@@ -40,8 +40,14 @@ namespace prjAcademia
         private void btnMatricular_Click(object sender, EventArgs e)
         {
             FormFichaAluno ficha = new FormFichaAluno();
+            ficha.Registro = null;
             ficha.ShowDialog();
-
+            if (ficha.Registro != null)
+            {
+                BoaForma.Matricular(ficha.Registro);
+                bs.MoveLast();
+                bs.ResetBindings(false);
+            }
         }
     }
 }
