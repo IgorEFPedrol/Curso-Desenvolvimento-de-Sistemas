@@ -14,12 +14,14 @@ namespace prjAcademia
         {
             this.Alunos = Alunos;
         }
-        public void matricular(Aluno novo)
+
+        public void Matricular(Aluno novo)
         {
             if (novo != null)
             {
                 Alunos.Add(novo);
             }
         }
+
     }
 }
