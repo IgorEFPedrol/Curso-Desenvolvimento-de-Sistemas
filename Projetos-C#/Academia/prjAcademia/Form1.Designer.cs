@@ -105,14 +105,14 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.btnMatricular});
-            this.bn.Location = new System.Drawing.Point(0, 661);
+            this.bn.Location = new System.Drawing.Point(0, 647);
             this.bn.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bn.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bn.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bn.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bn.Name = "bn";
             this.bn.PositionItem = this.bindingNavigatorPositionItem;
-            this.bn.Size = new System.Drawing.Size(1206, 25);
+            this.bn.Size = new System.Drawing.Size(1206, 39);
             this.bn.TabIndex = 2;
             this.bn.Text = "bindingNavigator1";
             // 
@@ -129,7 +129,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 36);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
             // 
             // bindingNavigatorMovePreviousItem
@@ -186,9 +186,10 @@
             // btnMatricular
             // 
             this.btnMatricular.Image = ((System.Drawing.Image)(resources.GetObject("btnMatricular.Image")));
+            this.btnMatricular.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnMatricular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnMatricular.Name = "btnMatricular";
-            this.btnMatricular.Size = new System.Drawing.Size(98, 22);
+            this.btnMatricular.Size = new System.Drawing.Size(114, 36);
             this.btnMatricular.Text = "MATRICULAR";
             // 
             // Form1
