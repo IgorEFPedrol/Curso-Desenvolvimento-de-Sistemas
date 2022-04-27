@@ -12,19 +12,11 @@ namespace prjAcademia
 {
     public partial class FormFichaAluno : Form
     {
+        internal Aluno Registro { get; set; }
+
         public FormFichaAluno()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

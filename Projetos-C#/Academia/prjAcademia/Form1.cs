@@ -36,5 +36,12 @@ namespace prjAcademia
             dgvAlunos.AutoResizeColumns();
 
         }
+
+        private void btnMatricular_Click(object sender, EventArgs e)
+        {
+            FormFichaAluno ficha = new FormFichaAluno();
+            ficha.ShowDialog();
+
+        }
     }
 }

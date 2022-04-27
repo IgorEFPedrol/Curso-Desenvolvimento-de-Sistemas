@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAlunos = new System.Windows.Forms.DataGridView();
             this.bn = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -45,6 +44,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnMatricular = new System.Windows.Forms.ToolStripButton();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bn)).BeginInit();
@@ -60,14 +60,14 @@
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1203, 71);
+            this.panel1.Size = new System.Drawing.Size(1073, 71);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(275, 8);
+            this.label1.Location = new System.Drawing.Point(199, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(666, 47);
             this.label1.TabIndex = 0;
@@ -84,7 +84,7 @@
             this.dgvAlunos.Location = new System.Drawing.Point(31, 94);
             this.dgvAlunos.Name = "dgvAlunos";
             this.dgvAlunos.ReadOnly = true;
-            this.dgvAlunos.Size = new System.Drawing.Size(1146, 541);
+            this.dgvAlunos.Size = new System.Drawing.Size(1014, 541);
             this.dgvAlunos.TabIndex = 1;
             // 
             // bn
@@ -112,7 +112,7 @@
             this.bn.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bn.Name = "bn";
             this.bn.PositionItem = this.bindingNavigatorPositionItem;
-            this.bn.Size = new System.Drawing.Size(1206, 39);
+            this.bn.Size = new System.Drawing.Size(1075, 39);
             this.bn.TabIndex = 2;
             this.bn.Text = "bindingNavigator1";
             // 
@@ -191,13 +191,14 @@
             this.btnMatricular.Name = "btnMatricular";
             this.btnMatricular.Size = new System.Drawing.Size(114, 36);
             this.btnMatricular.Text = "MATRICULAR";
+            this.btnMatricular.Click += new System.EventHandler(this.btnMatricular_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1206, 686);
+            this.ClientSize = new System.Drawing.Size(1075, 686);
             this.Controls.Add(this.bn);
             this.Controls.Add(this.dgvAlunos);
             this.Controls.Add(this.panel1);
