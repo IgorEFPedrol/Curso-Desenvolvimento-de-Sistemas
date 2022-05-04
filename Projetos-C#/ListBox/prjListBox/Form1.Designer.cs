@@ -36,11 +36,11 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbResposta = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnMedia = new System.Windows.Forms.Button();
+            this.btnMaior = new System.Windows.Forms.Button();
+            this.btnMenor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -100,6 +100,7 @@
             this.btnLimpar.TabIndex = 5;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnEditar
             // 
@@ -121,17 +122,18 @@
             this.btnRemover.TabIndex = 7;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
-            // label3
+            // lbResposta
             // 
-            this.label3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(473, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 110);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Resposta:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbResposta.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lbResposta.ForeColor = System.Drawing.Color.Black;
+            this.lbResposta.Location = new System.Drawing.Point(473, 26);
+            this.lbResposta.Name = "lbResposta";
+            this.lbResposta.Size = new System.Drawing.Size(142, 110);
+            this.lbResposta.TabIndex = 8;
+            this.lbResposta.Text = "Resposta:";
+            this.lbResposta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button3
             // 
@@ -142,47 +144,51 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Somar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnMedia
             // 
-            this.button4.Location = new System.Drawing.Point(476, 253);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 50);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Média";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnMedia.Location = new System.Drawing.Point(476, 253);
+            this.btnMedia.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMedia.Name = "btnMedia";
+            this.btnMedia.Size = new System.Drawing.Size(139, 50);
+            this.btnMedia.TabIndex = 10;
+            this.btnMedia.Text = "Média";
+            this.btnMedia.UseVisualStyleBackColor = true;
+            this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
             // 
-            // button5
+            // btnMaior
             // 
-            this.button5.Location = new System.Drawing.Point(476, 343);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(139, 50);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Maior";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnMaior.Location = new System.Drawing.Point(476, 343);
+            this.btnMaior.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaior.Name = "btnMaior";
+            this.btnMaior.Size = new System.Drawing.Size(139, 50);
+            this.btnMaior.TabIndex = 11;
+            this.btnMaior.Text = "Maior";
+            this.btnMaior.UseVisualStyleBackColor = true;
+            this.btnMaior.Click += new System.EventHandler(this.btnMaior_Click);
             // 
-            // button6
+            // btnMenor
             // 
-            this.button6.Location = new System.Drawing.Point(476, 443);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(139, 50);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "Menor";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnMenor.Location = new System.Drawing.Point(476, 443);
+            this.btnMenor.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMenor.Name = "btnMenor";
+            this.btnMenor.Size = new System.Drawing.Size(139, 50);
+            this.btnMenor.TabIndex = 12;
+            this.btnMenor.Text = "Menor";
+            this.btnMenor.UseVisualStyleBackColor = true;
+            this.btnMenor.Click += new System.EventHandler(this.btnMenor_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 540);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnMenor);
+            this.Controls.Add(this.btnMaior);
+            this.Controls.Add(this.btnMedia);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbResposta);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnLimpar);
@@ -213,11 +219,11 @@
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbResposta;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnMedia;
+        private System.Windows.Forms.Button btnMaior;
+        private System.Windows.Forms.Button btnMenor;
     }
 }
 
