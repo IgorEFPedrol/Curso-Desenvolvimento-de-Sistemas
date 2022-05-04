@@ -23,5 +23,23 @@ namespace prjAcademia
             }
         }
 
+
+        internal void Editar(Aluno aluno)
+        {
+            Aluno p = Alunos.FirstOrDefault(i => i.Id == aluno.Id);
+            if (p != null)
+            {
+                p.Nome = aluno.Nome;
+                p.Idade = aluno.Idade;
+                p.Peso = aluno.Peso ;
+                p.Altura= aluno.Altura;
+            }    
+        }
+
+        public void Excluir(Aluno atual)
+        {
+            Aluno p = Alunos.FirstOrDefault(i => i.Id == atual.Id);
+            Alunos.Remove(p);
+        }
     }
 }

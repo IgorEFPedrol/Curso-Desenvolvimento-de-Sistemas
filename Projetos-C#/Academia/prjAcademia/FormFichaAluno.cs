@@ -21,8 +21,44 @@ namespace prjAcademia
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            Registro = new Aluno(8, "ALUNO TESTE", 45, 70, 1.65);
+            if (Registro == null) novo();
+            else editar();
             this.Dispose();
+        }
+
+        private void novo()
+        {
+            Registro = new Aluno(
+                Int32.Parse(txtId.Text),
+                txtNome.Text,
+                Int16.Parse(txtIdade.Text),
+                Double.Parse(txtPeso.Text),
+                Double.Parse(txtAltura.Text));
+            MessageBox.Show("Matrícula Cadastrada");
+
+        }
+
+        private void editar()
+        {
+            Registro.Id = Int32.Parse(txtId.Text);
+            Registro.Nome = txtNome.Text;
+            Registro.Idade = Int16.Parse(txtIdade.Text);
+            Registro.Peso = Double.Parse(txtPeso.Text);
+            Registro.Altura =  Double.Parse(txtAltura.Text);       
+            MessageBox.Show("Matrícula Editada");
+        }
+
+        private void FormFichaAluno_Load(object sender, EventArgs e)
+        {
+            if (Registro != null)
+            {
+                txtId.Text = Registro.Id.ToString();
+                txtNome.Text = Registro.Nome;
+                txtIdade.Text = Registro.Idade.ToString();
+                txtPeso.Text = Registro.Peso.ToString();
+                txtAltura.Text = Registro.Altura.ToString();
+                txtId.ReadOnly = true;
+            }
         }
     }
 
