@@ -75,7 +75,7 @@ namespace prjListBox
             }
 
             media = soma / lista.Items.Count;
-            lbResposta.Text ="A médiaé="+media.ToString();
+            lbResposta.Text ="A Média é = "+media.ToString();
         }
 
         private void btnMaior_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace prjListBox
 
         private void btnMenor_Click(object sender, EventArgs e)
         {
-            int min = 0;
+            int min = 9999999;
 
             foreach (object item in lista.Items)
             {
