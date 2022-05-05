@@ -64,13 +64,13 @@
             <form action="calculo.php" method="post">
                 <div class="mb-4 mx-2">
                     <label for="ladotriangulo1" class="form-label">Primeiro Lado</label>
-                    <input type="number" class="form-control" id="ladotriangulo1" name="ladoTriangulo1">
+                    <input type="number" class="form-control" id="ladotriangulo1" name="ladoTriangulo1" min="0">
 
                     <label for="ladotriangulo2" class="form-label">Segundo Lado</label>
-                    <input type="number" class="form-control" id="ladotriangulo2" name="ladoTriangulo2">
+                    <input type="number" class="form-control" id="ladotriangulo2" name="ladoTriangulo2" min="0">
 
                     <label for="ladotriangulo3" class="form-label">Terceiro Lado</label>
-                    <input type="number" class="form-control" id="ladotriangulo3" name="ladoTriangulo3">
+                    <input type="number" class="form-control" id="ladotriangulo3" name="ladoTriangulo3" min="0">
 
                     <input type="submit" name="triangulo" class="mt-3 btn btn-success" value="Calcular">
                 </div>
@@ -82,13 +82,31 @@
 
     <div class="row">
         <div class="col">
-        
+            <h4>Sucessor de Número Inteiro</h4>
+            <form action="calculo.php" method="post">
+                <div class="mb-4 mx-2">
+                    <label for="sucessorinteiro" class="form-label">Número Inteiro</label>
+                    <input type="number" class="form-control" id="sucessorinteiro" name="sucessorInteiro">
+                    
+                    <input type="submit" class="mt-3 btn btn-success" name="sucessor" value="Calcular">
+                </div>
+            </form>
         </div>
         <div class="col">
-        
+            <h4>Quociente e Resto da Divisão de Números Inteiros</h4>
+            <form action="calculo.php" method="post">
+            <div class="mb-4 mx-2">
+                <label for="numero1" class="form-label">Primeiro Número</label>
+                <input type="number" class="form-control" id="numero1" name="numeroInteiro1">
+
+                <label for="numero2" class="form-label">Segundo Número</label>
+                <input type="number" class="form-control" id="numero2" name="numeroInteiro2">
+
+                <input type="submit" class="mt-3 btn btn-success" name="quociente" value="Calcular" >
+            </div>
+            </form>
         </div>
-    </div>  
+    </div>
 </div>
-    
 </body>
 </html>

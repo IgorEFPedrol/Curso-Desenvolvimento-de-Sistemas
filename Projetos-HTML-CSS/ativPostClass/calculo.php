@@ -106,12 +106,13 @@
                        return $this->perimetro;
                    }  
                }
+               
 
-               //Cálculos e Retorno dos Resultados
+               //Cálculos e Retorno dos Resultados              
                 if (isset($_POST['quadrado']))
                 {
                     if (empty($_POST['ladoQuadrado']))                
-                    echo "<p>PREENCHA OS CAMPOS!</p>";
+                    echo "<p style='color:red;'>PREENCHA OS CAMPOS!</p>";
 
                     else {
                         $quadrado1 = new Quadrado();
@@ -128,7 +129,7 @@
                 if (isset($_POST['retangulo']))
                 {
                     if (empty($_POST['baseRetangulo']) || empty($_POST['alturaRetangulo']))                
-                    echo "<p>PREENCHA OS CAMPOS!</p>";
+                    echo "<p style='color:red;'>PREENCHA OS CAMPOS!</p>";
 
                     else {
                         $retangulo1 = new Retangulo();
@@ -157,11 +158,31 @@
 
                 if (isset($_POST['triangulo']))
                 {
-                    $triangulo1 = new Triangulo();
-                    $triangulo1->set_perimetro($_POST['ladoTriangulo1'] + $_POST['ladoTriangulo2'] + $_POST['ladoTriangulo3']);
+                    if (empty($_POST['ladoTriangulo1']))                
+                    echo "<p style='color:red;'>PREENCHA OS CAMPOS!</p>";
 
-                    echo "<p>O Perímetro do <strong>Triângulo</strong> é: ".$triangulo1->get_perimetro()."</p>";
+                    else {
+                        $triangulo1 = new Triangulo();
+                        $triangulo1->set_perimetro($_POST['ladoTriangulo1'] + $_POST['ladoTriangulo2'] + $_POST['ladoTriangulo3']);
+
+                        echo "<p>O Perímetro do <strong>Triângulo</strong> é: ".$triangulo1->get_perimetro()."</p>";
+                    }
                 }
+
+                if (isset($_POST['sucessor']))
+                {
+                    if (empty($_POST['sucessorInteiro']))
+                    echo "<p style='color:red;'>PREENCHA OS CAMPOS!</p>";
+                    
+                    else {
+                        $sucessor = ($_POST['sucessorInteiro']);
+                        $numeroInt = $sucessor++;
+                        
+                        echo "<p>O <strong>Sucessor</strong> de ".$numeroInt." é: ".$sucessor."</p>";    
+                    }
+                }
+
+
             ?>
 
         <form action="index.php" method="post">
