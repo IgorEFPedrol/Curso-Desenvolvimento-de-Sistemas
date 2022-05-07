@@ -106,6 +106,39 @@
                        return $this->perimetro;
                    }  
                }
+
+               class Idade {
+                   public $idadeAnos;
+                   public $idadeMeses;
+                   public $idadeDias;
+
+                   function set_idadeAnos($idadeAnos)
+                   {
+                       $this->idadeAnos = $idadeAnos;
+                   }
+                   function get_idadeAnos()
+                   {
+                       return $this->idadeAnos;
+                   }  
+
+                   function set_idadeMeses($idadeMeses)
+                   {
+                       $this->idadeMeses = $idadeMeses;
+                   }
+                   function get_idadeMeses()
+                   {
+                       return $this->idadeMeses;
+                   }  
+
+                   function set_idadeDias($idadeDias)
+                   {
+                       $this->idadeDias = $idadeDias;
+                   }
+                   function get_idadeDias()
+                   {
+                       return $this->idadeDias;
+                   } 
+               }
                
 
                //Cálculos e Retorno dos Resultados              
@@ -148,8 +181,8 @@
 
                     else {
                         $circunferencia1 = new Circunferencia();
-                        $circunferencia1->set_area($pi * ($_POST['raioCircunferencia'] * $_POST['raioCircunferencia']));
-                        $circunferencia1->set_perimetro(2 * $pi * $_POST['raioCircunferencia']);
+                        $circunferencia1->set_area(round($pi * ($_POST['raioCircunferencia'] * $_POST['raioCircunferencia']), 2));
+                        $circunferencia1->set_perimetro(round(2 * $pi * $_POST['raioCircunferencia']), 2);
     
                         echo "<p>A Área da <strong>Circunferência</strong> é: ".$circunferencia1->get_area()."</p>";
                         echo "<p>E o seu perímetro é: ".$circunferencia1->get_perimetro()."</p>";
@@ -158,7 +191,7 @@
 
                 if (isset($_POST['triangulo']))
                 {
-                    if (empty($_POST['ladoTriangulo1']))                
+                    if (empty($_POST['ladoTriangulo1']) || empty($_POST['ladoTriangulo2']) || empty($_POST['ladoTriangulo3']))                
                     echo "<p style='color:red;'>PREENCHA OS CAMPOS!</p>";
 
                     else {
@@ -181,6 +214,61 @@
                         echo "<p>O <strong>Sucessor</strong> de ".$numeroInt." é: ".$sucessor."</p>";    
                     }
                 }
+
+                if (isset($_POST['quociente']))
+                {
+                    if (empty($_POST['numeroInteiro1']) || empty($_POST['numeroInteiro2']))
+                    echo "<p style='color:red;'>PREENCHA OS CAMPOS!</p>";
+
+                    else {
+                        $numeroInt1 = $_POST['numeroInteiro1'];
+                        $numeroInt2 = $_POST['numeroInteiro2'];
+
+                        $quociente = $numeroInt1 * $numeroInt2;
+                        $restoDiv = $numeroInt1 % $numeroInt2;
+
+                        echo "<p>O <strong>Quociente</strong> entre ".$numeroInt1 ." e ".$numeroInt2. " é: ".$quociente."<br>
+                        E o <strong>Resto da Divisao</strong> é: ".$restoDiv."</p>";
+                    }
+                }
+
+                if (isset($_POST['idade']))
+                {
+                    if (empty($_POST['idadeAnos']))
+                    echo "<p style='color:red;'>PREENCHA OS CAMPOS!</p>";
+
+                    else {
+                        $diasAno = 365;
+                        $MesesAno = 12;
+                        $idadeAnos = $_POST['idadeAnos'];
+
+                        $idade1 = new Idade();
+                        $idade1->set_idadeAnos($idadeAnos);
+                        $idade1->set_idadeDias(round($idadeAnos * $diasAno, 2));
+                        $idade1->set_idadeMeses(round($idadeAnos *  $MesesAno, 2));
+
+                        echo "<p>A sua <strong>Idade</strong> em <strong>Anos</strong>: ".$idade1->get_idadeAnos()."<br>
+                        Em <strong>Meses</strong>: ".$idade1->get_idadeMeses()."<br>
+                        Em <strong>Dias</strong>: ".$idade1->get_idadeDias()."</p>";
+                        
+                    }
+                }
+
+                if (isset($_POST['fahrenheit']))
+                {
+                    if (empty($_POST['fahrenheitCelsius']))
+                    echo "<p style='color:red;'>PREENCHA OS CAMPOS!</p>";
+
+                    else {
+                       $fahrenheit = $_POST['fahrenheitCelsius'];
+                       $Celsius = round((($fahrenheit - 32) / 1.8), 2);
+
+                       echo "<p>".$fahrenheit." <strong>Fahrenheit</strong> correspondem a: ".$Celsius.
+                        "º <strong>Celsius</strong></p>";
+                    }
+                }
+
+
 
 
             ?>

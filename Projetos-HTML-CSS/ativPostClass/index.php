@@ -53,7 +53,7 @@
             <form action="calculo.php" method="post">
                 <div class="mb-4 mx-2">
                     <label for="raiocircunferencia" class="form-label">Raio da circunferência</label>
-                    <input type="number" class="form-control" id="raiocircunferencia" name="raioCircunferencia" min="0">
+                    <input type="number" class="form-control" id="raiocircunferencia" name="raioCircunferencia">
                     <input type="submit" name="circunferencia" class="mt-3 btn btn-success" value="Calcular">
                 </div>
             </form>
@@ -72,7 +72,7 @@
                     <label for="ladotriangulo3" class="form-label">Terceiro Lado</label>
                     <input type="number" class="form-control" id="ladotriangulo3" name="ladoTriangulo3" min="0">
 
-                    <input type="submit" name="triangulo" class="mt-3 btn btn-success" value="Calcular">
+                    <input type="submit" class="mt-3 btn btn-success" name="triangulo" value="Calcular">
                 </div>
             </form>
         </div>
@@ -104,6 +104,33 @@
 
                 <input type="submit" class="mt-3 btn btn-success" name="quociente" value="Calcular" >
             </div>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col">
+            <h4>Conversor de Idade para Meses e Dias</h4>
+            <form action="calculo.php" method="post">
+            <div class="mb-4 mx-2">
+                <label for="idade" class="form-label">Idade em Anos</label>
+                <input type="number" class="form-control" id="idade"  name="idadeAnos" min="0">
+
+                <input type="submit" class="mt-3 btn btn-success" name="idade" value="Calcular">
+            </div>
+            </form>
+        </div>
+        <div class="col">
+            <h4>Conversor de Fahrenheit para Celsius</h4>
+            <form action="calculo.php" method="post">
+            <div class="mb-4 mx-2">
+                <label for="fahrenheit" class="form-label">Temperatura em Fahrenheit</label>
+                <input type="number" class="form-control"  id="fahrenheit" name="fahrenheitCelsius">
+
+                <input type="submit" name="fahrenheit" class="mt-3 btn btn-success" value="Calcular">
+            </div>       
             </form>
         </div>
     </div>
