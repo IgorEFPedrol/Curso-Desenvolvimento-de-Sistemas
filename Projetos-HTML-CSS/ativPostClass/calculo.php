@@ -267,10 +267,6 @@
                         "º <strong>Celsius</strong></p>";
                     }
                 }
-
-
-
-
             ?>
 
         <form action="index.php" method="post">
