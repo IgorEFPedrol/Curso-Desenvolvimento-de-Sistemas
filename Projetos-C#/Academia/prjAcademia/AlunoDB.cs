@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.ComponentModel;
 
 namespace prjAcademia
 {
@@ -17,7 +18,7 @@ namespace prjAcademia
             {
                 string sql = string.Format("INSERT INTO ALUNO(ID, NOME, ALTURA)" +
                     "VALUES ({0}, {1}, {2}, {3}, {4})",
-                    reg.ID, reg.Nome, reg.Idade, reg.Peso,
+                    reg.Id, reg.Nome, reg.Idade, reg.Peso,
                     reg.Altura.ToString().Replace(',', '.') + ")");
                 banco.CommandText = sql;
                 banco.ExecuteNonQuery();
@@ -32,10 +33,31 @@ namespace prjAcademia
                  string sql = String.Format("UPDATE ALUNO SET NOME = '{0}'" +
                      ", IDADE = {1}, PESO = {2}, ALTURA = {3}) " +
                      "WHERE ID = {4}", reg.Nome, reg.Idade, reg.Peso,
-                     reg.Altura.ToString().Replace(',', '.'), reg.ID);
+                     reg.Altura.ToString().Replace(',', '.'), reg.Id);
                  banco.CommandText = sql;
                  banco.ExecuteNonQuery();
              }
+        }
+        public void Excluir(Aluno reg)
+        {
+            ServidorSQL academia = new ServidorSQL();
+
+            using (var banco = new SQLiteCommand(academia.Open()))
+            {
+                string sql = String.Format(
+                    "DELETE FROM ALUNO WHERE ID = {0}", reg.Id);
+                banco.CommandText = sql;
+                banco.ExecuteNonQuery();
+            }
+        }
+        public void Select(BindingList<Aluno> Alunos)
+        {
+            ServidorSQL academia = new ServidorSQL();
+
+            using (var banco = new SQLiteCommand(academia.Open()))
+            {
+                SQLiteDataReader dr = banco.ExecuteReader();
+            }
         }
             
     }
