@@ -42,7 +42,22 @@ namespace prjAcademia
 
         private void criarTabelas()
         {
+            try
+            {
+                string sql = "CREATE TABLE IF NOT EXISTS ALUNO ("+
+                    "ID INT PRIMARY KEY, NOME VARCHAR(45), IDADE INT, "+
+                    "PESO DOUBLE, ALTURA DOUBLE)";
+                using(var banco = new SQLiteCommand(Open()))
+                {
+                    banco.CommandText = sql;
+                    banco.ExecuteNonQuery();
+                }
 
+            }
+            catch (Exception Erro)
+            {
+                System.Windows.Forms.MessageBox.Show("Erro: " + Erro.Message);
+            }
         }
     }
 }

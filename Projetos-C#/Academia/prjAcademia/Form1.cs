@@ -26,11 +26,12 @@ namespace prjAcademia
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ServidorSQL Servidor = new ServidorSQL();
+            if (Servidor.CriarBanco() == true)
+            {
+                MessageBox.Show("Banco de dados gerado com sucesso!");
+            }
             BoaForma = new Academia(new BindingList<Aluno>());
-            BoaForma.Matricular(new Aluno(1, "JOAO", 20, 67, 1.73));
-            BoaForma.Matricular(new Aluno(2, "MARIA", 22, 97, 1.80));
-            BoaForma.Matricular(new Aluno(3, "JOSE", 28, 78, 1.56));
-            BoaForma.Matricular(new Aluno(4, "ANA", 25, 80, 1.82));
             bs.DataSource = BoaForma.Alunos;
             dgvAlunos.DataSource = bs;
             dgvAlunos.AutoResizeColumns();
