@@ -15,14 +15,38 @@ namespace prjAcademia
             this.Alunos = Alunos;
         }
 
-        public void Matricular(Aluno novo)
+        public void Preencher()
         {
-            if (novo != null)
+            try
             {
-                Alunos.Add(novo);
+                AlunoDB tabela = new AlunoDB();
+                tabela.Select(Alunos);
+            }
+            catch (Exception Erro)
+            {
+                System.Windows.Forms.MessageBox.Show(
+                    "ERRO: " + Erro.Message);
             }
         }
 
+        public void Matricular(Aluno novo)
+        {
+            try
+            {
+                if (novo != null)
+                {
+                    AlunoDB tabela = new AlunoDB();
+                    tabela.Inserir(novo);
+                    Alunos.Add(novo);
+                }
+            }
+            catch (Exception Erro)
+            {
+                System.Windows.Forms.MessageBox.Show(
+                    "ERRO: " + Erro.Message);
+            }
+
+        }
 
         internal void Editar(Aluno aluno)
         {

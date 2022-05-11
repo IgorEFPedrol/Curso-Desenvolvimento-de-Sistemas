@@ -32,6 +32,7 @@ namespace prjAcademia
                 MessageBox.Show("Banco de dados gerado com sucesso!");
             }
             BoaForma = new Academia(new BindingList<Aluno>());
+            BoaForma.Preencher();
             bs.DataSource = BoaForma.Alunos;
             dgvAlunos.DataSource = bs;
             dgvAlunos.AutoResizeColumns();
