@@ -67,7 +67,7 @@ namespace prjAcademia
         {
             Aluno atual = (Aluno)bs.Current;
             DialogResult op;
-            op = MessageBox.Show("Deseja Excluir:" + atual.Nome, "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            op = MessageBox.Show("Deseja Excluir: " + atual.Nome, "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (op == DialogResult.Yes)
             {
                 BoaForma.Excluir(atual);

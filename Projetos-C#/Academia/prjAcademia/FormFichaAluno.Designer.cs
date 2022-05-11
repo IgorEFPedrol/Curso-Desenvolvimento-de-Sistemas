@@ -198,6 +198,7 @@
             this.btnFechar.TabIndex = 7;
             this.btnFechar.Text = "FECHAR";
             this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // FormFichaAluno
             // 
