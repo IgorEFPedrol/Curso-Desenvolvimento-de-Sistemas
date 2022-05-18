@@ -73,7 +73,17 @@ namespace prjAcademia
         public void Excluir(Aluno atual)
         {
             Aluno p = Alunos.FirstOrDefault(i => i.Id == atual.Id);
-            Alunos.Remove(p);
+            try
+            {
+                AlunoDB tabela = new AlunoDB();
+                tabela.Excluir(p);
+                Alunos.Remove(p);
+            }
+            catch (Exception Erro)
+            {
+                System.Windows.Forms.MessageBox.Show(
+                    "ERRO: " + Erro.Message);
+            }
         }
     }
 }
