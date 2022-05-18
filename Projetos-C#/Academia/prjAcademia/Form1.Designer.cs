@@ -47,6 +47,7 @@
             this.btnMatricular = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
+            this.btnPesquisar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bn)).BeginInit();
@@ -108,7 +109,8 @@
             this.bindingNavigatorSeparator2,
             this.btnMatricular,
             this.btnEditar,
-            this.btnExcluir});
+            this.btnExcluir,
+            this.btnPesquisar});
             this.bn.Location = new System.Drawing.Point(0, 647);
             this.bn.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bn.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -217,6 +219,15 @@
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnPesquisar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(103, 36);
+            this.btnPesquisar.Text = "PESQUISAR";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +276,7 @@
         private System.Windows.Forms.ToolStripButton btnMatricular;
         private System.Windows.Forms.ToolStripButton btnEditar;
         private System.Windows.Forms.ToolStripButton btnExcluir;
+        private System.Windows.Forms.ToolStripButton btnPesquisar;
     }
 }
 
