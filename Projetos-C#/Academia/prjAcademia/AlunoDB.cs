@@ -31,8 +31,8 @@ namespace prjAcademia
              using (var banco = new SQLiteCommand(academia.Open()))
              {
                  string sql = String.Format("UPDATE ALUNO SET NOME = '{0}'" +
-                     ", IDADE = {1}, PESO = {2}, ALTURA = {3}) " +
-                     "WHERE ID = {4}", reg.Nome, reg.Idade, reg.Peso,
+                     ", IDADE = {1}, PESO = {2}, ALTURA = {3} " +
+                     " WHERE ID = {4}", reg.Nome, reg.Idade, reg.Peso,
                      reg.Altura.ToString().Replace(',', '.'), reg.Id);
                  banco.CommandText = sql;
                  banco.ExecuteNonQuery();
