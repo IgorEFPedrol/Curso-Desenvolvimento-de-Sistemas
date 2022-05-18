@@ -57,6 +57,16 @@ namespace prjAcademia
                 p.Idade = aluno.Idade;
                 p.Peso = aluno.Peso ;
                 p.Altura= aluno.Altura;
+                try
+                {
+                    AlunoDB tabela = new AlunoDB();
+                    tabela.Editar(p);
+                }
+                catch (Exception Erro)
+                {
+                    System.Windows.Forms.MessageBox.Show(
+                        "ERRO: " + Erro.Message);
+                }
             }    
         }
 
