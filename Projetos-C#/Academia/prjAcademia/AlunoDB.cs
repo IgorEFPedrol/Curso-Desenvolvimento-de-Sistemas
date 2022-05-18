@@ -79,9 +79,19 @@ namespace prjAcademia
              {
                  banco.CommandText = "SELECT MAX(ID) AS COD FROM ALUNO";
                  SQLiteDataReader dr = banco.ExecuteReader();
-                 while (dr.Read())
+                 if (dr.HasRows)
                  {
-                     return dr.GetInt32(0) + 1;
+                     try
+                     {
+                         while (dr.Read())
+                         {
+                             return dr.GetInt32(0) + 1;
+                         }
+                     }
+                     catch (Exception)
+                     {
+                         return 1;
+                     }
                  }
                  return 1;
              }
@@ -97,13 +107,13 @@ namespace prjAcademia
              {
                  if (p.Equals("F"))
                      sql = "SELECT * FROM ALUNO WHERE " +
-                         " NOME ='%" + nome + "'";
+                         " NOME LIKE '%" + nome + "'";
                  else if (p.Equals("M"))
                      sql = "SELECT * FROM ALUNO WHERE " +
-                      " NOME ='%" + nome + "%'";
+                      " NOME LIKE '%" + nome + "%'";
                  else
                      sql = "SELECT * FROM ALUNO WHERE " +
-                       " NOME ='" + nome + "%'";
+                       " NOME LIKE '" + nome + "%'";
                  banco.CommandText = sql;
                  SQLiteDataReader dr = banco.ExecuteReader();
                  BindingList<Aluno> Lista = new BindingList<Aluno>();

@@ -27,7 +27,7 @@ namespace prjAcademia
         private void Pesquisar(string p)
         {
             AlunoDB tabela = new AlunoDB();
-            tabela.pesquisar(dgvLista, p);
+            tabela.pesquisar(dgvLista, p, txtNome.Text);
             dgvLista.AutoResizeColumns();
         }
     }

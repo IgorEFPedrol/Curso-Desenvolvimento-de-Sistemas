@@ -79,5 +79,11 @@ namespace prjAcademia
                 dgvAlunos.AutoResizeColumns();
             }
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            FormPesquisar pesquisa = new FormPesquisar();
+            pesquisa.ShowDialog();
+        }
     }
 }
