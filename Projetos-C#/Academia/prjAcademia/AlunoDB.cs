@@ -96,14 +96,32 @@ namespace prjAcademia
              using (var banco = new SQLiteCommand(academia.Open()))
              {
                  if (p.Equals("F"))
-                     sql = "SELECT ID AS MATRICULA, NOME FROM ALUNO WHERE " +
+                     sql = "SELECT * FROM ALUNO WHERE " +
                          " NOME ='%" + nome + "'";
                  else if (p.Equals("M"))
-                     sql = "SELECT ID AS MATRICULA, NOME FROM ALUNO WHERE " +
+                     sql = "SELECT * FROM ALUNO WHERE " +
                       " NOME ='%" + nome + "%'";
                  else
-                     sql = "SELECT ID AS MATRICULA, NOME FROM ALUNO WHERE " +
+                     sql = "SELECT * FROM ALUNO WHERE " +
                        " NOME ='" + nome + "%'";
+                 banco.CommandText = sql;
+                 SQLiteDataReader dr = banco.ExecuteReader();
+                 BindingList<Aluno> Lista = new BindingList<Aluno>();
+                 if (dr.HasRows)
+                 {
+                     while (dr.Read())
+                     {
+                         Aluno reg = new Aluno(
+                           dr.GetInt16(0),
+                           dr.GetString(1),
+                           dr.GetInt16(2),
+                           dr.GetDouble(3),
+                           dr.GetDouble(4)
+                           );
+                         Lista.Add(reg);
+                     }
+                     dgvLista.DataSource = Lista;
+                 }
              }
         }
     }
