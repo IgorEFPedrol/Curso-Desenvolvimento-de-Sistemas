@@ -48,7 +48,7 @@ namespace prjAcademia
 
         }
 
-        internal void Editar(Aluno aluno)
+        public void Editar(Aluno aluno)
         {
             Aluno p = Alunos.FirstOrDefault(i => i.Id == aluno.Id);
             if (p != null)
