@@ -86,6 +86,25 @@ namespace prjAcademia
                  return 1;
              }
         }
-            
+
+
+        public void pesquisar(System.Windows.Forms.DataGridView dgvLista, string p, string nome)
+        {
+             ServidorSQL academia = new ServidorSQL();
+             string sql = "";
+
+             using (var banco = new SQLiteCommand(academia.Open()))
+             {
+                 if (p.Equals("F"))
+                     sql = "SELECT ID AS MATRICULA, NOME FROM ALUNO WHERE " +
+                         " NOME ='%" + nome + "'";
+                 else if (p.Equals("M"))
+                     sql = "SELECT ID AS MATRICULA, NOME FROM ALUNO WHERE " +
+                      " NOME ='%" + nome + "%'";
+                 else
+                     sql = "SELECT ID AS MATRICULA, NOME FROM ALUNO WHERE " +
+                       " NOME ='" + nome + "%'";
+             }
+        }
     }
 }
