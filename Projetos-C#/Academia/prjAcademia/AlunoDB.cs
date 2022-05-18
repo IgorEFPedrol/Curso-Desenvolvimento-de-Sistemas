@@ -134,5 +134,28 @@ namespace prjAcademia
                  }
              }
         }
+
+        public Aluno SelecionarRegistro(object p)
+        {
+             ServidorSQL academia = new ServidorSQL();
+
+             using (var banco = new SQLiteCommand(academia.Open()))
+             {
+                 banco.CommandText = "SELECT * FROM ALUNO WHERE ID = " + p.ToString();
+                 SQLiteDataReader dr = banco.ExecuteReader();
+                 while (dr.Read())
+                 {
+                     Aluno reg = new Aluno(
+                     dr.GetInt16(0),
+                     dr.GetString(1),
+                     dr.GetInt16(2),
+                     dr.GetDouble(3),
+                     dr.GetDouble(4)
+                     );
+                     return reg;
+                 }
+             }
+             return null;
+        }
     }
 }

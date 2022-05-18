@@ -37,6 +37,7 @@
             this.rbMeio = new System.Windows.Forms.RadioButton();
             this.rbFim = new System.Windows.Forms.RadioButton();
             this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.btnAbrirFicha = new System.Windows.Forms.Button();
             this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
@@ -137,13 +138,30 @@
             this.dgvLista.ReadOnly = true;
             this.dgvLista.Size = new System.Drawing.Size(549, 338);
             this.dgvLista.TabIndex = 1;
+            this.dgvLista.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_RowEnter);
+            // 
+            // btnAbrirFicha
+            // 
+            this.btnAbrirFicha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrirFicha.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirFicha.Image")));
+            this.btnAbrirFicha.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAbrirFicha.Location = new System.Drawing.Point(3, 483);
+            this.btnAbrirFicha.Name = "btnAbrirFicha";
+            this.btnAbrirFicha.Size = new System.Drawing.Size(567, 76);
+            this.btnAbrirFicha.TabIndex = 3;
+            this.btnAbrirFicha.Text = "ABRIR A FICHA SELECIONADA";
+            this.btnAbrirFicha.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAbrirFicha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAbrirFicha.UseVisualStyleBackColor = true;
+            this.btnAbrirFicha.Click += new System.EventHandler(this.btnAbrirFicha_Click);
             // 
             // FormPesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(574, 484);
+            this.ClientSize = new System.Drawing.Size(574, 561);
+            this.Controls.Add(this.btnAbrirFicha);
             this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.pnSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -170,5 +188,6 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.DataGridView dgvLista;
+        private System.Windows.Forms.Button btnAbrirFicha;
     }
 }

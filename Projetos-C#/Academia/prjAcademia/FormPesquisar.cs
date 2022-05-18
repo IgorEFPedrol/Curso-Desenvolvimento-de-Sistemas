@@ -17,6 +17,8 @@ namespace prjAcademia
             InitializeComponent();
         }
 
+        internal Aluno Registro { get; set; }
+
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             if (rbInicio.Checked) Pesquisar("I");
@@ -30,5 +32,25 @@ namespace prjAcademia
             tabela.pesquisar(dgvLista, p, txtNome.Text);
             dgvLista.AutoResizeColumns();
         }
+
+        private void dgvLista_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvLista.Rows.Count != 0)
+            {
+                AlunoDB tabela = new AlunoDB();
+                Registro = tabela.SelecionarRegistro(
+                    dgvLista.CurrentRow.Cells["Id"].Value);
+            }     
+        }
+
+        private void btnAbrirFicha_Click(object sender, EventArgs e)
+        {
+            if (Registro != null && dgvLista.Rows.Count != 0)
+            {
+                MessageBox.Show(Registro.Nome);
+            }
+        }
+
+
     }
 }
