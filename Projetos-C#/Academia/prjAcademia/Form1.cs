@@ -67,6 +67,8 @@ namespace prjAcademia
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            if (bs.Count == 0) return;
+
             Aluno atual = (Aluno)bs.Current;
             DialogResult op;
             op = MessageBox.Show("Deseja Excluir: " + atual.Nome, "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

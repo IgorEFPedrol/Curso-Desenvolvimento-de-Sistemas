@@ -71,6 +71,21 @@ namespace prjAcademia
                 }
             }
         }
+        public long ProximoCodigo()
+        {
+             ServidorSQL academia = new ServidorSQL();
+
+             using (var banco = new SQLiteCommand(academia.Open()))
+             {
+                 banco.CommandText = "SELECT MAX(ID) AS COD FROM ALUNO";
+                 SQLiteDataReader dr = banco.ExecuteReader();
+                 while (dr.Read())
+                 {
+                     return dr.GetInt32(0) + 1;
+                 }
+                 return 1;
+             }
+        }
             
     }
 }
