@@ -21,9 +21,48 @@ namespace prjAcademia
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
+            if (validacao() == false) return;
+
             if (Registro == null) novo();
             else editar();
             this.Dispose();
+        }
+
+        private bool validacao()
+        {
+            if (txtNome.Text.Equals(""))
+            {
+                ep.SetError(txtNome, "Nome Vazio");
+                ep.SetIconPadding(txtNome, -30);
+                return false;
+            }
+            else
+            {
+                ep.SetError(txtNome, "");
+            }
+
+            if (Convert.ToInt16(txtIdade.Text) < 15)
+            {
+                ep.SetError(txtIdade, "Idade Inválida (<15)");
+                ep.SetIconPadding(txtIdade, -30);
+                return false;
+            }
+            else
+            {
+                ep.SetError(txtIdade, "");
+            }
+
+            if (Convert.ToInt16(txtPeso.Text) < 50)
+            {
+                ep.SetError(txtPeso, "Peso Inválido (<50)");
+                ep.SetIconPadding(txtPeso, -30);
+                return false;
+            }
+            else
+            {
+                ep.SetError(txtPeso, "");
+            }
+            return true;
         }
 
         private void novo()
@@ -57,6 +96,12 @@ namespace prjAcademia
                 txtIdade.Text = Registro.Idade.ToString();
                 txtPeso.Text = Registro.Peso.ToString();
                 txtAltura.Text = Registro.Altura.ToString();
+                txtId.ReadOnly = true;
+            }
+            else
+            {
+                AlunoDB tabela = new AlunoDB();
+                txtId.Text = tabela.ProximoCodigo().ToString();
                 txtId.ReadOnly = true;
             }
         }

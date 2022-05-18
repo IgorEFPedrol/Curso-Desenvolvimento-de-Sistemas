@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnFormulario = new System.Windows.Forms.Panel();
@@ -43,8 +44,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.ep = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.pnFormulario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,7 +97,8 @@
             this.txtAltura.Location = new System.Drawing.Point(32, 197);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(129, 20);
-            this.txtAltura.TabIndex = 5;
+            this.txtAltura.TabIndex = 4;
+            this.txtAltura.Text = "1,40";
             // 
             // label6
             // 
@@ -111,7 +115,8 @@
             this.txtPeso.Location = new System.Drawing.Point(211, 193);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(142, 20);
-            this.txtPeso.TabIndex = 4;
+            this.txtPeso.TabIndex = 3;
+            this.txtPeso.Text = "50";
             // 
             // label5
             // 
@@ -128,7 +133,8 @@
             this.txtIdade.Location = new System.Drawing.Point(211, 116);
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(142, 20);
-            this.txtIdade.TabIndex = 3;
+            this.txtIdade.TabIndex = 2;
+            this.txtIdade.Text = "16";
             // 
             // label4
             // 
@@ -142,10 +148,12 @@
             // 
             // txtNome
             // 
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Location = new System.Drawing.Point(33, 37);
+            this.txtNome.MaxLength = 40;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(308, 20);
-            this.txtNome.TabIndex = 2;
+            this.txtNome.TabIndex = 1;
             // 
             // label3
             // 
@@ -162,7 +170,7 @@
             this.txtId.Location = new System.Drawing.Point(32, 116);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(129, 20);
-            this.txtId.TabIndex = 1;
+            this.txtId.TabIndex = 7;
             // 
             // label2
             // 
@@ -182,7 +190,7 @@
             this.btnGravar.Location = new System.Drawing.Point(254, 364);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(157, 83);
-            this.btnGravar.TabIndex = 6;
+            this.btnGravar.TabIndex = 5;
             this.btnGravar.Text = "GRAVAR";
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
@@ -195,10 +203,14 @@
             this.btnFechar.Location = new System.Drawing.Point(19, 370);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(169, 70);
-            this.btnFechar.TabIndex = 7;
+            this.btnFechar.TabIndex = 6;
             this.btnFechar.Text = "FECHAR";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // ep
+            // 
+            this.ep.ContainerControl = this;
             // 
             // FormFichaAluno
             // 
@@ -222,6 +234,7 @@
             this.panel1.ResumeLayout(false);
             this.pnFormulario.ResumeLayout(false);
             this.pnFormulario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,5 +256,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.ErrorProvider ep;
     }
 }
