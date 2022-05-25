@@ -105,6 +105,12 @@ namespace prjAcademia
                 txtId.Text = tabela.ProximoCodigo().ToString();
                 txtId.ReadOnly = true;
             }
+            string caminho = Environment.CurrentDirectory + "\\" +
+                txtId.Text + ".png";
+            if (File.Exists(caminho))
+            {
+                pbFoto.Image = Image.FromFile(caminho);
+            }
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
