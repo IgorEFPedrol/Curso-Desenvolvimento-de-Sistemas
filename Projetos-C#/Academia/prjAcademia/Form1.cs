@@ -107,11 +107,14 @@ namespace prjAcademia
                     atual.Id + ".png";
                 if (File.Exists(caminho))
                 {
-                    pbFoto.Image = Image.FromFile(caminho);
+                    Graphics g = pbFoto.CreateGraphics();
+                    g.Clear(Color.White);
+                    g.DrawImage(Image.FromFile(caminho), 0, 0,
+                        pbFoto.Width, pbFoto.Height);                 
                 }
                 else
                 {
-                    pbFoto.Image = null;
+                    pbFoto.CreateGraphics().Clear(Color.White);
                 }
             }
         }
