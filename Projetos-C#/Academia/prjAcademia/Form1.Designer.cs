@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAlunos = new System.Windows.Forms.DataGridView();
             this.bn = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -47,23 +48,25 @@
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.btnPesquisar = new System.Windows.Forms.ToolStripButton();
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bn)).BeginInit();
             this.bn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(133)))), ((int)(((byte)(181)))));
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
-            this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1073, 71);
+            this.panel1.Size = new System.Drawing.Size(1064, 71);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -84,11 +87,11 @@
             this.dgvAlunos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.dgvAlunos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlunos.Location = new System.Drawing.Point(31, 94);
+            this.dgvAlunos.Location = new System.Drawing.Point(26, 91);
             this.dgvAlunos.Name = "dgvAlunos";
             this.dgvAlunos.ReadOnly = true;
             this.dgvAlunos.RowHeadersWidth = 60;
-            this.dgvAlunos.Size = new System.Drawing.Size(1014, 541);
+            this.dgvAlunos.Size = new System.Drawing.Size(697, 394);
             this.dgvAlunos.TabIndex = 1;
             // 
             // bn
@@ -112,16 +115,20 @@
             this.btnEditar,
             this.btnExcluir,
             this.btnPesquisar});
-            this.bn.Location = new System.Drawing.Point(0, 647);
+            this.bn.Location = new System.Drawing.Point(0, 507);
             this.bn.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bn.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bn.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bn.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bn.Name = "bn";
             this.bn.PositionItem = this.bindingNavigatorPositionItem;
-            this.bn.Size = new System.Drawing.Size(1075, 39);
+            this.bn.Size = new System.Drawing.Size(1064, 39);
             this.bn.TabIndex = 2;
             this.bn.Text = "bindingNavigator1";
+            // 
+            // bs
+            // 
+            this.bs.PositionChanged += new System.EventHandler(this.bs_PositionChanged);
             // 
             // bindingNavigatorCountItem
             // 
@@ -229,14 +236,25 @@
             this.btnPesquisar.Size = new System.Drawing.Size(103, 36);
             this.btnPesquisar.Text = "PESQUISAR";
             // 
+            // pbFoto
+            // 
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Location = new System.Drawing.Point(680, 106);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(357, 337);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbFoto.TabIndex = 9;
+            this.pbFoto.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1075, 686);
-            this.Controls.Add(this.bn);
+            this.ClientSize = new System.Drawing.Size(1064, 546);
+            this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.dgvAlunos);
+            this.Controls.Add(this.bn);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -253,6 +271,7 @@
             this.bn.ResumeLayout(false);
             this.bn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,6 +297,7 @@
         private System.Windows.Forms.ToolStripButton btnEditar;
         private System.Windows.Forms.ToolStripButton btnExcluir;
         private System.Windows.Forms.ToolStripButton btnPesquisar;
+        private System.Windows.Forms.PictureBox pbFoto;
     }
 }
 

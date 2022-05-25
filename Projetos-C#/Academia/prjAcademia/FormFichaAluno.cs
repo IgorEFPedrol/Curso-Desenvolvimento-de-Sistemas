@@ -109,7 +109,7 @@ namespace prjAcademia
                 txtId.Text + ".png";
             if (File.Exists(caminho))
             {
-                pbFoto.Image = Image.FromFile(caminho);
+                
             }
         }
 

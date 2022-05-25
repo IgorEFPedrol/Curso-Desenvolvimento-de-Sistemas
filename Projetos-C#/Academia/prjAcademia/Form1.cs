@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -91,6 +92,20 @@ namespace prjAcademia
                     Find(f => f.Id == pesquisa.Registro.Id);
                 bs.Position = bs.IndexOf(obj);
                 btnEditar_Click(sender, e);
+            }
+        }
+
+        private void bs_PositionChanged(object sender, EventArgs e)
+        {
+            if (bs.Count != 0)
+            {
+                Aluno atual = (Aluno)bs.Current;
+                string caminho = Environment.CurrentDirectory + "\\" +
+                    atual.Id + ".png";
+                if (File.Exists(caminho))
+                {
+                    pbFoto.Image = Image.FromFile(caminho);
+                }
             }
         }
     }
