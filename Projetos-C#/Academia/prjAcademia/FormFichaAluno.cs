@@ -118,9 +118,15 @@ namespace prjAcademia
             string caminho = Environment.CurrentDirectory + "\\" +
                 txtId.Text + ".png";
             saveFoto.ShowDialog();
-            if (File.Exists())
+            if (File.Exists(saveFoto.FileName))
             {
-                
+                pbFoto.Image = null;
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                File.Delete(caminho);
+                File.Copy(saveFoto.FileName, caminho);
+                pbFoto.Image = Image.FromFile(caminho);
+                MessageBox.Show("Foto Salva com Sucesso!");
             }
         }
     }
