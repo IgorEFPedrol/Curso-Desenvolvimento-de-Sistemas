@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFichaAluno));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnFormulario = new System.Windows.Forms.Panel();
@@ -45,16 +46,19 @@
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.ep = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.saveFoto = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.pnFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(133)))), ((int)(((byte)(181)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -212,12 +216,39 @@
             // 
             this.ep.ContainerControl = this;
             // 
+            // btnFoto
+            // 
+            this.btnFoto.BackColor = System.Drawing.Color.White;
+            this.btnFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFoto.ForeColor = System.Drawing.Color.Black;
+            this.btnFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnFoto.Image")));
+            this.btnFoto.Location = new System.Drawing.Point(540, 364);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(157, 83);
+            this.btnFoto.TabIndex = 7;
+            this.btnFoto.Text = "FOTO";
+            this.btnFoto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFoto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFoto.UseVisualStyleBackColor = false;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Location = new System.Drawing.Point(444, 12);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(346, 327);
+            this.pbFoto.TabIndex = 8;
+            this.pbFoto.TabStop = false;
+            // 
             // FormFichaAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(431, 461);
+            this.ClientSize = new System.Drawing.Size(802, 461);
+            this.Controls.Add(this.pbFoto);
+            this.Controls.Add(this.btnFoto);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.pnFormulario);
@@ -235,6 +266,7 @@
             this.pnFormulario.ResumeLayout(false);
             this.pnFormulario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +289,8 @@
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.ErrorProvider ep;
+        private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.SaveFileDialog saveFoto;
     }
 }

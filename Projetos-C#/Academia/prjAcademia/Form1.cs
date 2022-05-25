@@ -71,7 +71,8 @@ namespace prjAcademia
 
             Aluno atual = (Aluno)bs.Current;
             DialogResult op;
-            op = MessageBox.Show("Deseja Excluir: " + atual.Nome, "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            op = MessageBox.Show("Deseja Excluir: " + atual.Nome, "ALERTA",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (op == DialogResult.Yes)
             {
                 BoaForma.Excluir(atual);
@@ -84,6 +85,13 @@ namespace prjAcademia
         {
             FormPesquisar pesquisa = new FormPesquisar();
             pesquisa.ShowDialog();
+            if (pesquisa.Registro != null)
+            {
+                var obj = bs.List.OfType<Aluno>().ToList().
+                    Find(f => f.Id == pesquisa.Registro.Id);
+                bs.Position = bs.IndexOf(obj);
+                btnEditar_Click(sender, e);
+            }
         }
     }
 }

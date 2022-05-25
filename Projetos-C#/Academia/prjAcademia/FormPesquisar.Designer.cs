@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisar));
             this.pnSuperior = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.rbInicio = new System.Windows.Forms.RadioButton();
-            this.rbMeio = new System.Windows.Forms.RadioButton();
             this.rbFim = new System.Windows.Forms.RadioButton();
+            this.rbMeio = new System.Windows.Forms.RadioButton();
+            this.rbInicio = new System.Windows.Forms.RadioButton();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.btnAbrirFicha = new System.Windows.Forms.Button();
             this.pnSuperior.SuspendLayout();
@@ -56,24 +56,43 @@
             this.pnSuperior.Size = new System.Drawing.Size(550, 109);
             this.pnSuperior.TabIndex = 0;
             // 
-            // label1
+            // rbFim
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NOME:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbFim.AutoSize = true;
+            this.rbFim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbFim.ForeColor = System.Drawing.Color.White;
+            this.rbFim.Location = new System.Drawing.Point(263, 76);
+            this.rbFim.Name = "rbFim";
+            this.rbFim.Size = new System.Drawing.Size(48, 21);
+            this.rbFim.TabIndex = 5;
+            this.rbFim.Text = "FIM";
+            this.rbFim.UseVisualStyleBackColor = true;
             // 
-            // txtNome
+            // rbMeio
             // 
-            this.txtNome.Location = new System.Drawing.Point(27, 34);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(280, 20);
-            this.txtNome.TabIndex = 1;
+            this.rbMeio.AutoSize = true;
+            this.rbMeio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbMeio.ForeColor = System.Drawing.Color.White;
+            this.rbMeio.Location = new System.Drawing.Point(140, 76);
+            this.rbMeio.Name = "rbMeio";
+            this.rbMeio.Size = new System.Drawing.Size(60, 21);
+            this.rbMeio.TabIndex = 4;
+            this.rbMeio.Text = "MEIO";
+            this.rbMeio.UseVisualStyleBackColor = true;
+            // 
+            // rbInicio
+            // 
+            this.rbInicio.AutoSize = true;
+            this.rbInicio.Checked = true;
+            this.rbInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbInicio.ForeColor = System.Drawing.Color.White;
+            this.rbInicio.Location = new System.Drawing.Point(25, 76);
+            this.rbInicio.Name = "rbInicio";
+            this.rbInicio.Size = new System.Drawing.Size(65, 21);
+            this.rbInicio.TabIndex = 3;
+            this.rbInicio.TabStop = true;
+            this.rbInicio.Text = "INÍCIO";
+            this.rbInicio.UseVisualStyleBackColor = true;
             // 
             // btnPesquisar
             // 
@@ -90,43 +109,24 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // rbInicio
+            // txtNome
             // 
-            this.rbInicio.AutoSize = true;
-            this.rbInicio.Checked = true;
-            this.rbInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbInicio.ForeColor = System.Drawing.Color.White;
-            this.rbInicio.Location = new System.Drawing.Point(25, 76);
-            this.rbInicio.Name = "rbInicio";
-            this.rbInicio.Size = new System.Drawing.Size(65, 21);
-            this.rbInicio.TabIndex = 3;
-            this.rbInicio.TabStop = true;
-            this.rbInicio.Text = "INÍCIO";
-            this.rbInicio.UseVisualStyleBackColor = true;
+            this.txtNome.Location = new System.Drawing.Point(27, 34);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(280, 20);
+            this.txtNome.TabIndex = 1;
             // 
-            // rbMeio
+            // label1
             // 
-            this.rbMeio.AutoSize = true;
-            this.rbMeio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbMeio.ForeColor = System.Drawing.Color.White;
-            this.rbMeio.Location = new System.Drawing.Point(140, 76);
-            this.rbMeio.Name = "rbMeio";
-            this.rbMeio.Size = new System.Drawing.Size(60, 21);
-            this.rbMeio.TabIndex = 4;
-            this.rbMeio.Text = "MEIO";
-            this.rbMeio.UseVisualStyleBackColor = true;
-            // 
-            // rbFim
-            // 
-            this.rbFim.AutoSize = true;
-            this.rbFim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbFim.ForeColor = System.Drawing.Color.White;
-            this.rbFim.Location = new System.Drawing.Point(263, 76);
-            this.rbFim.Name = "rbFim";
-            this.rbFim.Size = new System.Drawing.Size(48, 21);
-            this.rbFim.TabIndex = 5;
-            this.rbFim.Text = "FIM";
-            this.rbFim.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(23, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "NOME:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvLista
             // 
@@ -138,7 +138,6 @@
             this.dgvLista.ReadOnly = true;
             this.dgvLista.Size = new System.Drawing.Size(549, 338);
             this.dgvLista.TabIndex = 1;
-            this.dgvLista.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_RowEnter);
             // 
             // btnAbrirFicha
             // 

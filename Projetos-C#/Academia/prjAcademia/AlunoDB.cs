@@ -79,19 +79,18 @@ namespace prjAcademia
              {
                  banco.CommandText = "SELECT MAX(ID) AS COD FROM ALUNO";
                  SQLiteDataReader dr = banco.ExecuteReader();
-                 if (dr.HasRows)
+                 try
                  {
-                     try
+                     while (dr.Read())
                      {
-                         while (dr.Read())
-                         {
-                             return dr.GetInt32(0) + 1;
-                         }
+                         int cod = dr.GetInt32(0) + 1;
+                         dr.Close();
+                         return cod;
                      }
-                     catch (Exception)
-                     {
-                         return 1;
-                     }
+                 }
+                 catch (Exception)
+                 {
+                     return 1;
                  }
                  return 1;
              }
@@ -130,6 +129,7 @@ namespace prjAcademia
                            );
                          Lista.Add(reg);
                      }
+                     dr.Close();
                      dgvLista.DataSource = Lista;
                  }
              }
@@ -152,6 +152,7 @@ namespace prjAcademia
                      dr.GetDouble(3),
                      dr.GetDouble(4)
                      );
+                     dr.Close();
                      return reg;
                  }
              }

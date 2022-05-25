@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -110,6 +111,17 @@ namespace prjAcademia
         {
             Registro = null;
             this.Dispose();
+        }
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        { 
+            string caminho = Environment.CurrentDirectory + "\\" +
+                txtId.Text + ".png";
+            saveFoto.ShowDialog();
+            if (File.Exists())
+            {
+                
+            }
         }
     }
 
