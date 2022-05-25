@@ -66,7 +66,7 @@
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1064, 71);
+            this.panel1.Size = new System.Drawing.Size(988, 71);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -122,7 +122,7 @@
             this.bn.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bn.Name = "bn";
             this.bn.PositionItem = this.bindingNavigatorPositionItem;
-            this.bn.Size = new System.Drawing.Size(1064, 39);
+            this.bn.Size = new System.Drawing.Size(988, 39);
             this.bn.TabIndex = 2;
             this.bn.Text = "bindingNavigator1";
             // 
@@ -235,11 +235,12 @@
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(103, 36);
             this.btnPesquisar.Text = "PESQUISAR";
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // pbFoto
             // 
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoto.Location = new System.Drawing.Point(680, 106);
+            this.pbFoto.Location = new System.Drawing.Point(605, 107);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(357, 337);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -251,7 +252,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1064, 546);
+            this.ClientSize = new System.Drawing.Size(988, 546);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.dgvAlunos);
             this.Controls.Add(this.bn);

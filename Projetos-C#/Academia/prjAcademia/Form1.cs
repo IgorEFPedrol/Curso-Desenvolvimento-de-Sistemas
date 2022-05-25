@@ -48,8 +48,10 @@ namespace prjAcademia
             if (ficha.Registro != null)
             {
                 BoaForma.Matricular(ficha.Registro);
-                bs.MoveLast();
                 bs.ResetBindings(false);
+                bs.MoveLast();
+                dgvAlunos.AutoResizeColumns();
+                bs_PositionChanged(sender, e);
             }
         }
 
@@ -63,6 +65,7 @@ namespace prjAcademia
                 BoaForma.Editar(ficha.Registro);
                 bs.ResetBindings(false);
                 dgvAlunos.AutoResizeColumns();
+                bs_PositionChanged(sender, e);
             }
         }
 
@@ -106,7 +109,12 @@ namespace prjAcademia
                 {
                     pbFoto.Image = Image.FromFile(caminho);
                 }
+                else
+                {
+                    pbFoto.Image = null;
+                }
             }
         }
+
     }
 }
