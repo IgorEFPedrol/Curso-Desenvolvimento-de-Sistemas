@@ -48,7 +48,7 @@
             this.ep = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnFoto = new System.Windows.Forms.Button();
             this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.saveFoto = new System.Windows.Forms.SaveFileDialog();
+            this.saveFoto = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.pnFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ep)).BeginInit();
@@ -238,8 +238,13 @@
             this.pbFoto.Location = new System.Drawing.Point(444, 12);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(346, 327);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbFoto.TabIndex = 8;
             this.pbFoto.TabStop = false;
+            // 
+            // saveFoto
+            // 
+            this.saveFoto.FileName = "openFileDialog1";
             // 
             // FormFichaAluno
             // 
@@ -291,6 +296,6 @@
         private System.Windows.Forms.ErrorProvider ep;
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Button btnFoto;
-        private System.Windows.Forms.SaveFileDialog saveFoto;
+        private System.Windows.Forms.OpenFileDialog saveFoto;
     }
 }
