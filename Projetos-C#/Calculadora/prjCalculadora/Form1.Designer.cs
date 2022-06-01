@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbVisor = new System.Windows.Forms.Label();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.btn7 = new System.Windows.Forms.Button();
@@ -60,24 +60,24 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbVisor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(430, 100);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // lbVisor
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(404, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbVisor.BackColor = System.Drawing.Color.White;
+            this.lbVisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lbVisor.ForeColor = System.Drawing.Color.Black;
+            this.lbVisor.Location = new System.Drawing.Point(12, 29);
+            this.lbVisor.Name = "lbVisor";
+            this.lbVisor.Size = new System.Drawing.Size(404, 37);
+            this.lbVisor.TabIndex = 0;
+            this.lbVisor.Text = "0";
+            this.lbVisor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btn8
             // 
@@ -88,6 +88,7 @@
             this.btn8.TabIndex = 1;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn0
             // 
@@ -98,7 +99,7 @@
             this.btn0.TabIndex = 1;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
-            this.btn0.Click += new System.EventHandler(this.button2_Click);
+            this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // btn7
             // 
@@ -109,6 +110,7 @@
             this.btn7.TabIndex = 1;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn9
             // 
@@ -119,6 +121,7 @@
             this.btn9.TabIndex = 1;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btn5
             // 
@@ -129,6 +132,7 @@
             this.btn5.TabIndex = 1;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn6
             // 
@@ -139,6 +143,7 @@
             this.btn6.TabIndex = 1;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn4
             // 
@@ -149,6 +154,7 @@
             this.btn4.TabIndex = 1;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn2
             // 
@@ -159,6 +165,7 @@
             this.btn2.TabIndex = 1;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn3
             // 
@@ -169,6 +176,7 @@
             this.btn3.TabIndex = 1;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn1
             // 
@@ -179,6 +187,7 @@
             this.btn1.TabIndex = 1;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btnSomar
             // 
@@ -240,7 +249,6 @@
             this.btnInverterSinal.TabIndex = 1;
             this.btnInverterSinal.Text = "+-";
             this.btnInverterSinal.UseVisualStyleBackColor = true;
-            this.btnInverterSinal.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnCE
             // 
@@ -251,6 +259,7 @@
             this.btnCE.TabIndex = 1;
             this.btnCE.Text = "CE";
             this.btnCE.UseVisualStyleBackColor = true;
+            this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
             // btnBK
             // 
@@ -281,6 +290,7 @@
             this.btnC.TabIndex = 1;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // btnQuadrado
             // 
@@ -326,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(430, 477);
             this.Controls.Add(this.btnPontoDecimal);
             this.Controls.Add(this.btnInverterSinal);
@@ -367,7 +377,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbVisor;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btn7;

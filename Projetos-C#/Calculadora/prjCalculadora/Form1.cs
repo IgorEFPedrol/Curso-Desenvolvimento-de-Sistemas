@@ -17,9 +17,84 @@ namespace prjCalculadora
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+        Calculadora IG = new Calculadora();
 
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            IG.SetVisor(btn0.Text);
+            lbVisor.Text = IG.Visor;
         }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            IG.SetVisor(btn1.Text);
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            IG.SetVisor(btn2.Text);
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            IG.SetVisor(btn3.Text);
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            IG.SetVisor(btn4.Text);
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            IG.SetVisor(btn5.Text);
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            IG.SetVisor(btn6.Text);
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            IG.SetVisor(btn7.Text);
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            IG.SetVisor(btn8.Text);
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            IG.SetVisor(btn9.Text);
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+            IG = new Calculadora();
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            IG.Visor = "0";
+            lbVisor.Text = IG.Visor;
+        }
+
+
+
+      
+
+      
     }
 }
