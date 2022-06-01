@@ -11,7 +11,16 @@ namespace prjCalculadora
         public string Visor { get; set; }
         public double Aux1 { get; set; }
         public double Aux2 { get; set; }
-        public string Op { get; set; }
+        private string op;
+        public string Op
+        {
+            get { return op; }
+            set {
+                Aux1 = Double.Parse(Visor);
+                Visor = "0";
+                op = value;
+            }
+        }
 
         public Calculadora()
         {
@@ -27,5 +36,17 @@ namespace prjCalculadora
                 Visor = digito;
             else Visor += digito;
         }
+
+        public void Calcular()
+        {
+            if (Aux2 == 0) Aux2 = Double.Parse(Visor);
+            if (Op.Equals("+")) Aux1 += Aux2;
+            if (Op.Equals("-")) Aux1 -= Aux2;
+            if (Op.Equals("*")) Aux1 *= Aux2;
+            if (Op.Equals("/")) Aux1 /= Aux2;
+            Visor = Aux1.ToString();
+        }
+
+
     }        
 }            
