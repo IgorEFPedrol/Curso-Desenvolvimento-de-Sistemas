@@ -91,6 +91,34 @@ namespace prjCalculadora
             lbVisor.Text = IG.Visor;
         }
 
+        private void btnSomar_Click(object sender, EventArgs e)
+        {
+            IG.Op = "+";
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            IG.Calcular();
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btnSubtrair_Click(object sender, EventArgs e)
+        {
+            IG.Op = "-";
+        }
+
+        private void btnMultiplicar_Click(object sender, EventArgs e)
+        {
+            IG.Op = "*";
+        }
+
+        private void btnDividir_Click(object sender, EventArgs e)
+        {
+            IG.Op = "/";
+        }
+
+
+
 
 
       
