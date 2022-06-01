@@ -45,7 +45,7 @@
             this.btnMultiplicar = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnPontoDecimal = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.btnInverterSinal = new System.Windows.Forms.Button();
             this.btnCE = new System.Windows.Forms.Button();
             this.btnBK = new System.Windows.Forms.Button();
             this.btnDividir = new System.Windows.Forms.Button();
@@ -212,7 +212,7 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(129)))), ((int)(((byte)(164)))));
+            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(167)))));
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.btnCalcular.Location = new System.Drawing.Point(259, 403);
             this.btnCalcular.Name = "btnCalcular";
@@ -231,16 +231,16 @@
             this.btnPontoDecimal.Text = ",";
             this.btnPontoDecimal.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // btnInverterSinal
             // 
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button16.Location = new System.Drawing.Point(10, 403);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(77, 67);
-            this.button16.TabIndex = 1;
-            this.button16.Text = "+-";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button2_Click);
+            this.btnInverterSinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnInverterSinal.Location = new System.Drawing.Point(10, 403);
+            this.btnInverterSinal.Name = "btnInverterSinal";
+            this.btnInverterSinal.Size = new System.Drawing.Size(77, 67);
+            this.btnInverterSinal.TabIndex = 1;
+            this.btnInverterSinal.Text = "+-";
+            this.btnInverterSinal.UseVisualStyleBackColor = true;
+            this.btnInverterSinal.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnCE
             // 
@@ -289,7 +289,7 @@
             this.btnQuadrado.Name = "btnQuadrado";
             this.btnQuadrado.Size = new System.Drawing.Size(77, 67);
             this.btnQuadrado.TabIndex = 1;
-            this.btnQuadrado.Text = "QUAD";
+            this.btnQuadrado.Text = "x²";
             this.btnQuadrado.UseVisualStyleBackColor = true;
             // 
             // btnFracao
@@ -329,7 +329,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(430, 477);
             this.Controls.Add(this.btnPontoDecimal);
-            this.Controls.Add(this.button16);
+            this.Controls.Add(this.btnInverterSinal);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btn4);
@@ -383,7 +383,7 @@
         private System.Windows.Forms.Button btnMultiplicar;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnPontoDecimal;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button btnInverterSinal;
         private System.Windows.Forms.Button btnCE;
         private System.Windows.Forms.Button btnBK;
         private System.Windows.Forms.Button btnDividir;
