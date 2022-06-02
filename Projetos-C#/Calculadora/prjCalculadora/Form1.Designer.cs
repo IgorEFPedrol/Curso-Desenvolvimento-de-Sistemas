@@ -243,6 +243,7 @@
             this.btnPontoDecimal.TabIndex = 1;
             this.btnPontoDecimal.Text = ",";
             this.btnPontoDecimal.UseVisualStyleBackColor = true;
+            this.btnPontoDecimal.Click += new System.EventHandler(this.btnPontoDecimal_Click);
             // 
             // btnInverterSinal
             // 
@@ -275,6 +276,7 @@
             this.btnBK.TabIndex = 1;
             this.btnBK.Text = "BK";
             this.btnBK.UseVisualStyleBackColor = true;
+            this.btnBK.Click += new System.EventHandler(this.btnBK_Click);
             // 
             // btnDividir
             // 
@@ -307,6 +309,7 @@
             this.btnQuadrado.TabIndex = 1;
             this.btnQuadrado.Text = "x²";
             this.btnQuadrado.UseVisualStyleBackColor = true;
+            this.btnQuadrado.Click += new System.EventHandler(this.btnQuadrado_Click);
             // 
             // btnFracao
             // 
@@ -317,6 +320,7 @@
             this.btnFracao.TabIndex = 1;
             this.btnFracao.Text = "1/x";
             this.btnFracao.UseVisualStyleBackColor = true;
+            this.btnFracao.Click += new System.EventHandler(this.btnFracao_Click);
             // 
             // btnPorcentagem
             // 
@@ -375,7 +379,7 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Calculadora Versao 1.0";
+            this.Text = "CALCULADORA VERSAO 1.0";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

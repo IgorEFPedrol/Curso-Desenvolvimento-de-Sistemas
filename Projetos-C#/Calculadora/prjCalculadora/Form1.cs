@@ -129,12 +129,29 @@ namespace prjCalculadora
             lbVisor.Text = IG.Visor;
         }
 
+        private void btnFracao_Click(object sender, EventArgs e)
+        {
+            IG.Fracao();
+            lbVisor.Text = IG.Visor;
+        }
 
+        private void btnQuadrado_Click(object sender, EventArgs e)
+        {
+            IG.Quadrado();
+            lbVisor.Text = IG.Visor;
+        }
 
+        private void btnPontoDecimal_Click(object sender, EventArgs e)
+        {
+            IG.PontoDecimal();
+            lbVisor.Text = IG.Visor;
+        }
 
-
-      
-
+        private void btnBK_Click(object sender, EventArgs e)
+        {
+            IG.Backspace();
+            lbVisor.Text = IG.Visor;
+        }
       
     }
 }

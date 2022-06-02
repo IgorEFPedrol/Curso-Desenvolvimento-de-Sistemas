@@ -58,5 +58,30 @@ namespace prjCalculadora
             double num = Double.Parse(Visor);
             Visor = Math.Sqrt(num).ToString();
         }
+
+        public void Fracao()
+        {
+            double num = 1 /  Double.Parse(Visor);
+            Visor = num.ToString();
+        }
+
+        public void Quadrado()
+        {
+            double num = Double.Parse(Visor);
+            Visor = (Math.Pow(num, 2)).ToString();
+        }
+
+        public void PontoDecimal()
+        {
+            if (!Visor.Contains(","))
+            {
+                Visor += ",";
+            }
+        }
+
+        public void Backspace()
+        {
+            
+        }
     }        
 }            
