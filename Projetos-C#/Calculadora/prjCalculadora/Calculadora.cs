@@ -81,7 +81,9 @@ namespace prjCalculadora
 
         public void Backspace()
         {
-            
+            Visor = Visor.Substring(0, Visor.Length - 1);
+            if (Visor.Length == 0)
+                Visor = "0";              
         }
     }        
 }            
