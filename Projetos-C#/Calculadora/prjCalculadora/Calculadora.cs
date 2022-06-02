@@ -32,6 +32,8 @@ namespace prjCalculadora
 
         public void SetVisor(string digito)
         {
+            if (Visor.Length > 15) return;
+           
             if (Visor.Equals("0"))
                 Visor = digito;
             else Visor += digito;

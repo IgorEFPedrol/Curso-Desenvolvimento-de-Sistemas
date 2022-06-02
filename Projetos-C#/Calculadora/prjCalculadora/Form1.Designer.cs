@@ -70,7 +70,7 @@
             // lbVisor
             // 
             this.lbVisor.BackColor = System.Drawing.Color.White;
-            this.lbVisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lbVisor.Font = new System.Drawing.Font("Quartz", 25F);
             this.lbVisor.ForeColor = System.Drawing.Color.Black;
             this.lbVisor.Location = new System.Drawing.Point(12, 29);
             this.lbVisor.Name = "lbVisor";
@@ -375,12 +375,14 @@
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CALCULADORA VERSAO 1.0";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -158,6 +158,15 @@ namespace prjCalculadora
             IG.Porcentagem();
             lbVisor.Text = IG.Visor;
         }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                IG.SetVisor(Convert.ToString(e.KeyChar));
+                lbVisor.Text = IG.Visor;
+            }
+        }
       
     }
 }
