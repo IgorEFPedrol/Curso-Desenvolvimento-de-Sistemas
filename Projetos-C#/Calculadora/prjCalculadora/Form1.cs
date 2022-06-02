@@ -152,6 +152,12 @@ namespace prjCalculadora
             IG.Backspace();
             lbVisor.Text = IG.Visor;
         }
+
+        private void btnPorcentagem_Click(object sender, EventArgs e)
+        {
+            IG.Porcentagem();
+            lbVisor.Text = IG.Visor;
+        }
       
     }
 }

@@ -85,5 +85,12 @@ namespace prjCalculadora
             if (Visor.Length == 0)
                 Visor = "0";              
         }
+
+        public void Porcentagem()
+        {
+            double porcentagem = Double.Parse(Visor);
+            double resultado = Aux1 * porcentagem / 100;
+            Visor = resultado.ToString();
+        }
     }        
 }            

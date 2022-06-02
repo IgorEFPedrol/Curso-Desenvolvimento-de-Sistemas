@@ -218,7 +218,7 @@
             this.btnMultiplicar.Name = "btnMultiplicar";
             this.btnMultiplicar.Size = new System.Drawing.Size(77, 67);
             this.btnMultiplicar.TabIndex = 1;
-            this.btnMultiplicar.Text = "*";
+            this.btnMultiplicar.Text = "×";
             this.btnMultiplicar.UseVisualStyleBackColor = true;
             this.btnMultiplicar.Click += new System.EventHandler(this.btnMultiplicar_Click);
             // 
@@ -252,7 +252,7 @@
             this.btnInverterSinal.Name = "btnInverterSinal";
             this.btnInverterSinal.Size = new System.Drawing.Size(77, 67);
             this.btnInverterSinal.TabIndex = 1;
-            this.btnInverterSinal.Text = "+-";
+            this.btnInverterSinal.Text = "±";
             this.btnInverterSinal.UseVisualStyleBackColor = true;
             this.btnInverterSinal.Click += new System.EventHandler(this.btnInverterSinal_Click);
             // 
@@ -274,7 +274,7 @@
             this.btnBK.Name = "btnBK";
             this.btnBK.Size = new System.Drawing.Size(77, 67);
             this.btnBK.TabIndex = 1;
-            this.btnBK.Text = "BK";
+            this.btnBK.Text = "⌫";
             this.btnBK.UseVisualStyleBackColor = true;
             this.btnBK.Click += new System.EventHandler(this.btnBK_Click);
             // 
@@ -285,7 +285,7 @@
             this.btnDividir.Name = "btnDividir";
             this.btnDividir.Size = new System.Drawing.Size(77, 67);
             this.btnDividir.TabIndex = 1;
-            this.btnDividir.Text = "/";
+            this.btnDividir.Text = "÷";
             this.btnDividir.UseVisualStyleBackColor = true;
             this.btnDividir.Click += new System.EventHandler(this.btnDividir_Click);
             // 
@@ -331,15 +331,16 @@
             this.btnPorcentagem.TabIndex = 1;
             this.btnPorcentagem.Text = "%";
             this.btnPorcentagem.UseVisualStyleBackColor = true;
+            this.btnPorcentagem.Click += new System.EventHandler(this.btnPorcentagem_Click);
             // 
             // btnRaiz
             // 
-            this.btnRaiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnRaiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.btnRaiz.Location = new System.Drawing.Point(342, 111);
             this.btnRaiz.Name = "btnRaiz";
             this.btnRaiz.Size = new System.Drawing.Size(77, 67);
             this.btnRaiz.TabIndex = 1;
-            this.btnRaiz.Text = "RAIZ";
+            this.btnRaiz.Text = "√";
             this.btnRaiz.UseVisualStyleBackColor = true;
             this.btnRaiz.Click += new System.EventHandler(this.btnRaiz_Click);
             // 
