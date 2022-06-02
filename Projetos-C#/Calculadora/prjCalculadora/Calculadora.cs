@@ -47,6 +47,16 @@ namespace prjCalculadora
             Visor = Aux1.ToString();
         }
 
+        public void InverterSinal()
+        {
+            double num = Double.Parse(Visor) * -1;
+            Visor = num.ToString();
+        }
 
+        public void RaizQuadrada()
+        {
+            double num = Double.Parse(Visor);
+            Visor = Math.Sqrt(num).ToString();
+        }
     }        
 }            

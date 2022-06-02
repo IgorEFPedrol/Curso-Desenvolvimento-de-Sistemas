@@ -117,6 +117,18 @@ namespace prjCalculadora
             IG.Op = "/";
         }
 
+        private void btnInverterSinal_Click(object sender, EventArgs e)
+        {
+            IG.InverterSinal();
+            lbVisor.Text = IG.Visor;
+        }
+
+        private void btnRaiz_Click(object sender, EventArgs e)
+        {
+            IG.RaizQuadrada();
+            lbVisor.Text = IG.Visor;
+        }
+
 
 
 

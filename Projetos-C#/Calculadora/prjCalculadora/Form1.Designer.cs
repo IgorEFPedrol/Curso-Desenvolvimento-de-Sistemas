@@ -253,6 +253,7 @@
             this.btnInverterSinal.TabIndex = 1;
             this.btnInverterSinal.Text = "+-";
             this.btnInverterSinal.UseVisualStyleBackColor = true;
+            this.btnInverterSinal.Click += new System.EventHandler(this.btnInverterSinal_Click);
             // 
             // btnCE
             // 
@@ -336,6 +337,7 @@
             this.btnRaiz.TabIndex = 1;
             this.btnRaiz.Text = "RAIZ";
             this.btnRaiz.UseVisualStyleBackColor = true;
+            this.btnRaiz.Click += new System.EventHandler(this.btnRaiz_Click);
             // 
             // Form1
             // 
