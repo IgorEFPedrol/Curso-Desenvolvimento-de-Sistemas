@@ -18,63 +18,84 @@ namespace prjCalculadora
         }
 
         Calculadora IG = new Calculadora();
+        bool EstadoIgual = false;
+
 
         private void btn0_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             IG.SetVisor(btn0.Text);
             lbVisor.Text = IG.Visor;
         }
 
+        private void TestarIgual(object sender, EventArgs e)
+        {
+            if (EstadoIgual == true)
+            {
+                btnCE_Click(sender, e);
+                EstadoIgual = false;
+            }
+        }
+
         private void btn1_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             IG.SetVisor(btn1.Text);
             lbVisor.Text = IG.Visor;
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             IG.SetVisor(btn2.Text);
             lbVisor.Text = IG.Visor;
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             IG.SetVisor(btn3.Text);
             lbVisor.Text = IG.Visor;
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             IG.SetVisor(btn4.Text);
             lbVisor.Text = IG.Visor;
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             IG.SetVisor(btn5.Text);
             lbVisor.Text = IG.Visor;
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             IG.SetVisor(btn6.Text);
             lbVisor.Text = IG.Visor;
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             IG.SetVisor(btn7.Text);
             lbVisor.Text = IG.Visor;
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             IG.SetVisor(btn8.Text);
             lbVisor.Text = IG.Visor;
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             IG.SetVisor(btn9.Text);
             lbVisor.Text = IG.Visor;
         }
@@ -100,6 +121,7 @@ namespace prjCalculadora
         {
             IG.Calcular();
             lbVisor.Text = IG.Visor;
+            EstadoIgual = true;
         }
 
         private void btnSubtrair_Click(object sender, EventArgs e)
@@ -127,18 +149,21 @@ namespace prjCalculadora
         {
             IG.RaizQuadrada();
             lbVisor.Text = IG.Visor;
+            EstadoIgual = true;
         }
 
         private void btnFracao_Click(object sender, EventArgs e)
         {
             IG.Fracao();
             lbVisor.Text = IG.Visor;
+            EstadoIgual = true;
         }
 
         private void btnQuadrado_Click(object sender, EventArgs e)
         {
             IG.Quadrado();
             lbVisor.Text = IG.Visor;
+            EstadoIgual = true;
         }
 
         private void btnPontoDecimal_Click(object sender, EventArgs e)
@@ -157,15 +182,63 @@ namespace prjCalculadora
         {
             IG.Porcentagem();
             lbVisor.Text = IG.Visor;
+            EstadoIgual = true;
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsNumber(e.KeyChar))
             {
+                TestarIgual(sender, e);
                 IG.SetVisor(Convert.ToString(e.KeyChar));
                 lbVisor.Text = IG.Visor;
+                return;
             }
+         
+            if (e.KeyChar == '+') IG.Op = "+";
+            if (e.KeyChar == '-') IG.Op = "-";
+            if (e.KeyChar == '*') IG.Op = "*";
+            if (e.KeyChar == '/') IG.Op = "/";
+            if (e.KeyChar == '=')
+            {
+                btnCalcular_Click(sender, e);
+            }
+           
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSeno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCosseno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTangente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPI_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+
         }
       
     }

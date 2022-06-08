@@ -54,6 +54,12 @@
             this.btnFracao = new System.Windows.Forms.Button();
             this.btnPorcentagem = new System.Windows.Forms.Button();
             this.btnRaiz = new System.Windows.Forms.Button();
+            this.btnTangente = new System.Windows.Forms.Button();
+            this.btnCosseno = new System.Windows.Forms.Button();
+            this.btnSeno = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnPI = new System.Windows.Forms.Button();
+            this.btnE = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,17 +70,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 100);
+            this.panel1.Size = new System.Drawing.Size(593, 100);
             this.panel1.TabIndex = 0;
             // 
             // lbVisor
             // 
             this.lbVisor.BackColor = System.Drawing.Color.White;
-            this.lbVisor.Font = new System.Drawing.Font("Quartz", 25F);
+            this.lbVisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.lbVisor.ForeColor = System.Drawing.Color.Black;
             this.lbVisor.Location = new System.Drawing.Point(12, 29);
             this.lbVisor.Name = "lbVisor";
-            this.lbVisor.Size = new System.Drawing.Size(404, 37);
+            this.lbVisor.Size = new System.Drawing.Size(561, 37);
             this.lbVisor.TabIndex = 0;
             this.lbVisor.Text = "0";
             this.lbVisor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -302,7 +308,7 @@
             // 
             // btnQuadrado
             // 
-            this.btnQuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnQuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.btnQuadrado.Location = new System.Drawing.Point(342, 330);
             this.btnQuadrado.Name = "btnQuadrado";
             this.btnQuadrado.Size = new System.Drawing.Size(77, 67);
@@ -344,12 +350,78 @@
             this.btnRaiz.UseVisualStyleBackColor = true;
             this.btnRaiz.Click += new System.EventHandler(this.btnRaiz_Click);
             // 
+            // btnTangente
+            // 
+            this.btnTangente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnTangente.Location = new System.Drawing.Point(425, 257);
+            this.btnTangente.Name = "btnTangente";
+            this.btnTangente.Size = new System.Drawing.Size(159, 67);
+            this.btnTangente.TabIndex = 1;
+            this.btnTangente.Text = "TANGENTE";
+            this.btnTangente.UseVisualStyleBackColor = true;
+            this.btnTangente.Click += new System.EventHandler(this.btnTangente_Click);
+            // 
+            // btnCosseno
+            // 
+            this.btnCosseno.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnCosseno.Location = new System.Drawing.Point(425, 184);
+            this.btnCosseno.Name = "btnCosseno";
+            this.btnCosseno.Size = new System.Drawing.Size(159, 67);
+            this.btnCosseno.TabIndex = 1;
+            this.btnCosseno.Text = "COSSENO";
+            this.btnCosseno.UseVisualStyleBackColor = true;
+            this.btnCosseno.Click += new System.EventHandler(this.btnCosseno_Click);
+            // 
+            // btnSeno
+            // 
+            this.btnSeno.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnSeno.Location = new System.Drawing.Point(425, 111);
+            this.btnSeno.Name = "btnSeno";
+            this.btnSeno.Size = new System.Drawing.Size(159, 67);
+            this.btnSeno.TabIndex = 1;
+            this.btnSeno.Text = "SENO";
+            this.btnSeno.UseVisualStyleBackColor = true;
+            this.btnSeno.Click += new System.EventHandler(this.btnSeno_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.button2.Location = new System.Drawing.Point(425, 403);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(159, 67);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "LOG";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnLog_Click);
+            // 
+            // btnPI
+            // 
+            this.btnPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnPI.Location = new System.Drawing.Point(425, 330);
+            this.btnPI.Name = "btnPI";
+            this.btnPI.Size = new System.Drawing.Size(77, 67);
+            this.btnPI.TabIndex = 1;
+            this.btnPI.Text = "PI";
+            this.btnPI.UseVisualStyleBackColor = true;
+            this.btnPI.Click += new System.EventHandler(this.btnPI_Click);
+            // 
+            // btnE
+            // 
+            this.btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnE.Location = new System.Drawing.Point(504, 330);
+            this.btnE.Name = "btnE";
+            this.btnE.Size = new System.Drawing.Size(77, 67);
+            this.btnE.TabIndex = 1;
+            this.btnE.Text = "E";
+            this.btnE.UseVisualStyleBackColor = true;
+            this.btnE.Click += new System.EventHandler(this.btnE_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(430, 477);
+            this.ClientSize = new System.Drawing.Size(593, 477);
             this.Controls.Add(this.btnPontoDecimal);
             this.Controls.Add(this.btnInverterSinal);
             this.Controls.Add(this.btn0);
@@ -359,12 +431,18 @@
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.btn7);
+            this.Controls.Add(this.btnSeno);
             this.Controls.Add(this.btnRaiz);
             this.Controls.Add(this.btnDividir);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCosseno);
             this.Controls.Add(this.btnPorcentagem);
+            this.Controls.Add(this.btnTangente);
             this.Controls.Add(this.btnMultiplicar);
             this.Controls.Add(this.btnFracao);
             this.Controls.Add(this.btnSubtrair);
+            this.Controls.Add(this.btnE);
+            this.Controls.Add(this.btnPI);
             this.Controls.Add(this.btnQuadrado);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.btnSomar);
@@ -382,6 +460,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CALCULADORA VERSAO 1.0";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -416,6 +495,12 @@
         private System.Windows.Forms.Button btnFracao;
         private System.Windows.Forms.Button btnPorcentagem;
         private System.Windows.Forms.Button btnRaiz;
+        private System.Windows.Forms.Button btnTangente;
+        private System.Windows.Forms.Button btnCosseno;
+        private System.Windows.Forms.Button btnSeno;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPI;
+        private System.Windows.Forms.Button btnE;
     }
 }
 
