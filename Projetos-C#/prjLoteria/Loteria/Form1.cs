@@ -16,5 +16,14 @@ namespace Loteria
         {
             InitializeComponent();
         }
+
+        private void btnCartela_Click(object sender, EventArgs e)
+        {
+            if (rbMegasena.Checked)
+            {
+                Cartela c = new Cartela(60);
+                c.Imprimir(pnCartela, 6, 10);
+            }
+        }
     }
 }

@@ -100,6 +100,7 @@
             this.btnCartela.TabIndex = 3;
             this.btnCartela.Text = "GERAR CARTELA";
             this.btnCartela.UseVisualStyleBackColor = true;
+            this.btnCartela.Click += new System.EventHandler(this.btnCartela_Click);
             // 
             // Form1
             // 
