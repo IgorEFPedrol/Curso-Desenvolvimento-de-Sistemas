@@ -114,6 +114,7 @@ namespace prjCalculadora
 
         private void btnSomar_Click(object sender, EventArgs e)
         {
+            if (!IG.Op.Equals("")) IG.Aux2 = 0;
             IG.Op = "+";
         }
 
@@ -213,32 +214,44 @@ namespace prjCalculadora
 
         private void btnSeno_Click(object sender, EventArgs e)
         {
-
+            EstadoIgual = true;
+            IG.Seno();
+            lbVisor.Text = IG.Visor;
         }
 
         private void btnCosseno_Click(object sender, EventArgs e)
         {
-
+            EstadoIgual = true;
+            IG.Cosseno();
+            lbVisor.Text = IG.Visor;
         }
 
         private void btnTangente_Click(object sender, EventArgs e)
         {
-
+            EstadoIgual = true;
+            IG.Tangente();
+            lbVisor.Text = IG.Visor;
         }
 
         private void btnPI_Click(object sender, EventArgs e)
         {
-
+            EstadoIgual = true;
+            IG.PI();
+            lbVisor.Text = IG.Visor;
         }
 
         private void btnE_Click(object sender, EventArgs e)
         {
-
+            EstadoIgual = true;
+            IG.Euler();
+            lbVisor.Text = IG.Visor;
         }
 
         private void btnLog_Click(object sender, EventArgs e)
         {
-
+            EstadoIgual = true;
+            IG.Logaritmo();
+            lbVisor.Text = IG.Visor;
         }
       
     }
