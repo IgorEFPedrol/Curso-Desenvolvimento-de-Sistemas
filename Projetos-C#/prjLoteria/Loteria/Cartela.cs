@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Loteria
+namespace prjLoteria
 {
     class Cartela
     {
@@ -36,19 +37,41 @@ namespace Loteria
                 Numeros[i].AutoSize = false;
                 Numeros[i].Width = p.Width / col;
                 Numeros[i].Height = p.Height / lin;
-                Numeros[i].Font = new Font(Numeros[i].Font.Name, 14);
+                Numeros[i].Font = new Font(Numeros[i].Font.Name, 12);
                 if (i % col == 0 && i != 0)
                 {
                     pv += (p.Height / lin);
                     ph = 0;
                 }
+
                 Numeros[i].Top = pv;
                 Numeros[i].Left = ph;
                 ph += (p.Width / col);
                 p.Controls.Add(Numeros[i]);
-                string caminho = Environment.CurrentDirectory + "\\bola.png";
-                Numeros[i].CreateGraphics().DrawImage(Image.FromFile(caminho), 0, 0);
+                string caminho = Environment.CurrentDirectory + "\\Bola.png";
+                Numeros[i].Image = Image.FromFile(caminho);
                 Numeros[i].Show();
+            }
+        }
+        public void Sortear(int faixa, int quantidade)
+        {
+            List<int> lista = new List<int>();
+            Random sorteio = new Random();
+            for (int i = 0; i < quantidade; i++)
+            {
+                int numero = sorteio.Next(0, faixa);
+                if (lista.Contains(numero))
+                {
+                    i--;
+                    continue;
+                }
+                lista.Add(numero);
+                Thread.Sleep(1);
+            }
+            foreach (int num in lista)
+            {
+                Numeros[num].ForeColor = Color.Black;
+                Numeros[num].BackColor = Color.DarkOrange;
             }
         }
     }
