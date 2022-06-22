@@ -48,45 +48,57 @@
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(10, 10, 5, 10);
-            this.menu.Size = new System.Drawing.Size(118, 639);
+            this.menu.Size = new System.Drawing.Size(136, 639);
             this.menu.TabIndex = 1;
             this.menu.Text = "menu";
             // 
             // mnProdutos
             // 
+            this.mnProdutos.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.mnProdutos.Image = ((System.Drawing.Image)(resources.GetObject("mnProdutos.Image")));
             this.mnProdutos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnProdutos.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.mnProdutos.Name = "mnProdutos";
             this.mnProdutos.Padding = new System.Windows.Forms.Padding(10, 10, 5, 10);
-            this.mnProdutos.Size = new System.Drawing.Size(77, 87);
+            this.mnProdutos.Size = new System.Drawing.Size(95, 92);
             this.mnProdutos.Text = "PRODUTOS";
             this.mnProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // mnMesas
             // 
+            this.mnMesas.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.mnMesas.Image = ((System.Drawing.Image)(resources.GetObject("mnMesas.Image")));
+            this.mnMesas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnMesas.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.mnMesas.Name = "mnMesas";
             this.mnMesas.Padding = new System.Windows.Forms.Padding(10, 10, 5, 10);
-            this.mnMesas.Size = new System.Drawing.Size(77, 40);
+            this.mnMesas.Size = new System.Drawing.Size(95, 92);
             this.mnMesas.Text = "MESAS";
+            this.mnMesas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // mnComandas
             // 
+            this.mnComandas.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.mnComandas.Image = ((System.Drawing.Image)(resources.GetObject("mnComandas.Image")));
+            this.mnComandas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnComandas.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.mnComandas.Name = "mnComandas";
             this.mnComandas.Padding = new System.Windows.Forms.Padding(10, 10, 5, 10);
-            this.mnComandas.Size = new System.Drawing.Size(77, 39);
+            this.mnComandas.Size = new System.Drawing.Size(95, 92);
             this.mnComandas.Text = "COMANDAS";
+            this.mnComandas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // mnSair
             // 
+            this.mnSair.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.mnSair.Image = ((System.Drawing.Image)(resources.GetObject("mnSair.Image")));
+            this.mnSair.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnSair.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.mnSair.Name = "mnSair";
             this.mnSair.Padding = new System.Windows.Forms.Padding(10, 10, 5, 10);
-            this.mnSair.Size = new System.Drawing.Size(77, 39);
+            this.mnSair.Size = new System.Drawing.Size(95, 92);
             this.mnSair.Text = "SAIR";
+            this.mnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.mnSair.Click += new System.EventHandler(this.mnSair_Click);
             // 
             // FormPrincipal
