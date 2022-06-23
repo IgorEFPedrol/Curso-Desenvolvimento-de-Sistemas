@@ -16,7 +16,7 @@ namespace prjRestaurante.controle
             using (var banco = new modelo.restaurantedbEntidades())
             {
                 banco.Database.Connection.ConnectionString = con;
-                var query = from linhas in banco.produto
+                var query = from linhas in banco.produto.Include("tipo")
                             orderby linhas.idproduto
                             select linhas;
                 bs.DataSource = query.ToList();
