@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controle\Conexao.cs" />
+    <Compile Include="controle\ProdutoDB.cs" />
     <Compile Include="modelo\comanda.cs">
       <DependentUpon>restauranteDB.tt</DependentUpon>
     </Compile>
@@ -142,9 +144,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controle\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

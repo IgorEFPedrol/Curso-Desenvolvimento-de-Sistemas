@@ -34,30 +34,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.bn = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnAdicionar = new System.Windows.Forms.ToolStripButton();
+            this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnExluir = new System.Windows.Forms.ToolStripButton();
             this.btnPesquisar = new System.Windows.Forms.ToolStripButton();
             this.pnPrincipal = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbId = new System.Windows.Forms.Label();
+            this.lbTipo = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
             this.lbPreco = new System.Windows.Forms.Label();
-            this.lbTipo = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbId = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bn)).BeginInit();
@@ -120,6 +120,31 @@
             this.bn.TabIndex = 1;
             this.bn.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 36);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 36);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 36);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -152,16 +177,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 36);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorMoveNextItem
@@ -184,35 +202,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 36);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 36);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(80, 36);
-            this.btnEditar.Text = "EDITAR";
             // 
             // btnAdicionar
             // 
@@ -222,6 +213,15 @@
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(106, 36);
             this.btnAdicionar.Text = "ADICIONAR";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(80, 36);
+            this.btnEditar.Text = "EDITAR";
             // 
             // btnExluir
             // 
@@ -256,17 +256,6 @@
             this.pnPrincipal.Size = new System.Drawing.Size(703, 432);
             this.pnPrincipal.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "CÓDIGO DO PRODUTO";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -276,6 +265,16 @@
             this.label3.Size = new System.Drawing.Size(216, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "DESCRIÇÃO DO PRODUTO";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(297, 181);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(156, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "TIPO DO PRODUTO";
             // 
             // label4
             // 
@@ -287,17 +286,17 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "PREÇO DO PRODUTO";
             // 
-            // lbId
+            // lbTipo
             // 
-            this.lbId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.lbId.ForeColor = System.Drawing.Color.Black;
-            this.lbId.Location = new System.Drawing.Point(36, 69);
-            this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(223, 66);
-            this.lbId.TabIndex = 0;
-            this.lbId.Text = "123456";
-            this.lbId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbId.Click += new System.EventHandler(this.label2_Click);
+            this.lbTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.lbTipo.ForeColor = System.Drawing.Color.Black;
+            this.lbTipo.Location = new System.Drawing.Point(297, 220);
+            this.lbTipo.Name = "lbTipo";
+            this.lbTipo.Size = new System.Drawing.Size(376, 66);
+            this.lbTipo.TabIndex = 0;
+            this.lbTipo.Text = "REFRIGERANTE";
+            this.lbTipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTipo.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbNome
             // 
@@ -322,27 +321,28 @@
             this.lbPreco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbPreco.Click += new System.EventHandler(this.label2_Click);
             // 
-            // lbTipo
+            // lbId
             // 
-            this.lbTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.lbTipo.ForeColor = System.Drawing.Color.Black;
-            this.lbTipo.Location = new System.Drawing.Point(297, 220);
-            this.lbTipo.Name = "lbTipo";
-            this.lbTipo.Size = new System.Drawing.Size(376, 66);
-            this.lbTipo.TabIndex = 0;
-            this.lbTipo.Text = "REFRIGERANTE";
-            this.lbTipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbTipo.Click += new System.EventHandler(this.label2_Click);
+            this.lbId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.lbId.ForeColor = System.Drawing.Color.Black;
+            this.lbId.Location = new System.Drawing.Point(36, 69);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(223, 66);
+            this.lbId.TabIndex = 0;
+            this.lbId.Text = "123456";
+            this.lbId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbId.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label9
+            // label2
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(297, 181);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(156, 20);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "TIPO DO PRODUTO";
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(32, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(185, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "CÓDIGO DO PRODUTO";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // FormProduto
             // 
@@ -360,6 +360,7 @@
             this.ShowIcon = false;
             this.Text = "PRODUTOS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormProduto_FormClosing);
+            this.Load += new System.EventHandler(this.FormProduto_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bn)).EndInit();
