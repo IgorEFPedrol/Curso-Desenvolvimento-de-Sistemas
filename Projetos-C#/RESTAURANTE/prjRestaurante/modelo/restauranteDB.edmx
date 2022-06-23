@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="restaurantedbModelo.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="comanda">
+          <Key>
+            <PropertyRef Name="idcomanda" />
+          </Key>
+          <Property Name="idcomanda" Type="int" Nullable="false" />
+          <Property Name="Consumo" Type="double" />
+        </EntityType>
+        <EntityType Name="consumo_comanda">
+          <Key>
+            <PropertyRef Name="idconsumo_comanda" />
+          </Key>
+          <Property Name="idconsumo_comanda" Type="int" Nullable="false" />
+          <Property Name="idmesa" Type="int" />
+          <Property Name="idcomanda" Type="int" />
+          <Property Name="itemproduto" Type="int" />
+          <Property Name="quantidade" Type="int" />
+        </EntityType>
+        <EntityType Name="mesa">
+          <Key>
+            <PropertyRef Name="idmesa" />
+          </Key>
+          <Property Name="idmesa" Type="int" Nullable="false" />
+          <Property Name="status" Type="int" />
+          <Property Name="vagas" Type="int" />
+        </EntityType>
+        <EntityType Name="produto">
+          <Key>
+            <PropertyRef Name="idproduto" />
+          </Key>
+          <Property Name="idproduto" Type="int" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="45" />
+          <Property Name="preco" Type="double" />
+          <Property Name="idtipo" Type="int" />
+        </EntityType>
+        <EntityType Name="tipo">
+          <Key>
+            <PropertyRef Name="idtipo" />
+          </Key>
+          <Property Name="idtipo" Type="int" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <Association Name="FK_COMANDA">
+          <End Role="comanda" Type="Self.comanda" Multiplicity="0..1" />
+          <End Role="consumo_comanda" Type="Self.consumo_comanda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="comanda">
+              <PropertyRef Name="idcomanda" />
+            </Principal>
+            <Dependent Role="consumo_comanda">
+              <PropertyRef Name="idcomanda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MESA">
+          <End Role="mesa" Type="Self.mesa" Multiplicity="0..1" />
+          <End Role="consumo_comanda" Type="Self.consumo_comanda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mesa">
+              <PropertyRef Name="idmesa" />
+            </Principal>
+            <Dependent Role="consumo_comanda">
+              <PropertyRef Name="idmesa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUTO">
+          <End Role="produto" Type="Self.produto" Multiplicity="0..1" />
+          <End Role="consumo_comanda" Type="Self.consumo_comanda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produto">
+              <PropertyRef Name="idproduto" />
+            </Principal>
+            <Dependent Role="consumo_comanda">
+              <PropertyRef Name="itemproduto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPO">
+          <End Role="tipo" Type="Self.tipo" Multiplicity="0..1" />
+          <End Role="produto" Type="Self.produto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo">
+              <PropertyRef Name="idtipo" />
+            </Principal>
+            <Dependent Role="produto">
+              <PropertyRef Name="idtipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="restaurantedbModeloStoreContainer">
+          <EntitySet Name="comanda" EntityType="Self.comanda" Schema="restaurantedb" store:Type="Tables" />
+          <EntitySet Name="consumo_comanda" EntityType="Self.consumo_comanda" Schema="restaurantedb" store:Type="Tables" />
+          <EntitySet Name="mesa" EntityType="Self.mesa" Schema="restaurantedb" store:Type="Tables" />
+          <EntitySet Name="produto" EntityType="Self.produto" Schema="restaurantedb" store:Type="Tables" />
+          <EntitySet Name="tipo" EntityType="Self.tipo" Schema="restaurantedb" store:Type="Tables" />
+          <AssociationSet Name="FK_COMANDA" Association="Self.FK_COMANDA">
+            <End Role="comanda" EntitySet="comanda" />
+            <End Role="consumo_comanda" EntitySet="consumo_comanda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MESA" Association="Self.FK_MESA">
+            <End Role="mesa" EntitySet="mesa" />
+            <End Role="consumo_comanda" EntitySet="consumo_comanda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUTO" Association="Self.FK_PRODUTO">
+            <End Role="produto" EntitySet="produto" />
+            <End Role="consumo_comanda" EntitySet="consumo_comanda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPO" Association="Self.FK_TIPO">
+            <End Role="tipo" EntitySet="tipo" />
+            <End Role="produto" EntitySet="produto" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="restaurantedbModelo" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="comanda">
+          <Key>
+            <PropertyRef Name="idcomanda" />
+          </Key>
+          <Property Name="idcomanda" Type="Int32" Nullable="false" />
+          <Property Name="Consumo" Type="Double" />
+          <NavigationProperty Name="consumo_comanda" Relationship="Self.FK_COMANDA" FromRole="comanda" ToRole="consumo_comanda" />
+        </EntityType>
+        <EntityType Name="consumo_comanda">
+          <Key>
+            <PropertyRef Name="idconsumo_comanda" />
+          </Key>
+          <Property Name="idconsumo_comanda" Type="Int32" Nullable="false" />
+          <Property Name="idmesa" Type="Int32" />
+          <Property Name="idcomanda" Type="Int32" />
+          <Property Name="itemproduto" Type="Int32" />
+          <Property Name="quantidade" Type="Int32" />
+          <NavigationProperty Name="comanda" Relationship="Self.FK_COMANDA" FromRole="consumo_comanda" ToRole="comanda" />
+          <NavigationProperty Name="mesa" Relationship="Self.FK_MESA" FromRole="consumo_comanda" ToRole="mesa" />
+          <NavigationProperty Name="produto" Relationship="Self.FK_PRODUTO" FromRole="consumo_comanda" ToRole="produto" />
+        </EntityType>
+        <EntityType Name="mesa">
+          <Key>
+            <PropertyRef Name="idmesa" />
+          </Key>
+          <Property Name="idmesa" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="vagas" Type="Int32" />
+          <NavigationProperty Name="consumo_comanda" Relationship="Self.FK_MESA" FromRole="mesa" ToRole="consumo_comanda" />
+        </EntityType>
+        <EntityType Name="produto">
+          <Key>
+            <PropertyRef Name="idproduto" />
+          </Key>
+          <Property Name="idproduto" Type="Int32" Nullable="false" />
+          <Property Name="nome" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="preco" Type="Double" />
+          <Property Name="idtipo" Type="Int32" />
+          <NavigationProperty Name="consumo_comanda" Relationship="Self.FK_PRODUTO" FromRole="produto" ToRole="consumo_comanda" />
+          <NavigationProperty Name="tipo" Relationship="Self.FK_TIPO" FromRole="produto" ToRole="tipo" />
+        </EntityType>
+        <EntityType Name="tipo">
+          <Key>
+            <PropertyRef Name="idtipo" />
+          </Key>
+          <Property Name="idtipo" Type="Int32" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="produto" Relationship="Self.FK_TIPO" FromRole="tipo" ToRole="produto" />
+        </EntityType>
+        <Association Name="FK_COMANDA">
+          <End Role="comanda" Type="Self.comanda" Multiplicity="0..1" />
+          <End Role="consumo_comanda" Type="Self.consumo_comanda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="comanda">
+              <PropertyRef Name="idcomanda" />
+            </Principal>
+            <Dependent Role="consumo_comanda">
+              <PropertyRef Name="idcomanda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MESA">
+          <End Role="mesa" Type="Self.mesa" Multiplicity="0..1" />
+          <End Role="consumo_comanda" Type="Self.consumo_comanda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mesa">
+              <PropertyRef Name="idmesa" />
+            </Principal>
+            <Dependent Role="consumo_comanda">
+              <PropertyRef Name="idmesa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUTO">
+          <End Role="produto" Type="Self.produto" Multiplicity="0..1" />
+          <End Role="consumo_comanda" Type="Self.consumo_comanda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produto">
+              <PropertyRef Name="idproduto" />
+            </Principal>
+            <Dependent Role="consumo_comanda">
+              <PropertyRef Name="itemproduto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPO">
+          <End Role="tipo" Type="Self.tipo" Multiplicity="0..1" />
+          <End Role="produto" Type="Self.produto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo">
+              <PropertyRef Name="idtipo" />
+            </Principal>
+            <Dependent Role="produto">
+              <PropertyRef Name="idtipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="restaurantedbEntidades" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="comanda" EntityType="Self.comanda" />
+          <EntitySet Name="consumo_comanda" EntityType="Self.consumo_comanda" />
+          <EntitySet Name="mesa" EntityType="Self.mesa" />
+          <EntitySet Name="produto" EntityType="Self.produto" />
+          <EntitySet Name="tipo" EntityType="Self.tipo" />
+          <AssociationSet Name="FK_COMANDA" Association="Self.FK_COMANDA">
+            <End Role="comanda" EntitySet="comanda" />
+            <End Role="consumo_comanda" EntitySet="consumo_comanda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MESA" Association="Self.FK_MESA">
+            <End Role="mesa" EntitySet="mesa" />
+            <End Role="consumo_comanda" EntitySet="consumo_comanda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUTO" Association="Self.FK_PRODUTO">
+            <End Role="produto" EntitySet="produto" />
+            <End Role="consumo_comanda" EntitySet="consumo_comanda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPO" Association="Self.FK_TIPO">
+            <End Role="tipo" EntitySet="tipo" />
+            <End Role="produto" EntitySet="produto" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="restaurantedbModeloStoreContainer" CdmEntityContainer="restaurantedbEntidades">
+          <EntitySetMapping Name="comanda">
+            <EntityTypeMapping TypeName="restaurantedbModelo.comanda">
+              <MappingFragment StoreEntitySet="comanda">
+                <ScalarProperty Name="idcomanda" ColumnName="idcomanda" />
+                <ScalarProperty Name="Consumo" ColumnName="Consumo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumo_comanda">
+            <EntityTypeMapping TypeName="restaurantedbModelo.consumo_comanda">
+              <MappingFragment StoreEntitySet="consumo_comanda">
+                <ScalarProperty Name="idconsumo_comanda" ColumnName="idconsumo_comanda" />
+                <ScalarProperty Name="idmesa" ColumnName="idmesa" />
+                <ScalarProperty Name="idcomanda" ColumnName="idcomanda" />
+                <ScalarProperty Name="itemproduto" ColumnName="itemproduto" />
+                <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mesa">
+            <EntityTypeMapping TypeName="restaurantedbModelo.mesa">
+              <MappingFragment StoreEntitySet="mesa">
+                <ScalarProperty Name="idmesa" ColumnName="idmesa" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="vagas" ColumnName="vagas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="produto">
+            <EntityTypeMapping TypeName="restaurantedbModelo.produto">
+              <MappingFragment StoreEntitySet="produto">
+                <ScalarProperty Name="idproduto" ColumnName="idproduto" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="preco" ColumnName="preco" />
+                <ScalarProperty Name="idtipo" ColumnName="idtipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo">
+            <EntityTypeMapping TypeName="restaurantedbModelo.tipo">
+              <MappingFragment StoreEntitySet="tipo">
+                <ScalarProperty Name="idtipo" ColumnName="idtipo" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

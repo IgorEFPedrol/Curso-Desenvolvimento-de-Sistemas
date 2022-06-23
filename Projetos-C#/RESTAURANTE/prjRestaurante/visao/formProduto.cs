@@ -21,5 +21,11 @@ namespace prjRestaurante.visao
         {
 
         }
+
+        private void FormProduto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormPrincipal pai = (FormPrincipal)this.MdiParent;
+            pai.frProdutos = null;
+        }
     }
 }

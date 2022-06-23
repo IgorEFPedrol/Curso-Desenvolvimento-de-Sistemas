@@ -293,7 +293,7 @@
             this.lbId.ForeColor = System.Drawing.Color.Black;
             this.lbId.Location = new System.Drawing.Point(36, 69);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(199, 66);
+            this.lbId.Size = new System.Drawing.Size(223, 66);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "123456";
             this.lbId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -357,7 +357,9 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FormProduto";
+            this.ShowIcon = false;
             this.Text = "PRODUTOS";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormProduto_FormClosing);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bn)).EndInit();
