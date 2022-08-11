@@ -24,7 +24,14 @@ namespace PRJGRAFICO.visao
                 Double.Parse(txtC.Text));
             controle.RetGrafico graf = new controle.RetGrafico(
                 pnDesenho.CreateGraphics());
-            graf.Desenhar(ret);
+            graf.Desenhar(ret, escala.Value);
         }
+
+        private void escala_Scroll(object sender, ScrollEventArgs e)
+        {
+            lbEscala.Text = "Escala = " + escala.Value + " %";
+            btnPlotar_Click(sender, e);
+        }
+
     }
 }

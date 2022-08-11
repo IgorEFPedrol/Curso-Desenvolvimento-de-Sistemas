@@ -34,6 +34,10 @@
             this.txtC = new System.Windows.Forms.TextBox();
             this.btnPlotar = new System.Windows.Forms.Button();
             this.pnDesenho = new System.Windows.Forms.Panel();
+            this.lbEscala = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.escala = new System.Windows.Forms.HScrollBar();
             this.SuspendLayout();
             // 
             // label1
@@ -85,17 +89,61 @@
             // 
             // pnDesenho
             // 
-            this.pnDesenho.Location = new System.Drawing.Point(38, 223);
+            this.pnDesenho.Location = new System.Drawing.Point(12, 223);
             this.pnDesenho.Name = "pnDesenho";
-            this.pnDesenho.Size = new System.Drawing.Size(784, 416);
+            this.pnDesenho.Size = new System.Drawing.Size(832, 416);
             this.pnDesenho.TabIndex = 3;
+            // 
+            // lbEscala
+            // 
+            this.lbEscala.AutoSize = true;
+            this.lbEscala.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEscala.Location = new System.Drawing.Point(344, 685);
+            this.lbEscala.Name = "lbEscala";
+            this.lbEscala.Size = new System.Drawing.Size(189, 18);
+            this.lbEscala.TabIndex = 4;
+            this.lbEscala.Text = "ESCALA DO DESENHO";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 685);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 18);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "0%";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(784, 685);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 18);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "100%";
+            // 
+            // escala
+            // 
+            this.escala.Location = new System.Drawing.Point(12, 642);
+            this.escala.Minimum = 1;
+            this.escala.Name = "escala";
+            this.escala.Size = new System.Drawing.Size(832, 17);
+            this.escala.TabIndex = 7;
+            this.escala.Value = 1;
+            this.escala.Scroll += new System.Windows.Forms.ScrollEventHandler(this.escala_Scroll);
             // 
             // FormRetangulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(856, 651);
+            this.ClientSize = new System.Drawing.Size(856, 712);
+            this.Controls.Add(this.escala);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbEscala);
             this.Controls.Add(this.pnDesenho);
             this.Controls.Add(this.btnPlotar);
             this.Controls.Add(this.txtC);
@@ -103,7 +151,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRetangulo";
@@ -123,5 +171,9 @@
         private System.Windows.Forms.TextBox txtC;
         private System.Windows.Forms.Button btnPlotar;
         private System.Windows.Forms.Panel pnDesenho;
+        private System.Windows.Forms.Label lbEscala;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.HScrollBar escala;
     }
 }
