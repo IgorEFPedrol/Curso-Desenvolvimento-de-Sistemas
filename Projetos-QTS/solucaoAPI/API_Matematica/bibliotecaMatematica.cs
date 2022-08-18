@@ -22,5 +22,15 @@ namespace API_Matematica
             }
             return cont == 2 ? true : false;
         }
+        public static bool Perfeito(int num)
+        {
+            int soma = 0;
+
+            for (int i = 1; i < num; i++)
+            {
+                if (num % i == 0) soma += i;
+            }
+            return soma == num ? true : false;
+        }
     }
 }
