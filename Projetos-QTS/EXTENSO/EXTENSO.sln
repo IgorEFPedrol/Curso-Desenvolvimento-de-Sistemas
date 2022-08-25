@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_EXTENSO", "API_EXTENSO\API_EXTENSO.csproj", "{00B2E4BC-90CC-4190-8E13-D57105351CAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TESTE_EXTENSO", "TESTE_EXTENSO\TESTE_EXTENSO.csproj", "{FFB45D8F-5C17-4F43-BA31-F8362BF95973}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{00B2E4BC-90CC-4190-8E13-D57105351CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00B2E4BC-90CC-4190-8E13-D57105351CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00B2E4BC-90CC-4190-8E13-D57105351CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFB45D8F-5C17-4F43-BA31-F8362BF95973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB45D8F-5C17-4F43-BA31-F8362BF95973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFB45D8F-5C17-4F43-BA31-F8362BF95973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFB45D8F-5C17-4F43-BA31-F8362BF95973}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
