@@ -19,12 +19,14 @@ namespace API_EXTENSO
 
         private static string Milhares(int n)
         {
-            string[] m = new string[] {
-                "mil"
-            };
             if (n == 1000) return "mil";
-            else if (n % 1000 == 0) return Unidades(n / 1000) + " mil";
-            else return Unidades(n / 1000) + " mil, " + Imprimir(n % 1000); 
+            else if (n <= 1100)
+                return Unidades(n / 1000) +
+               " mil e " + Imprimir(n % 1000);
+            else if (n % 1000 == 0) return Unidades(n / 1000) +
+               " mil";
+            else return Unidades(n / 1000) +
+               " mil, " + Imprimir(n % 1000);
 
         }
 
