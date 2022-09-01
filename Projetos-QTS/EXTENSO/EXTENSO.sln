@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_EXTENSO", "API_EXTENSO\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TESTE_EXTENSO", "TESTE_EXTENSO\TESTE_EXTENSO.csproj", "{FFB45D8F-5C17-4F43-BA31-F8362BF95973}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TESTE_EXTENSO_TDD", "TESTE_EXTENSO_TDD\TESTE_EXTENSO_TDD.csproj", "{6530B0B2-59E8-40FA-A2B9-E5924447A4D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FFB45D8F-5C17-4F43-BA31-F8362BF95973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFB45D8F-5C17-4F43-BA31-F8362BF95973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFB45D8F-5C17-4F43-BA31-F8362BF95973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6530B0B2-59E8-40FA-A2B9-E5924447A4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6530B0B2-59E8-40FA-A2B9-E5924447A4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6530B0B2-59E8-40FA-A2B9-E5924447A4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6530B0B2-59E8-40FA-A2B9-E5924447A4D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
