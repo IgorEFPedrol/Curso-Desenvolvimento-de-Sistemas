@@ -54,9 +54,10 @@
             // 
             // txtCep
             // 
+            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCep.Location = new System.Drawing.Point(28, 60);
             this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(200, 20);
+            this.txtCep.Size = new System.Drawing.Size(200, 26);
             this.txtCep.TabIndex = 1;
             // 
             // btnPesquisar
@@ -85,7 +86,7 @@
             // 
             this.lbLog.BackColor = System.Drawing.Color.White;
             this.lbLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbLog.ForeColor = System.Drawing.Color.Black;
             this.lbLog.Location = new System.Drawing.Point(24, 164);
             this.lbLog.Name = "lbLog";
             this.lbLog.Size = new System.Drawing.Size(387, 20);
@@ -96,7 +97,7 @@
             // 
             this.lbBairro.BackColor = System.Drawing.Color.White;
             this.lbBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBairro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbBairro.ForeColor = System.Drawing.Color.Black;
             this.lbBairro.Location = new System.Drawing.Point(24, 256);
             this.lbBairro.Name = "lbBairro";
             this.lbBairro.Size = new System.Drawing.Size(387, 20);
@@ -118,7 +119,7 @@
             // 
             this.lbCidade.BackColor = System.Drawing.Color.White;
             this.lbCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbCidade.ForeColor = System.Drawing.Color.Black;
             this.lbCidade.Location = new System.Drawing.Point(24, 342);
             this.lbCidade.Name = "lbCidade";
             this.lbCidade.Size = new System.Drawing.Size(387, 20);
@@ -140,7 +141,7 @@
             // 
             this.lbEstado.BackColor = System.Drawing.Color.White;
             this.lbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbEstado.ForeColor = System.Drawing.Color.Black;
             this.lbEstado.Location = new System.Drawing.Point(24, 437);
             this.lbEstado.Name = "lbEstado";
             this.lbEstado.Size = new System.Drawing.Size(387, 20);
