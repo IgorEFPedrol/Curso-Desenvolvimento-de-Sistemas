@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_LIVRO", "API_LIVRO\API_LIVRO.csproj", "{E5AEA959-B175-416F-9CF1-E4B7FE3697C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TESTE_GOOGLE_BOOKS", "TESTE_GOOGLE_BOOKS\TESTE_GOOGLE_BOOKS.csproj", "{3BC70B36-084C-428E-8ED9-9E95102F68DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E5AEA959-B175-416F-9CF1-E4B7FE3697C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5AEA959-B175-416F-9CF1-E4B7FE3697C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5AEA959-B175-416F-9CF1-E4B7FE3697C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC70B36-084C-428E-8ED9-9E95102F68DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC70B36-084C-428E-8ED9-9E95102F68DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC70B36-084C-428E-8ED9-9E95102F68DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC70B36-084C-428E-8ED9-9E95102F68DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
