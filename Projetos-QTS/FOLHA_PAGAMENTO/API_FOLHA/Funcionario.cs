@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace API_FOLHA
 {
-    class Funcionario:ICalculoSalario
+    public class Funcionario:ICalculoSalario
     {
         public int Cod { get; set; }
         public string Nome { get; set; }
@@ -31,6 +31,17 @@ namespace API_FOLHA
         {
             double valor = Salario * 0.02;
             return valor;
+        }
+        public void Holerite(double salHora)
+        {
+            double sb = Calcular(salHora);
+            Console.WriteLine("FUNCIONÁRIO: {0}", Nome);
+            Console.WriteLine("Salário Bruto: {0:C2}", sb);
+            double desc = Desconto(sb);
+            Console.WriteLine("Desconto: {0:C2}", desc);
+            double sl = sb - desc;
+            Console.WriteLine("Salário Líquido: {0:C2}", sl);
+            Console.ReadKey();
         }
     }
 }
