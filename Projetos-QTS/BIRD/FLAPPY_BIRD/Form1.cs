@@ -52,6 +52,11 @@ namespace FLAPPY_BIRD
                 tuboSuperior.Left = this.Width + tuboSuperior.Width * 2;
                 placar++;
             }
+            if (bird.Bounds.IntersectsWith(tuboInferior.Bounds) || bird.Bounds.IntersectsWith(tuboSuperior.Bounds))
+            {
+                jogo.Stop();
+                lbMensagem.Text = "Você Perdeu!";
+            }
             lbPlacar.Text = String.Format("PLACAR: {0}", placar.ToString().PadLeft(4, '0'));
         }
 

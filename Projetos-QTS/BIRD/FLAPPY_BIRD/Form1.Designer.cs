@@ -36,6 +36,7 @@
             this.tuboInferior = new System.Windows.Forms.PictureBox();
             this.tuboSuperior = new System.Windows.Forms.PictureBox();
             this.lbPlacar = new System.Windows.Forms.Label();
+            this.lbMensagem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuboInferior)).BeginInit();
@@ -45,7 +46,7 @@
             // bird
             // 
             this.bird.Image = ((System.Drawing.Image)(resources.GetObject("bird.Image")));
-            this.bird.Location = new System.Drawing.Point(109, 209);
+            this.bird.Location = new System.Drawing.Point(105, 68);
             this.bird.Name = "bird";
             this.bird.Size = new System.Drawing.Size(50, 50);
             this.bird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -61,18 +62,18 @@
             // 
             this.ground.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ground.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ground.BackgroundImage")));
-            this.ground.Location = new System.Drawing.Point(-1, 399);
+            this.ground.Location = new System.Drawing.Point(-2, 407);
             this.ground.Name = "ground";
-            this.ground.Size = new System.Drawing.Size(888, 96);
+            this.ground.Size = new System.Drawing.Size(888, 97);
             this.ground.TabIndex = 1;
             this.ground.TabStop = false;
             // 
             // tuboInferior
             // 
             this.tuboInferior.Image = ((System.Drawing.Image)(resources.GetObject("tuboInferior.Image")));
-            this.tuboInferior.Location = new System.Drawing.Point(616, 218);
+            this.tuboInferior.Location = new System.Drawing.Point(715, 230);
             this.tuboInferior.Name = "tuboInferior";
-            this.tuboInferior.Size = new System.Drawing.Size(75, 183);
+            this.tuboInferior.Size = new System.Drawing.Size(75, 180);
             this.tuboInferior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tuboInferior.TabIndex = 2;
             this.tuboInferior.TabStop = false;
@@ -80,7 +81,7 @@
             // tuboSuperior
             // 
             this.tuboSuperior.Image = ((System.Drawing.Image)(resources.GetObject("tuboSuperior.Image")));
-            this.tuboSuperior.Location = new System.Drawing.Point(420, -2);
+            this.tuboSuperior.Location = new System.Drawing.Point(549, -1);
             this.tuboSuperior.Name = "tuboSuperior";
             this.tuboSuperior.Size = new System.Drawing.Size(75, 156);
             this.tuboSuperior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,14 +91,26 @@
             // lbPlacar
             // 
             this.lbPlacar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(216)))), ((int)(((byte)(149)))));
-            this.lbPlacar.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPlacar.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Italic);
             this.lbPlacar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbPlacar.Location = new System.Drawing.Point(665, 441);
+            this.lbPlacar.Location = new System.Drawing.Point(620, 432);
             this.lbPlacar.Name = "lbPlacar";
-            this.lbPlacar.Size = new System.Drawing.Size(206, 40);
+            this.lbPlacar.Size = new System.Drawing.Size(251, 49);
             this.lbPlacar.TabIndex = 4;
             this.lbPlacar.Text = "placar = 0";
             this.lbPlacar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbMensagem
+            // 
+            this.lbMensagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(216)))), ((int)(((byte)(149)))));
+            this.lbMensagem.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Italic);
+            this.lbMensagem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbMensagem.Location = new System.Drawing.Point(24, 432);
+            this.lbMensagem.Name = "lbMensagem";
+            this.lbMensagem.Size = new System.Drawing.Size(579, 49);
+            this.lbMensagem.TabIndex = 5;
+            this.lbMensagem.Text = "aperte esc para sair";
+            this.lbMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -105,6 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(883, 490);
+            this.Controls.Add(this.lbMensagem);
             this.Controls.Add(this.lbPlacar);
             this.Controls.Add(this.tuboSuperior);
             this.Controls.Add(this.tuboInferior);
@@ -136,6 +150,7 @@
         private System.Windows.Forms.PictureBox tuboInferior;
         private System.Windows.Forms.PictureBox tuboSuperior;
         private System.Windows.Forms.Label lbPlacar;
+        private System.Windows.Forms.Label lbMensagem;
     }
 }
 
