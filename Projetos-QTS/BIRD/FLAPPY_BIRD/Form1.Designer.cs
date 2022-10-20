@@ -56,6 +56,7 @@
             // jogo
             // 
             this.jogo.Enabled = true;
+            this.jogo.Interval = 10;
             this.jogo.Tick += new System.EventHandler(this.jogo_Tick);
             // 
             // ground
@@ -133,6 +134,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.bird)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).EndInit();
