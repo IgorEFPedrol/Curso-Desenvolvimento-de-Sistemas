@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace FLAPPY_BIRD
 {
     public partial class Form1 : Form
@@ -16,11 +15,10 @@ namespace FLAPPY_BIRD
         {
             InitializeComponent();
         }
-
         int gravidade = 5;
-        int speed = 8;
+        int speed = 5;
         int placar = 0;
-
+        int Recorde = 0;
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Space)
@@ -28,7 +26,6 @@ namespace FLAPPY_BIRD
                 gravidade = -5;
             }
         }
-
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Space)
@@ -36,7 +33,6 @@ namespace FLAPPY_BIRD
                 gravidade = 5;
             }
         }
-
         private void jogo_Tick(object sender, EventArgs e)
         {
             bird.Top += gravidade;
@@ -46,14 +42,14 @@ namespace FLAPPY_BIRD
             {
                 Random p = new Random();
                 tuboInferior.Left = this.Width +
-                    tuboInferior.Width * p.Next(2, 20);
+                    tuboInferior.Width * p.Next(2, 10);
                 placar++;
             }
             if (tuboSuperior.Left < 0 - tuboSuperior.Width * 2)
             {
                 Random p = new Random();
                 tuboSuperior.Left = this.Width +
-                    tuboSuperior.Width * p.Next(2, 20);
+                    tuboSuperior.Width * p.Next(2, 5);
                 placar++;
             }
             if (bird.Bounds.IntersectsWith(tuboInferior.Bounds) ||
@@ -63,22 +59,60 @@ namespace FLAPPY_BIRD
             {
                 jogo.Stop();
                 lbMensagem.Text = "Voce perdeu!";
+                if (placar > Recorde)
+                {
+                    Recorde = placar;
+                    lbRecorde.Text = String.Format("REC: {0}",
+                        Recorde);
+                    Registro.Gravar("FLAPPY", "recorde",
+                        Recorde.ToString());
+                }
             }
             lbPlacar.Text = String.Format("PLACAR: {0}",
                 placar.ToString().PadLeft(4, '0'));
+
+            acelerar();
+        }
+        private void acelerar()
+        {
+            if (placar > 15) speed = 10;
+            if (placar > 25) speed = 15;
+            if (placar > 35) speed = 18;
+            if (placar > 40) speed = 22;
         }
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+                Environment.Exit(0);
             if (!Char.IsWhiteSpace(e.KeyChar))
             {
                 jogo.Start();
                 placar = 0;
                 tuboSuperior.Left = this.Width +
-                   tuboSuperior.Width * 3;
-                tuboInferior.Left = this.Width + tuboInferior.Width * 2;
+                   tuboSuperior.Width * 4;
+                tuboInferior.Left = this.Width +
+                   tuboInferior.Width * 2;
                 bird.Top = this.Height / 2;
-                lbMensagem.Text = "Pressione ESC para sair";
+                lbMensagem.Text = "Pressione ESC para sair...";
             }
-        } 
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Recorde = Int32.Parse(
+                Registro.Ler("FLAPPY", "recorde")
+                );
+            lbRecorde.Text = String.Format("RECORDE: {0}",
+                       Recorde);
+            if (DateTime.Now.Hour > 20)
+            {
+                this.BackColor = Color.Black;
+                lbRecorde.BackColor = Color.Black;
+            }
+            else
+            {
+                this.BackColor = Color.SkyBlue;
+                lbRecorde.BackColor = Color.SkyBlue;
+            }
+        }
     }
 }

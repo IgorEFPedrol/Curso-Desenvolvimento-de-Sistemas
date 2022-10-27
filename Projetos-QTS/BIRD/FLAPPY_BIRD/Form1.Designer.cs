@@ -37,18 +37,27 @@
             this.tuboSuperior = new System.Windows.Forms.PictureBox();
             this.lbPlacar = new System.Windows.Forms.Label();
             this.lbMensagem = new System.Windows.Forms.Label();
+            this.lbRecorde = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuboInferior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuboSuperior)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // bird
             // 
             this.bird.Image = ((System.Drawing.Image)(resources.GetObject("bird.Image")));
-            this.bird.Location = new System.Drawing.Point(105, 68);
+            this.bird.Location = new System.Drawing.Point(104, 110);
             this.bird.Name = "bird";
-            this.bird.Size = new System.Drawing.Size(50, 50);
+            this.bird.Size = new System.Drawing.Size(48, 46);
             this.bird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bird.TabIndex = 0;
             this.bird.TabStop = false;
@@ -72,9 +81,9 @@
             // tuboInferior
             // 
             this.tuboInferior.Image = ((System.Drawing.Image)(resources.GetObject("tuboInferior.Image")));
-            this.tuboInferior.Location = new System.Drawing.Point(715, 230);
+            this.tuboInferior.Location = new System.Drawing.Point(715, 242);
             this.tuboInferior.Name = "tuboInferior";
-            this.tuboInferior.Size = new System.Drawing.Size(75, 180);
+            this.tuboInferior.Size = new System.Drawing.Size(75, 168);
             this.tuboInferior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tuboInferior.TabIndex = 2;
             this.tuboInferior.TabStop = false;
@@ -84,7 +93,7 @@
             this.tuboSuperior.Image = ((System.Drawing.Image)(resources.GetObject("tuboSuperior.Image")));
             this.tuboSuperior.Location = new System.Drawing.Point(549, -1);
             this.tuboSuperior.Name = "tuboSuperior";
-            this.tuboSuperior.Size = new System.Drawing.Size(75, 156);
+            this.tuboSuperior.Size = new System.Drawing.Size(75, 147);
             this.tuboSuperior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tuboSuperior.TabIndex = 3;
             this.tuboSuperior.TabStop = false;
@@ -92,6 +101,7 @@
             // lbPlacar
             // 
             this.lbPlacar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(216)))), ((int)(((byte)(149)))));
+            this.lbPlacar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbPlacar.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Italic);
             this.lbPlacar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbPlacar.Location = new System.Drawing.Point(620, 432);
@@ -104,6 +114,7 @@
             // lbMensagem
             // 
             this.lbMensagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(216)))), ((int)(((byte)(149)))));
+            this.lbMensagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbMensagem.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Italic);
             this.lbMensagem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbMensagem.Location = new System.Drawing.Point(24, 432);
@@ -112,6 +123,58 @@
             this.lbMensagem.TabIndex = 5;
             this.lbMensagem.Text = "aperte esc para sair";
             this.lbMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbRecorde
+            // 
+            this.lbRecorde.BackColor = System.Drawing.Color.Transparent;
+            this.lbRecorde.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Italic);
+            this.lbRecorde.ForeColor = System.Drawing.Color.White;
+            this.lbRecorde.Location = new System.Drawing.Point(641, 21);
+            this.lbRecorde.Name = "lbRecorde";
+            this.lbRecorde.Size = new System.Drawing.Size(230, 34);
+            this.lbRecorde.TabIndex = 6;
+            this.lbRecorde.Text = "RECORDE: 0";
+            this.lbRecorde.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(488, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(68, 44);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(52, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(755, 75);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(53, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(293, 75);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(56, 48);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
             // 
             // Form1
             // 
@@ -125,6 +188,11 @@
             this.Controls.Add(this.tuboInferior);
             this.Controls.Add(this.ground);
             this.Controls.Add(this.bird);
+            this.Controls.Add(this.lbRecorde);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -132,7 +200,8 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "FLAPPY BIRD";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
@@ -140,6 +209,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuboInferior)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuboSuperior)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,6 +226,11 @@
         private System.Windows.Forms.PictureBox tuboSuperior;
         private System.Windows.Forms.Label lbPlacar;
         private System.Windows.Forms.Label lbMensagem;
+        private System.Windows.Forms.Label lbRecorde;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
