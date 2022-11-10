@@ -46,6 +46,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbUsuario = new System.Windows.Forms.Label();
+            this.lbPorcento = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -103,7 +105,7 @@
             // 
             // barra
             // 
-            this.barra.Location = new System.Drawing.Point(101, 366);
+            this.barra.Location = new System.Drawing.Point(96, 348);
             this.barra.Name = "barra";
             this.barra.Size = new System.Drawing.Size(567, 39);
             this.barra.TabIndex = 14;
@@ -115,7 +117,7 @@
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Location = new System.Drawing.Point(110, 302);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(548, 61);
+            this.label2.Size = new System.Drawing.Size(548, 43);
             this.label2.TabIndex = 15;
             this.label2.Text = "desenvolvido por EtecItapeva";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,7 +151,7 @@
             // tuboInferior
             // 
             this.tuboInferior.Image = ((System.Drawing.Image)(resources.GetObject("tuboInferior.Image")));
-            this.tuboInferior.Location = new System.Drawing.Point(27, 353);
+            this.tuboInferior.Location = new System.Drawing.Point(27, 427);
             this.tuboInferior.Name = "tuboInferior";
             this.tuboInferior.Size = new System.Drawing.Size(34, 144);
             this.tuboInferior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -189,12 +191,13 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(676, 430);
+            this.pictureBox7.Location = new System.Drawing.Point(676, 504);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(23, 67);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 22;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox8
             // 
@@ -209,20 +212,42 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Italic);
-            this.label3.Location = new System.Drawing.Point(92, 417);
+            this.label3.Location = new System.Drawing.Point(92, 427);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(576, 80);
+            this.label3.Size = new System.Drawing.Size(576, 76);
             this.label3.TabIndex = 24;
             this.label3.Text = "programa protegido pela lei de direitos autorais. proibida a cópia não autorizada" +
     "";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbUsuario
+            // 
+            this.lbUsuario.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Italic);
+            this.lbUsuario.Location = new System.Drawing.Point(82, 488);
+            this.lbUsuario.Name = "lbUsuario";
+            this.lbUsuario.Size = new System.Drawing.Size(576, 74);
+            this.lbUsuario.TabIndex = 25;
+            this.lbUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbPorcento
+            // 
+            this.lbPorcento.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Italic);
+            this.lbPorcento.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbPorcento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbPorcento.Location = new System.Drawing.Point(353, 390);
+            this.lbPorcento.Name = "lbPorcento";
+            this.lbPorcento.Size = new System.Drawing.Size(71, 47);
+            this.lbPorcento.TabIndex = 26;
+            this.lbPorcento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(744, 497);
+            this.ClientSize = new System.Drawing.Size(744, 571);
+            this.Controls.Add(this.lbPorcento);
+            this.Controls.Add(this.lbUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -279,5 +304,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbUsuario;
+        private System.Windows.Forms.Label lbPorcento;
     }
 }
