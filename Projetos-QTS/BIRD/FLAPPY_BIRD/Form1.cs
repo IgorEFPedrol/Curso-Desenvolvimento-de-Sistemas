@@ -62,7 +62,7 @@ namespace FLAPPY_BIRD
                 if (placar > Recorde)
                 {
                     Recorde = placar;
-                    lbRecorde.Text = String.Format("REC: {0}",
+                    lbRecorde.Text = String.Format("RECORDE: {0}",
                         Recorde);
                     Registro.Gravar("FLAPPY", "recorde",
                         Recorde.ToString());
@@ -103,16 +103,6 @@ namespace FLAPPY_BIRD
                 );
             lbRecorde.Text = String.Format("RECORDE: {0}",
                        Recorde);
-            if (DateTime.Now.Hour > 20)
-            {
-                this.BackColor = Color.Black;
-                lbRecorde.BackColor = Color.Black;
-            }
-            else
-            {
-                this.BackColor = Color.SkyBlue;
-                lbRecorde.BackColor = Color.SkyBlue;
-            }
         }
     }
 }
