@@ -21,6 +21,22 @@ namespace FLAPPY_BIRD
             Application.Run(new Form1());
         }
 
+        private static void Registrar()
+        {
+            try
+            {
+                string Serial = Registro.Ler("FLAPPY", "serial");
+                if (Serial.Equals(""))
+                {
+                    Application.Run(new FormRegistro());
+                }
+            }
+            catch (Exception)
+            {
+                Application.Run(new FormRegistro());
+            }
+        }
+
         private static void Splash()
         {
             ThreadStart start = new ThreadStart(BemVindo);
