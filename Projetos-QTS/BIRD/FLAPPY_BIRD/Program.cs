@@ -26,7 +26,9 @@ namespace FLAPPY_BIRD
         {
             try
             {
-                string Serial = Registro.Ler("FLAPPY", "serial");
+                string codigo = Cripto.Decodificar(Registro.Ler("FLAPPY", "serial"));
+                string Serial = codigo;
+
                 if (Serial.Equals(""))
                 {
                     Application.Run(new FormRegistro());
