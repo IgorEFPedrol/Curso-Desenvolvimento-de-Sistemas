@@ -34,6 +34,35 @@ namespace FLAPPY_BIRD
                 Provedor.Clear();
             }
             return Convert.ToBase64String(Results);
-        } 
+        }
+
+        public static string Decodificar(string texto)
+        {
+            byte[] Results;
+            // normalizar - UTF8
+            UTF8Encoding UTF8 = new UTF8Encoding();
+            MD5CryptoServiceProvider Provedor = new MD5CryptoServiceProvider();
+            byte[] TDESKey = Provedor.ComputeHash(UTF8.GetBytes(chave));
+            TripleDESCryptoServiceProvider TDESAlgoritmo =
+                new TripleDESCryptoServiceProvider();
+            TDESAlgoritmo.Mode = CipherMode.ECB;
+            TDESAlgoritmo.Key = TDESKey;
+            TDESAlgoritmo.Padding = PaddingMode.PKCS7;
+            byte[] dados = Convert.FromBase64String(texto);
+            try
+            {
+                ICryptoTransform Encriptador =
+                    TDESAlgoritmo.CreateDecryptor();
+                Results = Encriptador.TransformFinalBlock(
+                    dados, 0, dados.Length);
+            }
+            finally
+            {
+                TDESAlgoritmo.Clear();
+                Provedor.Clear();
+            }
+            return UTF8.GetString(Results);
+        }
+ 
     }
 }

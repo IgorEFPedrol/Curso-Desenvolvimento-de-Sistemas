@@ -23,7 +23,7 @@ namespace FLAPPY_BIRD
         {
             if (txtSerial.Text.Equals(Serial))
             {
-                Registro.Gravar("FLAPPY", "serial", Serial);
+                Registro.Gravar("FLAPPY", "serial", Cripto.Codificar(Serial));
                 this.Dispose();
             }
             else

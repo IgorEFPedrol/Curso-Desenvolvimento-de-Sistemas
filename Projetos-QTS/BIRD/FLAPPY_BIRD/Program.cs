@@ -17,8 +17,8 @@ namespace FLAPPY_BIRD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormRegistro());
             Splash();
+            Application.Run(new FormRegistro());
             Application.Run(new Form1());
         }
 
