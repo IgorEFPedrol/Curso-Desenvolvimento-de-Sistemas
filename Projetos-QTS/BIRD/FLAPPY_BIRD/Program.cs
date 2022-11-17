@@ -30,6 +30,10 @@ namespace FLAPPY_BIRD
                 {
                     Application.Run(new FormRegistro());
                 }
+                else if (!Serial.Equals("YTt2crwtYoo7"))
+                {
+                    Application.Run(new FormRegistro());
+                }
             }
             catch (Exception)
             {
